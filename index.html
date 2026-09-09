@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HASIRU ESTATE | Gated Lands & Plotted Developments</title>
+
+  <meta name="description"
+        content="Hasiru Estate offers carefully selected gated land and plotted development opportunities in Karnataka.">
+
+  <meta name="keywords"
+        content="Hasiru Estate, gated lands, gated plots, land for sale, plots in Karnataka, Mysore plots, real estate">
+
+  <meta name="author" content="Hasiru Estate">
+
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+  <style>
+
+    :root {
+
+      --pastel-green: #dcebd9;
+      --light-green: #eef6eb;
+      --soft-green: #c7ddc2;
+
+      --green: #285c3a;
+      --dark-green: #163b28;
+      --deep-green: #102b1d;
+
+      --accent: #6f9d68;
+
+      --text: #254332;
+      --soft-text: #587060;
+
+      --white: #ffffff;
+
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family: 'Poppins', sans-serif;
+
+      background: var(--pastel-green);
+
+      color: var(--text);
+
+      line-height: 1.7;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+    .kannada {
+
+      font-family: 'Noto Sans Kannada', sans-serif;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* ================= HEADER ================= */
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      background: rgba(238, 246, 235, 0.96);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(22, 59, 40, 0.10);
+
+    }
+
+
+    .navbar {
+
+      max-width: 1200px;
+
+      margin: auto;
+
+      padding: 16px 24px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 30px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    nav {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 24px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    nav a {
+
+      text-decoration: none;
+
+      color: var(--dark-green);
+
+      font-weight: 500;
+
+      font-size: 0.95rem;
+
+      transition: 0.3s;
+
+    }
+
+
+    nav a:hover {
+
+      color: var(--accent);
+
+    }
+
+
+    /* ================= LANGUAGE ================= */
+
+    .lang-switch {
+
+      display: flex;
+
+      gap: 8px;
+
+      align-items: center;
+
+    }
+
+
+    .lang-btn {
+
+      border: none;
+
+      background: var(--white);
+
+      color: var(--dark-green);
+
+      padding: 8px 15px;
+
+      border-radius: 999px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      box-shadow: 0 4px 12px rgba(16, 43, 29, 0.08);
+
+      transition: 0.3s;
+
+    }
+
+
+    .lang-btn.active,
+
+    .lang-btn:hover {
+
+      background: var(--dark-green);
+
+      color: white;
+
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+
+      max-width: 1050px;
+
+      margin: auto;
+
+      text-align: center;
+
+      padding: 70px 24px 55px;
+
+    }
+
+
+    .launch-badge {
+
+      display: inline-block;
+
+      background: rgba(111, 157, 104, 0.18);
+
+      color: var(--dark-green);
+
+      padding: 7px 18px;
+
+      border-radius: 999px;
+
+      font-size: 0.82rem;
+
+      font-weight: 600;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 20px;
+
+      border: 1px solid rgba(111, 157, 104, 0.3);
+
+    }
+
+
+    .brand-name {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 3rem;
+
+      font-weight: 700;
+
+      letter-spacing: 6px;
+
+      color: var(--dark-green);
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .tagline {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 1.55rem;
+
+      font-weight: 600;
+
+      letter-spacing: 1.5px;
+
+      color: var(--green);
+
+      text-transform: uppercase;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .hero p {
+
+      max-width: 780px;
+
+      margin: auto;
+
+      font-size: 1.05rem;
+
+      color: var(--soft-text);
+
+    }
+
+
+    /* ================= LOGO ================= */
+
+    .hero-logo {
+
+      margin: 40px 0 35px;
+
+      display: flex;
+
+      justify-content: center;
+
+    }
+
+
+    .hero-logo img {
+
+      width: 430px;
+
+      max-width: 90vw;
+
+      height: auto;
+
+      filter: drop-shadow(0 18px 30px rgba(16, 43, 29, 0.16));
+
+      transition: transform 0.4s ease;
+
+    }
+
+
+    .hero-logo img:hover {
+
+      transform: scale(1.02);
+
+    }
+
+
+    /* ================= BUTTON ================= */
+
+    .btn {
+
+      display: inline-block;
+
+      margin-top: 8px;
+
+      padding: 14px 36px;
+
+      border-radius: 999px;
+
+      background: var(--dark-green);
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 600;
+
+      letter-spacing: 0.3px;
+
+      box-shadow: 0 10px 24px rgba(16, 43, 29, 0.18);
+
+      transition: 0.3s ease;
+
+    }
+
+
+    .btn:hover {
+
+      transform: translateY(-2px);
+
+      background: var(--green);
+
+      box-shadow: 0 15px 30px rgba(40, 92, 58, 0.25);
+
+    }
+
+
+    /* ================= SECTIONS ================= */
+
+    section {
+
+      max-width: 1100px;
+
+      margin: auto;
+
+      padding: 75px 24px;
+
+    }
+
+
+    .section-title {
+
+      text-align: center;
+
+      margin-bottom: 42px;
+
+    }
+
+
+    .section-title h3 {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 2.25rem;
+
+      font-weight: 700;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      color: var(--dark-green);
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .section-title p {
+
+      max-width: 720px;
+
+      margin: auto;
+
+      color: var(--soft-text);
+
+    }
+
+
+    /* ================= BOXES ================= */
+
+    .about-box,
+
+    .card,
+
+    .contact,
+
+    .form-box {
+
+      background: var(--light-green);
+
+      border-radius: 28px;
+
+      border: 1px solid rgba(22, 59, 40, 0.08);
+
+      box-shadow: 0 14px 34px rgba(22, 59, 40, 0.08);
+
+    }
+
+
+    .about-box {
+
+      padding: 48px;
+
+    }
+
+
+    .about-box p {
+
+      text-align: center;
+
+      color: var(--soft-text);
+
+      font-size: 1rem;
+
+    }
+
+
+    /* ================= GRID ================= */
+
+    .services,
+
+    .why-grid,
+
+    .land-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 24px;
+
+    }
+
+
+    .card {
+
+      padding: 34px;
+
+      transition: 0.3s ease;
+
+    }
+
+
+    .card:hover {
+
+      transform: translateY(-6px);
+
+      box-shadow: 0 20px 42px rgba(22, 59, 40, 0.13);
+
+    }
+
+
+    .card-icon {
+
+      width: 58px;
+
+      height: 58px;
+
+      margin: 0 auto 18px;
+
+      border-radius: 50%;
+
+      background: var(--soft-green);
+
+      color: var(--dark-green);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 1.4rem;
+
+    }
+
+
+    .card h4 {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 1.5rem;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      text-align: center;
+
+      margin-bottom: 14px;
+
+      color: var(--dark-green);
+
+    }
+
+
+    .card p {
+
+      text-align: center;
+
+      color: var(--soft-text);
+
+      font-size: 0.96rem;
+
+    }
+
+
+    /* ================= LAND SECTION ================= */
+
+    .land-card {
+
+      overflow: hidden;
+
+      padding: 0;
+
+    }
+
+
+    .land-top {
+
+      background: var(--soft-green);
+
+      padding: 25px;
+
+      text-align: center;
+
+      font-size: 2rem;
+
+    }
+
+
+    .land-content {
+
+      padding: 30px;
+
+    }
+
+
+    .land-content h4 {
+
+      margin-bottom: 10px;
+
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact {
+
+      padding: 52px 40px;
+
+    }
+
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 28px;
+
+      align-items: start;
+
+    }
+
+
+    .contact-item {
+
+      text-align: center;
+
+      padding: 10px 6px;
+
+    }
+
+
+    .contact-icon {
+
+      width: 54px;
+
+      height: 54px;
+
+      margin: 0 auto 18px;
+
+      border-radius: 50%;
+
+      background: var(--soft-green);
+
+      color: var(--dark-green);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 1.25rem;
+
+    }
+
+
+    .contact-item h5 {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      font-size: 1.2rem;
+
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+
+      color: var(--dark-green);
+
+    }
+
+
+    .contact-item p,
+
+    .contact-item a {
+
+      color: var(--soft-text);
+
+      text-decoration: none;
+
+      font-size: 0.94rem;
+
+      line-height: 1.7;
+
+      word-break: break-word;
+
+    }
+
+
+    .contact-item a:hover {
+
+      color: var(--green);
+
+    }
+
+
+    /* ================= FORM ================= */
+
+    .form-box {
+
+      max-width: 700px;
+
+      margin: auto;
+
+      padding: 45px;
+
+    }
+
+
+    .form-group {
+
+      margin-bottom: 20px;
+
+      text-align: left;
+
+    }
+
+
+    .form-group label {
+
+      display: block;
+
+      font-size: 0.9rem;
+
+      font-weight: 600;
+
+      color: var(--dark-green);
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .form-group input,
+
+    .form-group select,
+
+    .form-group textarea {
+
+      width: 100%;
+
+      padding: 13px 16px;
+
+      border-radius: 12px;
+
+      border: 1px solid rgba(22, 59, 40, 0.18);
+
+      background: white;
+
+      color: var(--text);
+
+      font-family: 'Poppins', sans-serif;
+
+      font-size: 0.95rem;
+
+      outline: none;
+
+    }
+
+
+    .form-group textarea {
+
+      resize: vertical;
+
+      min-height: 110px;
+
+    }
+
+
+    .form-group input:focus,
+
+    .form-group select:focus,
+
+    .form-group textarea:focus {
+
+      border-color: var(--accent);
+
+      box-shadow: 0 0 0 3px rgba(111, 157, 104, 0.12);
+
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+
+      text-align: center;
+
+      padding: 42px 20px;
+
+      background: var(--deep-green);
+
+      color: #e5efe3;
+
+      margin-top: 60px;
+
+      font-size: 0.92rem;
+
+      letter-spacing: 0.4px;
+
+    }
+
+
+    .footer-disclaimer {
+
+      max-width: 900px;
+
+      margin: 0 auto 22px;
+
+      font-size: 0.79rem;
+
+      color: #b7c9b9;
+
+      line-height: 1.65;
+
+      text-align: justify;
+
+      border-top: 1px solid rgba(255,255,255,0.12);
+
+      padding-top: 20px;
+
+    }
+
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp-float {
+
+      position: fixed;
+
+      right: 18px;
+
+      bottom: 18px;
+
+      width: 64px;
+
+      height: 64px;
+
+      border-radius: 50%;
+
+      background: var(--light-green);
+
+      color: var(--dark-green);
+
+      border: 2px solid var(--dark-green);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      font-size: 28px;
+
+      text-decoration: none;
+
+      box-shadow: 0 14px 28px rgba(16, 43, 29, 0.18);
+
+      z-index: 2000;
+
+      transition: all 0.3s ease;
+
+    }
+
+
+    .whatsapp-float:hover {
+
+      transform: translateY(-3px) scale(1.05);
+
+      background: var(--dark-green);
+
+      color: white;
+
+    }
+
+
+    /* ================= ANIMATION ================= */
+
+    .fade-in {
+
+      opacity: 0;
+
+      transform: translateY(20px);
+
+      transition: all 0.8s ease;
+
+    }
+
+
+    .fade-in.appear {
+
+      opacity: 1;
+
+      transform: translateY(0);
+
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width: 900px) {
+
+      .contact-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 24px;
+
+      }
+
+    }
+
+
+    @media(max-width: 768px) {
+
+      .navbar {
+
+        padding: 14px;
+
+      }
+
+
+      nav {
+
+        gap: 15px;
+
+      }
+
+
+      nav a {
+
+        font-size: 0.9rem;
+
+      }
+
+
+      .brand-name {
+
+        font-size: 2.2rem;
+
+        letter-spacing: 4px;
+
+      }
+
+
+      .tagline {
+
+        font-size: 1.2rem;
+
+      }
+
+
+      .hero {
+
+        padding-top: 50px;
+
+      }
+
+
+      .hero-logo img {
+
+        width: 360px;
+
+      }
+
+
+      .about-box,
+
+      .form-box,
+
+      .contact {
+
+        padding: 30px;
+
+      }
+
+
+      .section-title h3 {
+
+        font-size: 1.9rem;
+
+      }
+
+    }
+
+
+    @media(max-width: 560px) {
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .brand-name {
+
+        font-size: 1.9rem;
+
+      }
+
+
+      .hero p {
+
+        font-size: 0.95rem;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <div class="navbar">
+
+    <nav>
+
+      <a href="#about" id="nav-about">About</a>
+
+      <a href="#lands" id="nav-lands">Gated Lands</a>
+
+      <a href="#services" id="nav-services">Services</a>
+
+      <a href="#contact" id="nav-contact">Contact</a>
+
+    </nav>
+
+
+    <div class="lang-switch">
+
+      <button class="lang-btn active"
+              onclick="setLanguage('en', this)">
+        ENG
+      </button>
+
+      <button class="lang-btn"
+              onclick="setLanguage('kn', this)">
+        KAN
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="launch-badge"
+       id="badge-en">
+
+    Gated Lands & Plotted Developments
+
+  </div>
+
+
+  <div class="launch-badge kannada"
+       id="badge-kn"
+       style="display:none;">
+
+    ಸಂಪೂರ್ಣ ಗೇಟೆಡ್ ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅಭಿವೃದ್ಧಿ
+
+  </div>
+
+
+  <div class="brand-name">
+
+    HASIRU ESTATE
+
+  </div>
+
+
+  <div id="tagline-en"
+       class="tagline">
+
+    Green Spaces. Thoughtful Living.
+
+  </div>
+
+
+  <div id="tagline-kn"
+       class="tagline kannada"
+       style="display:none;">
+
+    ಹಸಿರು ಪರಿಸರ. ಉತ್ತಮ ಜೀವನ.
+
+  </div>
+
+
+  <p id="hero-en">
+
+    Hasiru Estate focuses exclusively on gated land and plotted
+    development opportunities, helping individuals and families
+    discover thoughtfully planned spaces for living and investment.
+
+  </p>
+
+
+  <p id="hero-kn"
+     class="kannada"
+     style="display:none;">
+
+    ಹಸಿರು ಎಸ್ಟೇಟ್ ಸಂಪೂರ್ಣ ಗೇಟೆಡ್ ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅಭಿವೃದ್ಧಿ
+    ಅವಕಾಶಗಳ ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸಿದೆ. ವಾಸಸ್ಥಳ ಮತ್ತು ಹೂಡಿಕೆಗೆ
+    ಸೂಕ್ತವಾದ ಯೋಜಿತ ಸ್ಥಳಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ವ್ಯಕ್ತಿಗಳು ಮತ್ತು
+    ಕುಟುಂಬಗಳಿಗೆ ನಾವು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.
+
+  </p>
+
+
+  <!-- LOGO -->
+
+  <div class="hero-logo">
+
+    <img src="logo.png"
+         alt="Hasiru Estate Logo"
+         onerror="this.style.display='none'">
+
+  </div>
+
+
+  <a href="#contact"
+     class="btn"
+     id="hero-btn">
+
+    Explore Opportunities
+
+  </a>
+
+</section>
+
+
+
+<!-- ================= WHY HASIRU ================= -->
+
+<section class="fade-in">
+
+  <div class="section-title">
+
+    <h3 id="why-title-en">
+
+      Why Choose Hasiru Estate
+
+    </h3>
+
+
+    <h3 id="why-title-kn"
+        class="kannada"
+        style="display:none;">
+
+      ಹಸಿರು ಎಸ್ಟೇಟ್ ಅನ್ನು ಏಕೆ ಆರಿಸಬೇಕು
+
+    </h3>
+
+
+    <p id="why-sub-en">
+
+      A focused approach to gated land and plotted developments.
+
+    </p>
+
+
+    <p id="why-sub-kn"
+       class="kannada"
+       style="display:none;">
+
+      ಗೇಟೆಡ್ ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅಭಿವೃದ್ಧಿಗೆ ಕೇಂದ್ರೀಕೃತವಾದ ವಿಧಾನ.
+
+    </p>
+
+  </div>
+
+
+  <div class="why-grid">
+
+
+    <div class="card">
+
+      <div class="card-icon">🌿</div>
+
+      <h4 id="w1-en">
+
+        Gated Developments
+
+      </h4>
+
+      <h4 id="w1-kn"
+          class="kannada"
+          style="display:none;">
+
+        ಗೇಟೆಡ್ ಅಭಿವೃದ್ಧಿಗಳು
+
+      </h4>
+
+
+      <p id="w1p-en">
+
+        Focused on gated land and plotted developments
+        designed with planned layouts and community-oriented spaces.
+
+      </p>
+
+
+      <p id="w1p-kn"
+         class="kannada"
+         style="display:none;">
+
+        ಯೋಜಿತ ಲೇಔಟ್‌ಗಳು ಮತ್ತು ಸಮುದಾಯ ಕೇಂದ್ರೀಕೃತ ಸ್ಥಳಗಳೊಂದಿಗೆ
+        ಅಭಿವೃದ್ಧಿಪಡಿಸಲಾದ ಗೇಟೆಡ್ ಭೂಮಿ ಮತ್ತು ನಿವೇಶನಗಳ ಮೇಲೆ ಗಮನ.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+      <div class="card-icon">🏡</div>
+
+      <h4 id="w2-en">
+
+        Thoughtful Locations
+
+      </h4>
+
+
+      <h4 id="w2-kn"
+          class="kannada"
+          style="display:none;">
+
+        ಉತ್ತಮ ಸ್ಥಳಗಳು
+
+      </h4>
+
+
+      <p id="w2p-en">
+
+        We focus on opportunities in locations selected
+        for accessibility, surroundings and future potential.
+
+      </p>
+
+
+      <p id="w2p-kn"
+         class="kannada"
+         style="display:none;">
+
+        ಸಂಪರ್ಕ, ಸುತ್ತಮುತ್ತಲಿನ ಪರಿಸರ ಮತ್ತು ಭವಿಷ್ಯದ ಸಾಧ್ಯತೆಗಳನ್ನು
+        ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡು ಸ್ಥಳಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುತ್ತದೆ.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+      <div class="card-icon">🤝</div>
+
+      <h4 id="w3-en">
+
+        Personal Assistance
+
+      </h4>
+
+
+      <h4 id="w3-kn"
+          class="kannada"
+          style="display:none;">
+
+        ವೈಯಕ್ತಿಕ ಸಹಾಯ
+
+      </h4>
+
+
+      <p id="w3p-en">
+
+        We help interested buyers understand available
+        opportunities and connect with the relevant team.
+
+      </p>
+
+
+      <p id="w3p-kn"
+         class="kannada"
+         style="display:none;">
+
+        ಆಸಕ್ತ ಖರೀದಿದಾರರಿಗೆ ಲಭ್ಯವಿರುವ ಅವಕಾಶಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು
+        ಮತ್ತು ಸಂಬಂಧಿತ ತಂಡದೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="section-title">
+
+    <h3 id="about-title-en">
+
+      About Hasiru Estate
+
+    </h3>
+
+
+    <h3 id="about-title-kn"
+        class="kannada"
+        style="display:none;">
+
+      ಹಸಿರು ಎಸ್ಟೇಟ್ ಕುರಿತು
+
+    </h3>
+
+
+    <p id="about-sub-en">
+
+      Focused exclusively on land and plotted developments.
+
+    </p>
+
+
+    <p id="about-sub-kn"
+       class="kannada"
+       style="display:none;">
+
+      ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅಭಿವೃದ್ಧಿಗಳ ಮೇಲೆ ಮಾತ್ರ ಕೇಂದ್ರೀಕೃತವಾಗಿದೆ.
+
+    </p>
+
+  </div>
+
+
+  <div class="about-box">
+
+
+    <p id="about1-en">
+
+      Hasiru Estate is a real-estate company focused on
+      gated land and plotted development opportunities.
+
+    </p>
+
+
+    <p id="about1-kn"
+       class="kannada"
+       style="display:none;">
+
+      ಹಸಿರು ಎಸ್ಟೇಟ್ ಗೇಟೆಡ್ ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅಭಿವೃದ್ಧಿ
+      ಅವಕಾಶಗಳ ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸಿರುವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಂಸ್ಥೆಯಾಗಿದೆ.
+
+    </p>
+
+
+    <br>
+
+
+    <p id="about2-en">
+
+      Our focus is on presenting land opportunities in
+      thoughtfully planned and gated developments for
+      individuals, families and buyers looking for suitable plots.
+
+    </p>
+
+
+    <p id="about2-kn"
+       class="kannada"
+       style="display:none;">
+
+      ವ್ಯಕ್ತಿಗಳು, ಕುಟುಂಬಗಳು ಮತ್ತು ಸೂಕ್ತ ನಿವೇಶನಗಳನ್ನು ಹುಡುಕುತ್ತಿರುವ
+      ಖರೀದಿದಾರರಿಗೆ ಯೋಜಿತ ಮತ್ತು ಗೇಟೆಡ್ ಅಭಿವೃದ್ಧಿಗಳಲ್ಲಿನ
+      ಭೂಮಿ ಅವಕಾಶಗಳನ್ನು ಪರಿಚಯಿಸುವುದು ನಮ್ಮ ಮುಖ್ಯ ಗಮನವಾಗಿದೆ.
+
+    </p>
+
+
+    <br>
+
+
+    <p id="about3-en">
+
+      We aim to make the process of exploring land opportunities
+      simple, transparent and professional.
+
+    </p>
+
+
+    <p id="about3-kn"
+       class="kannada"
+       style="display:none;">
+
+      ಭೂಮಿ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸರಳ,
+      ಪಾರದರ್ಶಕ ಮತ್ತು ವೃತ್ತಿಪರವಾಗಿಸುವುದು ನಮ್ಮ ಉದ್ದೇಶವಾಗಿದೆ.
+
+    </p>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= GATED LANDS ================= -->
+
+<section id="lands"
+         class="fade-in">
+
+  <div class="section-title">
+
+    <h3 id="lands-title-en">
+
+      Our Focus
+
+    </h3>
+
+
+    <h3 id="lands-title-kn"
+        class="kannada"
+        style="display:none;">
+
+      ನಮ್ಮ ಮುಖ್ಯ ಗಮನ
+
+    </h3>
+
+
+    <p id="lands-sub-en">
+
+      Gated land opportunities designed around planned development.
+
+    </p>
+
+
+    <p id="lands-sub-kn"
+       class="kannada"
+       style="display:none;">
+
+      ಯೋಜಿತ ಅಭಿವೃದ್ಧಿಯನ್ನು ಆಧರಿಸಿದ ಗೇಟೆಡ್ ಭೂಮಿ ಅವಕಾಶಗಳು.
+
+    </p>
+
+  </div>
+
+
+  <div class="land-grid">
+
+
+    <div class="card land-card">
+
+      <div class="land-top">
+
+        🌳
+
+      </div>
+
+      <div class="land-content">
+
+        <h4 id="land1-en">
+
+          Gated Plots
+
+        </h4>
+
+
+        <h4 id="land1-kn"
+            class="kannada"
+            style="display:none;">
+
+          ಗೇಟೆಡ್ ನಿವೇಶನಗಳು
+
+        </h4>
+
+
+        <p id="land1p-en">
+
+          Plotted developments within gated communities
+          with planned layouts and designated spaces.
+
+        </p>
+
+
+        <p id="land1p-kn"
+           class="kannada"
+           style="display:none;">
+
+          ಯೋಜಿತ ಲೇಔಟ್‌ಗಳು ಮತ್ತು ನಿಗದಿತ ಸ್ಥಳಗಳೊಂದಿಗೆ
+          ಗೇಟೆಡ್ ಸಮುದಾಯಗಳಲ್ಲಿನ ನಿವೇಶನ ಅಭಿವೃದ್ಧಿಗಳು.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card land-card">
+
+      <div class="land-top">
+
+        🏡
+
+      </div>
+
+      <div class="land-content">
+
+        <h4 id="land2-en">
+
+          Residential Land
+
+        </h4>
+
+
+        <h4 id="land2-kn"
+            class="kannada"
+            style="display:none;">
+
+          ವಸತಿ ಭೂಮಿ
+
+        </h4>
+
+
+        <p id="land2p-en">
+
+          Land opportunities suitable for those looking
+          to plan a future home or residential property.
+
+        </p>
+
+
+        <p id="land2p-kn"
+           class="kannada"
+           style="display:none;">
+
+          ಭವಿಷ್ಯದ ಮನೆ ಅಥವಾ ವಸತಿ ಆಸ್ತಿಯನ್ನು ಯೋಜಿಸಲು
+          ಬಯಸುವವರಿಗೆ ಸೂಕ್ತವಾದ ಭೂಮಿ ಅವಕಾಶಗಳು.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="card land-card">
+
+      <div class="land-top">
+
+        🌱
+
+      </div>
+
+      <div class="land-content">
+
+        <h4 id="land3-en">
+
+          Land Opportunities
+
+        </h4>
+
+
+        <h4 id="land3-kn"
+            class="kannada"
+            style="display:none;">
+
+          ಭೂಮಿ ಅವಕಾಶಗಳು
+
+        </h4>
+
+
+        <p id="land3p-en">
+
+          Carefully presented opportunities based on
+          availability, location and development details.
+
+        </p>
+
+
+        <p id="land3p-kn"
+           class="kannada"
+           style="display:none;">
+
+          ಲಭ್ಯತೆ, ಸ್ಥಳ ಮತ್ತು ಅಭಿವೃದ್ಧಿ ವಿವರಗಳ ಆಧಾರದ ಮೇಲೆ
+          ಆಯ್ಕೆಮಾಡಿ ಪರಿಚಯಿಸಲಾಗುವ ಭೂಮಿ ಅವಕಾಶಗಳು.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+  <div class="section-title">
+
+    <h3 id="services-title-en">
+
+      Our Services
+
+    </h3>
+
+
+    <h3 id="services-title-kn"
+        class="kannada"
+        style="display:none;">
+
+      ನಮ್ಮ ಸೇವೆಗಳು
+
+    </h3>
+
+
+    <p id="services-sub-en">
+
+      Supporting buyers through the land discovery process.
+
+    </p>
+
+
+    <p id="services-sub-kn"
+       class="kannada"
+       style="display:none;">
+
+      ಭೂಮಿ ಹುಡುಕಾಟ ಪ್ರಕ್ರಿಯೆಯಲ್ಲಿ ಖರೀದಿದಾರರಿಗೆ ಸಹಾಯ.
+
+    </p>
+
+  </div>
+
+
+  <div class="services">
+
+
+    <div class="card">
+
+      <div class="card-icon">📍</div>
+
+      <h4 id="s1-en">
+
+        Land Opportunities
+
+      </h4>
+
+
+      <h4 id="s1-kn"
+          class="kannada"
+          style="display:none;">
+
+        ಭೂಮಿ ಅವಕಾಶಗಳು
+
+      </h4>
+
+
+      <p id="s1p-en">
+
+        Explore available gated land and plotted development
+        opportunities based on your requirements.
+
+      </p>
+
+
+      <p id="s1p-kn"
+         class="kannada"
+         style="display:none;">
+
+        ನಿಮ್ಮ ಅವಶ್ಯಕತೆಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಲಭ್ಯವಿರುವ ಗೇಟೆಡ್
+        ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+      <div class="card-icon">📋</div>
+
+      <h4 id="s2-en">
+
+        Project Information
+
+      </h4>
+
+
+      <h4 id="s2-kn"
+          class="kannada"
+          style="display:none;">
+
+        ಯೋಜನೆಯ ಮಾಹಿತಿ
+
+      </h4>
+
+
+      <p id="s2p-en">
+
+        Receive available information about location,
+        development features and plot availability.
+
+      </p>
+
+
+      <p id="s2p-kn"
+         class="kannada"
+         style="display:none;">
+
+        ಸ್ಥಳ, ಅಭಿವೃದ್ಧಿ ವೈಶಿಷ್ಟ್ಯಗಳು ಮತ್ತು ನಿವೇಶನ ಲಭ್ಯತೆಯ
+        ಕುರಿತು ಲಭ್ಯವಿರುವ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಿರಿ.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+      <div class="card-icon">🤝</div>
+
+      <h4 id="s3-en">
+
+        Buyer Assistance
+
+      </h4>
+
+
+      <h4 id="s3-kn"
+          class="kannada"
+          style="display:none;">
+
+        ಖರೀದಿದಾರರ ಸಹಾಯ
+
+      </h4>
+
+
+      <p id="s3p-en">
+
+        We assist interested buyers in connecting with
+        the appropriate sales or project representatives.
+
+      </p>
+
+
+      <p id="s3p-kn"
+         class="kannada"
+         style="display:none;">
+
+        ಆಸಕ್ತ ಖರೀದಿದಾರರನ್ನು ಸಂಬಂಧಿತ ಮಾರಾಟ ಅಥವಾ
+        ಯೋಜನಾ ಪ್ರತಿನಿಧಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= ENQUIRY ================= -->
+
+<section class="fade-in"
+         id="contact">
+
+  <div class="section-title">
+
+    <h3 id="form-title-en">
+
+      Enquire About Land
+
+    </h3>
+
+
+    <h3 id="form-title-kn"
+        class="kannada"
+        style="display:none;">
+
+      ಭೂಮಿಯ ಕುರಿತು ವಿಚಾರಿಸಿ
+
+    </h3>
+
+
+    <p id="form-sub-en">
+
+      Tell us what type of land or plot you are looking for.
+
+    </p>
+
+
+    <p id="form-sub-kn"
+       class="kannada"
+       style="display:none;">
+
+      ನೀವು ಹುಡುಕುತ್ತಿರುವ ಭೂಮಿ ಅಥವಾ ನಿವೇಶನದ ವಿವರಗಳನ್ನು ನಮಗೆ ತಿಳಿಸಿ.
+
+    </p>
+
+  </div>
+
+
+  <div class="form-box">
+
+    <form onsubmit="sendWhatsApp(event)">
+
+
+      <div class="form-group">
+
+        <label id="label-name-en"
+               for="name">
+
+          Name
+
+        </label>
+
+
+        <label id="label-name-kn"
+               for="name"
+               class="kannada"
+               style="display:none;">
+
+          ಹೆಸರು
+
+        </label>
+
+
+        <input type="text"
+               id="name"
+               required
+               placeholder="Enter your name">
+
+      </div>
+
+
+
+      <div class="form-group">
+
+        <label id="label-phone-en"
+               for="phone">
+
+          Phone / WhatsApp
+
+        </label>
+
+
+        <label id="label-phone-kn"
+               for="phone"
+               class="kannada"
+               style="display:none;">
+
+          ದೂರವಾಣಿ / ವಾಟ್ಸಾಪ್
+
+        </label>
+
+
+        <input type="tel"
+               id="phone"
+               required
+               placeholder="Enter your phone number">
+
+      </div>
+
+
+
+      <div class="form-group">
+
+        <label id="label-type-en"
+               for="type">
+
+          I am looking for
+
+        </label>
+
+
+        <label id="label-type-kn"
+               for="type"
+               class="kannada"
+               style="display:none;">
+
+          ನಾನು ಹುಡುಕುತ್ತಿರುವುದು
+
+        </label>
+
+
+        <select id="type">
+
+          <option value="Gated Plot">
+
+            Gated Plot
+
+          </option>
+
+          <option value="Residential Land">
+
+            Residential Land
+
+          </option>
+
+          <option value="Other Land Opportunity">
+
+            Other Land Opportunity
+
+          </option>
+
+        </select>
+
+      </div>
+
+
+
+      <div class="form-group">
+
+        <label id="label-location-en"
+               for="location">
+
+          Preferred Location
+
+        </label>
+
+
+        <label id="label-location-kn"
+               for="location"
+               class="kannada"
+               style="display:none;">
+
+          ಇಷ್ಟದ ಸ್ಥಳ
+
+        </label>
+
+
+        <input type="text"
+               id="location"
+               placeholder="Example: Mysore">
+
+      </div>
+
+
+
+      <div class="form-group">
+
+        <label id="label-message-en"
+               for="message">
+
+          Additional Requirements
+
+        </label>
+
+
+        <label id="label-message-kn"
+               for="message"
+               class="kannada"
+               style="display:none;">
+
+          ಹೆಚ್ಚುವರಿ ಅವಶ್ಯಕತೆಗಳು
+
+        </label>
+
+
+        <textarea id="message"
+                  placeholder="Tell us your requirements"></textarea>
+
+      </div>
+
+
+
+      <button type="submit"
+              class="btn"
+              style="width:100%; border:none; cursor:pointer;"
+              id="form-submit">
+
+        Send Enquiry
+
+      </button>
+
+
+    </form>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= DIRECT CONTACT ================= -->
+
+<section>
+
+  <div class="section-title">
+
+    <h3 id="contact-info-title-en">
+
+      Contact Hasiru Estate
+
+    </h3>
+
+
+    <h3 id="contact-info-title-kn"
+        class="kannada"
+        style="display:none;">
+
+      ಹಸಿರು ಎಸ್ಟೇಟ್ ಸಂಪರ್ಕಿಸಿ
+
+    </h3>
+
+
+    <p id="contact-sub-en">
+
+      Contact us for available gated land and plot opportunities.
+
+    </p>
+
+
+    <p id="contact-sub-kn"
+       class="kannada"
+       style="display:none;">
+
+      ಲಭ್ಯವಿರುವ ಗೇಟೆಡ್ ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅವಕಾಶಗಳಿಗಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.
+
+    </p>
+
+  </div>
+
+
+  <div class="contact">
+
+
+    <div class="contact-grid">
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">☎</div>
+
+        <h5 id="phone-heading-en">
+
+          Phone
+
+        </h5>
+
+
+        <h5 id="phone-heading-kn"
+            class="kannada"
+            style="display:none;">
+
+          ದೂರವಾಣಿ
+
+        </h5>
+
+
+        <!-- CHANGE THIS NUMBER -->
+
+        <a href="tel:+919019746649">
+
+          +91 90197 46649
+
+        </a>
+
+      </div>
+
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">✉</div>
+
+        <h5 id="email-heading-en">
+
+          Email
+
+        </h5>
+
+
+        <h5 id="email-heading-kn"
+            class="kannada"
+            style="display:none;">
+
+          ಇಮೇಲ್
+
+        </h5>
+
+
+        <!-- CHANGE THIS EMAIL -->
+
+        <a href="mailto:hasiruestate@gmail.com">
+
+          hasiruestate@gmail.com
+
+        </a>
+
+      </div>
+
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">⌂</div>
+
+        <h5 id="location-heading-en">
+
+          Location
+
+        </h5>
+
+
+        <h5 id="location-heading-kn"
+            class="kannada"
+            style="display:none;">
+
+          ಸ್ಥಳ
+
+        </h5>
+
+
+        <p id="location-en">
+
+          Mysore, Karnataka, India
+
+        </p>
+
+
+        <p id="location-kn"
+           class="kannada"
+           style="display:none;">
+
+          ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತ
+
+        </p>
+
+      </div>
+
+
+
+      <div class="contact-item">
+
+        <div class="contact-icon">◎</div>
+
+        <h5 id="instagram-heading-en">
+
+          Instagram
+
+        </h5>
+
+
+        <h5 id="instagram-heading-kn"
+            class="kannada"
+            style="display:none;">
+
+          ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್
+
+        </h5>
+
+
+        <!-- CHANGE INSTAGRAM LINK -->
+
+        <a href="#">
+
+          @HasiruEstate
+
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+  <div class="footer-disclaimer"
+       id="disclaimer-en">
+
+    <strong>Disclaimer:</strong>
+
+    Hasiru Estate provides information regarding available
+    land and plotted development opportunities. Property
+    availability, approvals, dimensions, development features,
+    pricing and other details may change and should be independently
+    verified before making any decision or transaction.
+    Hasiru Estate does not provide financial, legal, tax or
+    investment advice and does not guarantee returns or future
+    appreciation. All transactions are subject to the terms
+    and documentation agreed between the concerned parties.
+
+  </div>
+
+
+  <div class="footer-disclaimer kannada"
+       id="disclaimer-kn"
+       style="display:none;">
+
+    <strong>ಹಕ್ಕುತ್ಯಾಗ:</strong>
+
+    ಹಸಿರು ಎಸ್ಟೇಟ್ ಲಭ್ಯವಿರುವ ಭೂಮಿ ಮತ್ತು ನಿವೇಶನ ಅಭಿವೃದ್ಧಿ
+    ಅವಕಾಶಗಳ ಕುರಿತು ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸುತ್ತದೆ. ಆಸ್ತಿಯ ಲಭ್ಯತೆ,
+    ಅನುಮೋದನೆಗಳು, ಅಳತೆಗಳು, ಅಭಿವೃದ್ಧಿ ವೈಶಿಷ್ಟ್ಯಗಳು, ಬೆಲೆ ಮತ್ತು
+    ಇತರ ವಿವರಗಳು ಬದಲಾಗಬಹುದು. ಯಾವುದೇ ನಿರ್ಧಾರ ಅಥವಾ ವ್ಯವಹಾರಕ್ಕೂ
+    ಮೊದಲು ಸಂಬಂಧಿತ ವಿವರಗಳನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು.
+    ಹಸಿರು ಎಸ್ಟೇಟ್ ಹಣಕಾಸು, ಕಾನೂನು, ತೆರಿಗೆ ಅಥವಾ ಹೂಡಿಕೆ ಸಲಹೆ
+    ನೀಡುವುದಿಲ್ಲ ಮತ್ತು ಭವಿಷ್ಯದ ಆದಾಯ ಅಥವಾ ಮೌಲ್ಯವರ್ಧನೆಯನ್ನು
+    ಖಾತರಿಪಡಿಸುವುದಿಲ್ಲ.
+
+  </div>
+
+
+  <p id="footer-en">
+
+    © 2026 HASIRU ESTATE. All rights reserved.
+
+  </p>
+
+
+  <p id="footer-kn"
+     class="kannada"
+     style="display:none;">
+
+    © 2026 ಹಸಿರು ಎಸ್ಟೇಟ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+
+  </p>
+
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP BUTTON ================= -->
+
+<a href="https://wa.me/919019746649"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp">
+
+  <svg width="31"
+       height="31"
+       viewBox="0 0 24 24"
+       fill="currentColor"
+       xmlns="http://www.w3.org/2000/svg">
+
+    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.92 11.92 0 0 0 5.81 1.48h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.4ZM12.07 21.7a9.77 9.77 0 0 1-4.97-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.73 9.73 0 0 1-1.49-5.16c0-5.39 4.38-9.77 9.77-9.77 2.61 0 5.07 1.02 6.92 2.86a9.7 9.7 0 0 1 2.85 6.91c0 5.39-4.38 9.77-9.77 9.77Zm5.36-7.33c-.29-.14-1.71-.84-1.98-.94-.27-.1-.46-.14-.66.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.77.36-.27.29-1.01.99-1.01 2.42 0 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.09 4.89 4.33.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33Z"/>
+
+  </svg>
+
+</a>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+function setLanguage(lang, btn) {
+
+
+  document
+    .querySelectorAll('.lang-btn')
+    .forEach(button => button.classList.remove('active'));
+
+
+  if (btn) {
+
+    btn.classList.add('active');
+
+  }
+
+
+  const ids = [
+
+    'badge',
+
+    'tagline',
+
+    'hero',
+
+    'why-title',
+
+    'why-sub',
+
+    'w1',
+
+    'w1p',
+
+    'w2',
+
+    'w2p',
+
+    'w3',
+
+    'w3p',
+
+    'about-title',
+
+    'about-sub',
+
+    'about1',
+
+    'about2',
+
+    'about3',
+
+    'lands-title',
+
+    'lands-sub',
+
+    'land1',
+
+    'land1p',
+
+    'land2',
+
+    'land2p',
+
+    'land3',
+
+    'land3p',
+
+    'services-title',
+
+    'services-sub',
+
+    's1',
+
+    's1p',
+
+    's2',
+
+    's2p',
+
+    's3',
+
+    's3p',
+
+    'form-title',
+
+    'form-sub',
+
+    'label-name',
+
+    'label-phone',
+
+    'label-type',
+
+    'label-location',
+
+    'label-message',
+
+    'form-submit',
+
+    'contact-info-title',
+
+    'contact-sub',
+
+    'phone-heading',
+
+    'email-heading',
+
+    'location-heading',
+
+    'instagram-heading',
+
+    'location',
+
+    'disclaimer',
+
+    'footer'
+
+  ];
+
+
+  ids.forEach(id => {
+
+
+    const en = document.getElementById(id + '-en');
+
+    const kn = document.getElementById(id + '-kn');
+
+
+    if (en) {
+
+      en.style.display = lang === 'en' ? '' : 'none';
+
+    }
+
+
+    if (kn) {
+
+      kn.style.display = lang === 'kn' ? '' : 'none';
+
+    }
+
+
+  });
+
+
+  const navAbout =
+    document.getElementById('nav-about');
+
+
+  const navLands =
+    document.getElementById('nav-lands');
+
+
+  const navServices =
+    document.getElementById('nav-services');
+
+
+  const navContact =
+    document.getElementById('nav-contact');
+
+
+  const heroBtn =
+    document.getElementById('hero-btn');
+
+
+  if (navAbout)
+
+    navAbout.textContent =
+      lang === 'kn' ? 'ಕುರಿತು' : 'About';
+
+
+  if (navLands)
+
+    navLands.textContent =
+      lang === 'kn' ? 'ಗೇಟೆಡ್ ಭೂಮಿ' : 'Gated Lands';
+
+
+  if (navServices)
+
+    navServices.textContent =
+      lang === 'kn' ? 'ಸೇವೆಗಳು' : 'Services';
+
+
+  if (navContact)
+
+    navContact.textContent =
+      lang === 'kn' ? 'ಸಂಪರ್ಕ' : 'Contact';
+
+
+  if (heroBtn)
+
+    heroBtn.textContent =
+      lang === 'kn'
+        ? 'ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ'
+        : 'Explore Opportunities';
+
+
+  document.documentElement.lang =
+    lang === 'kn' ? 'kn' : 'en';
+
+
+  localStorage.setItem('hasiru_estate_lang', lang);
+
+}
+
+
+
+/* ================= WHATSAPP FORM ================= */
+
+function sendWhatsApp(event) {
+
+  event.preventDefault();
+
+
+  const name =
+    document.getElementById('name').value;
+
+
+  const phone =
+    document.getElementById('phone').value;
+
+
+  const type =
+    document.getElementById('type').value;
+
+
+  const location =
+    document.getElementById('location').value;
+
+
+  const message =
+    document.getElementById('message').value;
+
+
+  const text =
+
+    "Hello Hasiru Estate,%0A%0A" +
+
+    "Name: " + encodeURIComponent(name) + "%0A" +
+
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+
+    "Looking for: " + encodeURIComponent(type) + "%0A" +
+
+    "Preferred Location: " +
+    encodeURIComponent(location) + "%0A" +
+
+    "Requirements: " +
+    encodeURIComponent(message);
+
+
+  window.open(
+
+    "https://wa.me/919019746649?text=" + text,
+
+    "_blank"
+
+  );
+
+}
+
+
+
+/* ================= PAGE LOAD ================= */
+
+window.addEventListener('DOMContentLoaded', () => {
+
+
+  const savedLang =
+
+    localStorage.getItem('hasiru_estate_lang') || 'en';
+
+
+  const activeBtn =
+
+    document.querySelector(
+      `.lang-btn[onclick*="${savedLang}"]`
+    );
+
+
+  setLanguage(savedLang, activeBtn);
+
+
+
+  const observer =
+
+    new IntersectionObserver(
+
+      (entries, obs) => {
+
+
+        entries.forEach(entry => {
+
+
+          if (entry.isIntersecting) {
+
+
+            entry.target.classList.add('appear');
+
+
+            obs.unobserve(entry.target);
+
+
+          }
+
+        });
+
+
+      },
+
+      {
+        threshold: 0.1
+      }
+
+    );
+
+
+  document
+    .querySelectorAll('.fade-in')
+    .forEach(element =>
+      observer.observe(element)
+    );
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>
