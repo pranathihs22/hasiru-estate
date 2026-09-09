@@ -16,11 +16,12 @@
 
   <meta name="author" content="Hasiru Estate">
 
+  <meta name="theme-color" content="#163b28">
+
   <link rel="icon" type="image/png" href="logo.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"
@@ -28,6 +29,8 @@
 
 
   <style>
+
+    /* ================= ROOT ================= */
 
     :root {
 
@@ -46,8 +49,13 @@
 
       --white: #ffffff;
 
+      --shadow: 0 14px 34px rgba(22, 59, 40, 0.08);
+      --shadow-hover: 0 20px 42px rgba(22, 59, 40, 0.14);
+
     }
 
+
+    /* ================= RESET ================= */
 
     * {
       margin: 0;
@@ -58,6 +66,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
 
@@ -65,7 +74,9 @@
 
       font-family: 'Poppins', sans-serif;
 
-      background: var(--pastel-green);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 30%),
+        var(--pastel-green);
 
       color: var(--text);
 
@@ -73,6 +84,13 @@
 
       -webkit-font-smoothing: antialiased;
 
+      overflow-x: hidden;
+
+    }
+
+
+    body.menu-open {
+      overflow: hidden;
     }
 
 
@@ -95,11 +113,22 @@
 
       z-index: 1000;
 
-      background: rgba(238, 246, 235, 0.96);
+      background: rgba(238, 246, 235, 0.94);
 
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
+
+      -webkit-backdrop-filter: blur(14px);
 
       border-bottom: 1px solid rgba(22, 59, 40, 0.10);
+
+      transition: box-shadow 0.3s ease;
+
+    }
+
+
+    header.scrolled {
+
+      box-shadow: 0 8px 30px rgba(16, 43, 29, 0.10);
 
     }
 
@@ -142,6 +171,8 @@
 
     nav a {
 
+      position: relative;
+
       text-decoration: none;
 
       color: var(--dark-green);
@@ -152,12 +183,46 @@
 
       transition: 0.3s;
 
+      padding: 4px 0;
+
     }
 
 
-    nav a:hover {
+    nav a::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+
+      bottom: -3px;
+
+      width: 0;
+
+      height: 2px;
+
+      background: var(--accent);
+
+      transition: width 0.3s ease;
+
+    }
+
+
+    nav a:hover,
+
+    nav a.active {
 
       color: var(--accent);
+
+    }
+
+
+    nav a:hover::after,
+
+    nav a.active::after {
+
+      width: 100%;
 
     }
 
@@ -194,6 +259,8 @@
       box-shadow: 0 4px 12px rgba(16, 43, 29, 0.08);
 
       transition: 0.3s;
+
+      font-family: 'Poppins', sans-serif;
 
     }
 
@@ -363,6 +430,8 @@
 
       transition: 0.3s ease;
 
+      border: none;
+
     }
 
 
@@ -373,6 +442,19 @@
       background: var(--green);
 
       box-shadow: 0 15px 30px rgba(40, 92, 58, 0.25);
+
+    }
+
+
+    .btn:focus-visible,
+
+    .lang-btn:focus-visible,
+
+    nav a:focus-visible {
+
+      outline: 3px solid rgba(111, 157, 104, 0.45);
+
+      outline-offset: 4px;
 
     }
 
@@ -439,13 +521,13 @@
 
     .form-box {
 
-      background: var(--light-green);
+      background: rgba(238, 246, 235, 0.90);
 
       border-radius: 28px;
 
       border: 1px solid rgba(22, 59, 40, 0.08);
 
-      box-shadow: 0 14px 34px rgba(22, 59, 40, 0.08);
+      box-shadow: var(--shadow);
 
     }
 
@@ -498,10 +580,12 @@
 
       transform: translateY(-6px);
 
-      box-shadow: 0 20px 42px rgba(22, 59, 40, 0.13);
+      box-shadow: var(--shadow-hover);
 
     }
 
+
+    /* ================= STANDARD ICONS ================= */
 
     .card-icon {
 
@@ -523,7 +607,24 @@
 
       justify-content: center;
 
-      font-size: 1.4rem;
+    }
+
+
+    .card-icon svg {
+
+      width: 27px;
+
+      height: 27px;
+
+      stroke: currentColor;
+
+      fill: none;
+
+      stroke-width: 1.8;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
 
     }
 
@@ -579,7 +680,32 @@
 
       text-align: center;
 
-      font-size: 2rem;
+      color: var(--dark-green);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .land-top svg {
+
+      width: 40px;
+
+      height: 40px;
+
+      stroke: currentColor;
+
+      fill: none;
+
+      stroke-width: 1.5;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
 
     }
 
@@ -649,7 +775,24 @@
 
       justify-content: center;
 
-      font-size: 1.25rem;
+    }
+
+
+    .contact-icon svg {
+
+      width: 24px;
+
+      height: 24px;
+
+      stroke: currentColor;
+
+      fill: none;
+
+      stroke-width: 1.8;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
 
     }
 
@@ -758,6 +901,8 @@
 
       outline: none;
 
+      transition: 0.25s ease;
+
     }
 
 
@@ -835,9 +980,9 @@
 
       bottom: 18px;
 
-      width: 64px;
+      width: 62px;
 
-      height: 64px;
+      height: 62px;
 
       border-radius: 50%;
 
@@ -853,8 +998,6 @@
 
       justify-content: center;
 
-      font-size: 28px;
-
       text-decoration: none;
 
       box-shadow: 0 14px 28px rgba(16, 43, 29, 0.18);
@@ -862,6 +1005,17 @@
       z-index: 2000;
 
       transition: all 0.3s ease;
+
+    }
+
+
+    .whatsapp-float svg {
+
+      width: 30px;
+
+      height: 30px;
+
+      fill: currentColor;
 
     }
 
@@ -877,6 +1031,81 @@
     }
 
 
+    /* ================= SCROLL TOP ================= */
+
+    .scroll-top {
+
+      position: fixed;
+
+      right: 20px;
+
+      bottom: 92px;
+
+      width: 44px;
+
+      height: 44px;
+
+      border: 1px solid rgba(22, 59, 40, 0.15);
+
+      border-radius: 50%;
+
+      background: var(--light-green);
+
+      color: var(--dark-green);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      cursor: pointer;
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transform: translateY(10px);
+
+      transition: 0.3s ease;
+
+      z-index: 1999;
+
+      box-shadow: 0 8px 20px rgba(16, 43, 29, 0.12);
+
+    }
+
+
+    .scroll-top.show {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      transform: translateY(0);
+
+    }
+
+
+    .scroll-top svg {
+
+      width: 20px;
+
+      height: 20px;
+
+      stroke: currentColor;
+
+      fill: none;
+
+      stroke-width: 2;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
+
+    }
+
+
     /* ================= ANIMATION ================= */
 
     .fade-in {
@@ -885,7 +1114,7 @@
 
       transform: translateY(20px);
 
-      transition: all 0.8s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
 
     }
 
@@ -919,6 +1148,8 @@
       .navbar {
 
         padding: 14px;
+
+        gap: 15px;
 
       }
 
@@ -989,6 +1220,27 @@
 
     @media(max-width: 560px) {
 
+      .navbar {
+
+        padding: 12px;
+
+      }
+
+
+      nav {
+
+        gap: 12px;
+
+      }
+
+
+      nav a {
+
+        font-size: 0.82rem;
+
+      }
+
+
       .contact-grid {
 
         grid-template-columns: 1fr;
@@ -1000,12 +1252,96 @@
 
         font-size: 1.9rem;
 
+        letter-spacing: 3px;
+
+      }
+
+
+      .tagline {
+
+        font-size: 1.05rem;
+
       }
 
 
       .hero p {
 
         font-size: 0.95rem;
+
+      }
+
+
+      .hero-logo {
+
+        margin: 30px 0;
+
+      }
+
+
+      .hero-logo img {
+
+        width: 310px;
+
+      }
+
+
+      section {
+
+        padding: 55px 18px;
+
+      }
+
+
+      .about-box,
+
+      .form-box,
+
+      .contact {
+
+        padding: 24px;
+
+      }
+
+
+      .whatsapp-float {
+
+        width: 56px;
+
+        height: 56px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+      }
+
+
+      .scroll-top {
+
+        right: 20px;
+
+        bottom: 82px;
+
+      }
+
+    }
+
+
+    /* ================= REDUCED MOTION ================= */
+
+    @media(prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
 
       }
 
@@ -1021,11 +1357,11 @@
 
 <!-- ================= HEADER ================= -->
 
-<header>
+<header id="site-header">
 
   <div class="navbar">
 
-    <nav>
+    <nav aria-label="Main navigation">
 
       <a href="#about" id="nav-about">About</a>
 
@@ -1190,15 +1526,33 @@
   <div class="why-grid">
 
 
+    <!-- GATED DEVELOPMENT -->
+
     <div class="card">
 
-      <div class="card-icon">🌿</div>
+      <div class="card-icon" aria-hidden="true">
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M12 3C8 5 5 9 5 13c0 4 3 7 7 8 4-1 7-4 7-8 0-4-3-8-7-10z"/>
+
+          <path d="M12 21V8"/>
+
+          <path d="M12 13c-2-1-4-2-5-4"/>
+
+          <path d="M12 16c2-1 4-2 5-4"/>
+
+        </svg>
+
+      </div>
+
 
       <h4 id="w1-en">
 
         Gated Developments
 
       </h4>
+
 
       <h4 id="w1-kn"
           class="kannada"
@@ -1230,9 +1584,22 @@
 
 
 
+    <!-- LOCATION -->
+
     <div class="card">
 
-      <div class="card-icon">🏡</div>
+      <div class="card-icon" aria-hidden="true">
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/>
+
+          <circle cx="12" cy="10" r="2.5"/>
+
+        </svg>
+
+      </div>
+
 
       <h4 id="w2-en">
 
@@ -1271,9 +1638,22 @@
 
 
 
+    <!-- ASSISTANCE -->
+
     <div class="card">
 
-      <div class="card-icon">🤝</div>
+      <div class="card-icon" aria-hidden="true">
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M8 12l3 3 5-5"/>
+
+          <path d="M20 12c0 4-3 7-8 9-5-2-8-5-8-9V5l8-3 8 3v7z"/>
+
+        </svg>
+
+      </div>
+
 
       <h4 id="w3-en">
 
@@ -1472,13 +1852,24 @@
   <div class="land-grid">
 
 
+    <!-- GATED PLOTS -->
+
     <div class="card land-card">
 
-      <div class="land-top">
+      <div class="land-top" aria-hidden="true">
 
-        🌳
+        <svg viewBox="0 0 24 24">
+
+          <path d="M4 21V9l8-6 8 6v12"/>
+
+          <path d="M9 21v-7h6v7"/>
+
+          <path d="M3 21h18"/>
+
+        </svg>
 
       </div>
+
 
       <div class="land-content">
 
@@ -1521,13 +1912,24 @@
 
 
 
+    <!-- RESIDENTIAL LAND -->
+
     <div class="card land-card">
 
-      <div class="land-top">
+      <div class="land-top" aria-hidden="true">
 
-        🏡
+        <svg viewBox="0 0 24 24">
+
+          <path d="M3 11.5L12 4l9 7.5"/>
+
+          <path d="M5 10.5V21h14V10.5"/>
+
+          <path d="M9 21v-6h6v6"/>
+
+        </svg>
 
       </div>
+
 
       <div class="land-content">
 
@@ -1570,13 +1972,30 @@
 
 
 
+    <!-- LAND OPPORTUNITIES -->
+
     <div class="card land-card">
 
-      <div class="land-top">
+      <div class="land-top" aria-hidden="true">
 
-        🌱
+        <svg viewBox="0 0 24 24">
+
+          <path d="M3 20h18"/>
+
+          <path d="M5 20V9l7-5 7 5v11"/>
+
+          <path d="M8 20v-5h8v5"/>
+
+          <path d="M8 10h.01"/>
+
+          <path d="M12 10h.01"/>
+
+          <path d="M16 10h.01"/>
+
+        </svg>
 
       </div>
+
 
       <div class="land-content">
 
@@ -1667,9 +2086,22 @@
   <div class="services">
 
 
+    <!-- LAND OPPORTUNITIES -->
+
     <div class="card">
 
-      <div class="card-icon">📍</div>
+      <div class="card-icon" aria-hidden="true">
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/>
+
+          <circle cx="12" cy="10" r="2.5"/>
+
+        </svg>
+
+      </div>
+
 
       <h4 id="s1-en">
 
@@ -1708,9 +2140,26 @@
 
 
 
+    <!-- PROJECT INFORMATION -->
+
     <div class="card">
 
-      <div class="card-icon">📋</div>
+      <div class="card-icon" aria-hidden="true">
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M6 3h9l3 3v15H6z"/>
+
+          <path d="M15 3v4h4"/>
+
+          <path d="M9 12h6"/>
+
+          <path d="M9 16h6"/>
+
+        </svg>
+
+      </div>
+
 
       <h4 id="s2-en">
 
@@ -1749,9 +2198,22 @@
 
 
 
+    <!-- BUYER ASSISTANCE -->
+
     <div class="card">
 
-      <div class="card-icon">🤝</div>
+      <div class="card-icon" aria-hidden="true">
+
+        <svg viewBox="0 0 24 24">
+
+          <path d="M8 12l3 3 5-5"/>
+
+          <path d="M20 12c0 4-3 7-8 9-5-2-8-5-8-9V5l8-3 8 3v7z"/>
+
+        </svg>
+
+      </div>
+
 
       <h4 id="s3-en">
 
@@ -1864,6 +2326,7 @@
         <input type="text"
                id="name"
                required
+               autocomplete="name"
                placeholder="Enter your name">
 
       </div>
@@ -1893,6 +2356,7 @@
         <input type="tel"
                id="phone"
                required
+               autocomplete="tel"
                placeholder="Enter your phone number">
 
       </div>
@@ -1967,6 +2431,7 @@
 
         <input type="text"
                id="location"
+               autocomplete="address-level2"
                placeholder="Example: Mysore">
 
       </div>
@@ -2002,7 +2467,7 @@
 
       <button type="submit"
               class="btn"
-              style="width:100%; border:none; cursor:pointer;"
+              style="width:100%; cursor:pointer;"
               id="form-submit">
 
         Send Enquiry
@@ -2064,9 +2529,31 @@
     <div class="contact-grid">
 
 
+      <!-- PHONE -->
+
       <div class="contact-item">
 
-        <div class="contact-icon">☎</div>
+        <div class="contact-icon" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+            19.79 19.79 0 0 1-8.63-3.07
+            19.5 19.5 0 0 1-6-6
+            19.79 19.79 0 0 1-3.07-8.67
+            A2 2 0 0 1 4.11 2h3
+            a2 2 0 0 1 2 1.72
+            12.84 12.84 0 0 0 .7 2.81
+            2 2 0 0 1-.45 2.11L8.09 9.91
+            a16 16 0 0 0 6 6l1.27-1.27
+            a2 2 0 0 1 2.11-.45
+            12.84 12.84 0 0 0 2.81.7
+            A2 2 0 0 1 22 16.92z"/>
+
+          </svg>
+
+        </div>
+
 
         <h5 id="phone-heading-en">
 
@@ -2084,8 +2571,6 @@
         </h5>
 
 
-        <!-- CHANGE THIS NUMBER -->
-
         <a href="tel:+919019746649">
 
           +91 90197 46649
@@ -2096,9 +2581,22 @@
 
 
 
+      <!-- EMAIL -->
+
       <div class="contact-item">
 
-        <div class="contact-icon">✉</div>
+        <div class="contact-icon" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24">
+
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+
+            <path d="M3 7l9 6 9-6"/>
+
+          </svg>
+
+        </div>
+
 
         <h5 id="email-heading-en">
 
@@ -2116,8 +2614,6 @@
         </h5>
 
 
-        <!-- CHANGE THIS EMAIL -->
-
         <a href="mailto:hasiruestate@gmail.com">
 
           hasiruestate@gmail.com
@@ -2128,9 +2624,22 @@
 
 
 
+      <!-- LOCATION -->
+
       <div class="contact-item">
 
-        <div class="contact-icon">⌂</div>
+        <div class="contact-icon" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24">
+
+            <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/>
+
+            <circle cx="12" cy="10" r="2.5"/>
+
+          </svg>
+
+        </div>
+
 
         <h5 id="location-heading-en">
 
@@ -2167,9 +2676,24 @@
 
 
 
+      <!-- INSTAGRAM -->
+
       <div class="contact-item">
 
-        <div class="contact-icon">◎</div>
+        <div class="contact-icon" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24">
+
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+
+            <circle cx="12" cy="12" r="4"/>
+
+            <circle cx="17.5" cy="6.5" r="1"/>
+
+          </svg>
+
+        </div>
+
 
         <h5 id="instagram-heading-en">
 
@@ -2186,8 +2710,6 @@
 
         </h5>
 
-
-        <!-- CHANGE INSTAGRAM LINK -->
 
         <a href="#">
 
@@ -2267,20 +2789,66 @@
 
 
 
+<!-- ================= SCROLL TOP ================= -->
+
+<button class="scroll-top"
+        id="scrollTop"
+        aria-label="Scroll to top"
+        title="Back to top">
+
+  <svg viewBox="0 0 24 24">
+
+    <path d="M18 15l-6-6-6 6"/>
+
+  </svg>
+
+</button>
+
+
+
 <!-- ================= WHATSAPP BUTTON ================= -->
 
 <a href="https://wa.me/919019746649"
    class="whatsapp-float"
    target="_blank"
+   rel="noopener noreferrer"
    aria-label="WhatsApp">
 
-  <svg width="31"
-       height="31"
-       viewBox="0 0 24 24"
-       fill="currentColor"
-       xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 24 24">
 
-    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .1 5.36.1 11.96c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.92 11.92 0 0 0 5.81 1.48h.01c6.6 0 11.96-5.36 11.96-11.96 0-3.2-1.25-6.2-3.51-8.4ZM12.07 21.7a9.77 9.77 0 0 1-4.97-1.36l-.36-.21-3.7.97.99-3.61-.24-.37a9.73 9.73 0 0 1-1.49-5.16c0-5.39 4.38-9.77 9.77-9.77 2.61 0 5.07 1.02 6.92 2.86a9.7 9.7 0 0 1 2.85 6.91c0 5.39-4.38 9.77-9.77 9.77Zm5.36-7.33c-.29-.14-1.71-.84-1.98-.94-.27-.1-.46-.14-.66.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.77.36-.27.29-1.01.99-1.01 2.42 0 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.09 4.89 4.33.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33Z"/>
+    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0
+    C5.46 0 .1 5.36.1 11.96
+    c0 2.1.55 4.15 1.6 5.96L0 24
+    l6.25-1.64a11.92 11.92 0 0 0 5.81 1.48h.01
+    c6.6 0 11.96-5.36 11.96-11.96
+    0-3.2-1.25-6.2-3.51-8.4ZM12.07 21.7
+    a9.77 9.77 0 0 1-4.97-1.36l-.36-.21-3.7.97
+    .99-3.61-.24-.37a9.73 9.73 0 0 1-1.49-5.16
+    c0-5.39 4.38-9.77 9.77-9.77
+    2.61 0 5.07 1.02 6.92 2.86
+    a9.7 9.7 0 0 1 2.85 6.91
+    c0 5.39-4.38 9.77-9.77 9.77Zm5.36-7.33
+    c-.29-.14-1.71-.84-1.98-.94
+    -.27-.1-.46-.14-.66.14
+    -.19.29-.75.94-.92 1.13
+    -.17.19-.34.22-.63.07
+    -.29-.14-1.22-.45-2.33-1.44
+    -.86-.77-1.45-1.72-1.62-2.01
+    -.17-.29-.02-.45.13-.59
+    .13-.13.29-.34.43-.51
+    .14-.17.19-.29.29-.48
+    .1-.19.05-.36-.02-.51
+    -.07-.14-.66-1.58-.9-2.17
+    -.24-.57-.48-.49-.66-.5
+    h-.56c-.19 0-.51.07-.77.36
+    -.27.29-1.01.99-1.01 2.42
+    0 1.43 1.03 2.81 1.17 3
+    .14.19 2.02 3.09 4.89 4.33
+    .68.29 1.21.46 1.62.59
+    .68.22 1.3.19 1.79.12
+    .55-.08 1.71-.7 1.95-1.38
+    .24-.68.24-1.26.17-1.38
+    -.07-.12-.26-.19-.55-.33Z"/>
 
   </svg>
 
@@ -2292,6 +2860,8 @@
 
 <script>
 
+
+/* ================= LANGUAGE ================= */
 
 function setLanguage(lang, btn) {
 
@@ -2311,108 +2881,67 @@ function setLanguage(lang, btn) {
   const ids = [
 
     'badge',
-
     'tagline',
-
     'hero',
 
     'why-title',
-
     'why-sub',
 
     'w1',
-
     'w1p',
-
     'w2',
-
     'w2p',
-
     'w3',
-
     'w3p',
 
     'about-title',
-
     'about-sub',
-
     'about1',
-
     'about2',
-
     'about3',
 
     'lands-title',
-
     'lands-sub',
-
     'land1',
-
     'land1p',
-
     'land2',
-
     'land2p',
-
     'land3',
-
     'land3p',
 
     'services-title',
-
     'services-sub',
-
     's1',
-
     's1p',
-
     's2',
-
     's2p',
-
     's3',
-
     's3p',
 
     'form-title',
-
     'form-sub',
-
     'label-name',
-
     'label-phone',
-
     'label-type',
-
     'label-location',
-
     'label-message',
-
     'form-submit',
 
     'contact-info-title',
-
     'contact-sub',
-
     'phone-heading',
-
     'email-heading',
-
     'location-heading',
-
     'instagram-heading',
-
     'location',
 
     'disclaimer',
-
     'footer'
 
   ];
 
 
   ids.forEach(id => {
-
 
     const en = document.getElementById(id + '-en');
 
@@ -2431,7 +2960,6 @@ function setLanguage(lang, btn) {
       kn.style.display = lang === 'kn' ? '' : 'none';
 
     }
-
 
   });
 
@@ -2506,11 +3034,11 @@ function sendWhatsApp(event) {
 
 
   const name =
-    document.getElementById('name').value;
+    document.getElementById('name').value.trim();
 
 
   const phone =
-    document.getElementById('phone').value;
+    document.getElementById('phone').value.trim();
 
 
   const type =
@@ -2518,36 +3046,41 @@ function sendWhatsApp(event) {
 
 
   const location =
-    document.getElementById('location').value;
+    document.getElementById('location').value.trim();
 
 
   const message =
-    document.getElementById('message').value;
+    document.getElementById('message').value.trim();
 
 
   const text =
 
-    "Hello Hasiru Estate,%0A%0A" +
+    "Hello Hasiru Estate,\n\n" +
 
-    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Name: " + name + "\n" +
 
-    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Phone: " + phone + "\n" +
 
-    "Looking for: " + encodeURIComponent(type) + "%0A" +
+    "Looking for: " + type + "\n" +
 
     "Preferred Location: " +
-    encodeURIComponent(location) + "%0A" +
+    (location || "Not specified") + "\n" +
 
     "Requirements: " +
-    encodeURIComponent(message);
+    (message || "Not specified");
+
+
+  const whatsappURL =
+
+    "https://wa.me/919019746649?text=" +
+
+    encodeURIComponent(text);
 
 
   window.open(
-
-    "https://wa.me/919019746649?text=" + text,
-
-    "_blank"
-
+    whatsappURL,
+    "_blank",
+    "noopener,noreferrer"
   );
 
 }
@@ -2575,29 +3108,25 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+  /* ================= SCROLL ANIMATION ================= */
+
   const observer =
 
     new IntersectionObserver(
 
       (entries, obs) => {
 
-
         entries.forEach(entry => {
-
 
           if (entry.isIntersecting) {
 
-
             entry.target.classList.add('appear');
 
-
             obs.unobserve(entry.target);
-
 
           }
 
         });
-
 
       },
 
@@ -2613,6 +3142,143 @@ window.addEventListener('DOMContentLoaded', () => {
     .forEach(element =>
       observer.observe(element)
     );
+
+
+
+  /* ================= HEADER SHADOW ================= */
+
+  const header =
+    document.getElementById('site-header');
+
+
+  function updateHeader() {
+
+    if (window.scrollY > 20) {
+
+      header.classList.add('scrolled');
+
+    } else {
+
+      header.classList.remove('scrolled');
+
+    }
+
+  }
+
+
+  window.addEventListener(
+    'scroll',
+    updateHeader,
+    { passive: true }
+  );
+
+
+  updateHeader();
+
+
+
+  /* ================= SCROLL TO TOP ================= */
+
+  const scrollTop =
+    document.getElementById('scrollTop');
+
+
+  function updateScrollTop() {
+
+    if (window.scrollY > 500) {
+
+      scrollTop.classList.add('show');
+
+    } else {
+
+      scrollTop.classList.remove('show');
+
+    }
+
+  }
+
+
+  window.addEventListener(
+    'scroll',
+    updateScrollTop,
+    { passive: true }
+  );
+
+
+  scrollTop.addEventListener(
+    'click',
+    () => {
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: 'smooth'
+
+      });
+
+    }
+  );
+
+
+  updateScrollTop();
+
+
+
+  /* ================= ACTIVE NAVIGATION ================= */
+
+  const navLinks =
+    document.querySelectorAll('nav a');
+
+
+  const sections =
+    document.querySelectorAll('section[id]');
+
+
+  const sectionObserver =
+
+    new IntersectionObserver(
+
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            navLinks.forEach(link =>
+              link.classList.remove('active')
+            );
+
+
+            const activeLink =
+              document.querySelector(
+                `nav a[href="#${entry.target.id}"]`
+              );
+
+
+            if (activeLink) {
+
+              activeLink.classList.add('active');
+
+            }
+
+          }
+
+        });
+
+      },
+
+      {
+        rootMargin: '-30% 0px -60% 0px',
+        threshold: 0
+      }
+
+    );
+
+
+  sections.forEach(section =>
+    sectionObserver.observe(section)
+  );
 
 
 });
