@@ -10,18 +10,16 @@
     content="width=device-width, initial-scale=1.0"
 >
 
-<title>
-    HASIRU ESTATE | Gated Lands & Plotted Developments
-</title>
+<title>HASIRU ESTATE | Gated Lands & Plotted Developments</title>
 
 <meta
     name="description"
-    content="Hasiru Estate focuses on gated land and plotted development opportunities, helping individuals and families discover thoughtfully planned spaces for living and investment."
+    content="Hasiru Estate focuses on gated land and plotted development opportunities."
 >
 
 <meta
     name="keywords"
-    content="Hasiru Estate, gated plots, plotted development, land, Mysore plots, Mysuru land, real estate Karnataka"
+    content="Hasiru Estate, gated plots, plotted development, Mysore land, Mysuru plots, Karnataka real estate"
 >
 
 <meta
@@ -52,13 +50,7 @@
 
 /* =========================================================
    HASIRU ESTATE
-   PREMIUM GREEN REAL ESTATE WEBSITE
-   SINGLE FILE VERSION
-   ========================================================= */
-
-
-/* =========================================================
-   ROOT
+   PREMIUM BOTANICAL REAL ESTATE WEBSITE
    ========================================================= */
 
 :root{
@@ -84,10 +76,6 @@
     --gold:#a18a54;
 
     --whatsapp:#25D366;
-
-    --success:#4f8057;
-
-    --red:#a84d42;
 
     --shadow:
         0 15px 45px rgba(28,65,43,.12);
@@ -161,10 +149,6 @@ body{
     overflow-x:hidden;
 
     min-width:320px;
-
-    transition:
-        background .3s ease,
-        color .3s ease;
 }
 
 a{
@@ -241,10 +225,21 @@ img{
 
 
 /* =========================================================
-   LOADER
+   NEW HASIRU OPENING TRANSITION
    ========================================================= */
 
-.loader{
+/*
+   IMPORTANT:
+   This is intentionally NOT the PRANAURA loader.
+
+   Hasiru uses:
+   - soft botanical glow
+   - logo scale
+   - gentle blur removal
+   - no brand-name reveal
+*/
+
+.site-loader{
 
     position:fixed;
 
@@ -260,12 +255,14 @@ img{
 
     justify-content:center;
 
+    overflow:hidden;
+
     transition:
-        opacity .7s ease,
-        visibility .7s ease;
+        opacity .8s ease,
+        visibility .8s ease;
 }
 
-.loader.hide{
+.site-loader.hide{
 
     opacity:0;
 
@@ -274,96 +271,139 @@ img{
     pointer-events:none;
 }
 
-.loader-inner{
+.loader-glow{
 
-    text-align:center;
+    position:absolute;
 
-    display:flex;
+    width:260px;
 
-    flex-direction:column;
+    height:260px;
 
-    align-items:center;
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(114,155,105,.16) 0%,
+            rgba(114,155,105,.08) 35%,
+            rgba(114,155,105,0) 72%
+        );
+
+    transform:scale(.55);
+
+    animation:
+        botanicalGlow 1.8s
+        cubic-bezier(.22,.61,.36,1)
+        forwards;
 }
 
 .loader-logo{
 
-    width:105px;
+    position:relative;
 
-    height:105px;
+    z-index:2;
+
+    width:125px;
+
+    height:125px;
 
     object-fit:contain;
 
     opacity:0;
 
-    animation:
-        logoFade 1.5s ease forwards;
-}
+    filter:blur(8px);
 
-.loader-brand{
-
-    margin-top:18px;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:48px;
-
-    letter-spacing:7px;
-
-    color:var(--green);
-
-    opacity:0;
+    transform:
+        scale(.92)
+        translateY(8px);
 
     animation:
-        brandFade 1.5s ease .4s forwards;
+        botanicalLogo 1.5s
+        cubic-bezier(.22,.61,.36,1)
+        .15s forwards;
 }
 
-.loader-line{
+@keyframes botanicalGlow{
 
-    width:0;
+    0%{
 
-    height:1px;
-
-    margin-top:20px;
-
-    background:var(--gold);
-
-    animation:
-        loaderLine 1.2s ease .8s forwards;
-}
-
-@keyframes logoFade{
-
-    from{
         opacity:0;
-        transform:scale(.88);
+
+        transform:scale(.55);
     }
 
-    to{
+    45%{
+
         opacity:1;
+
+        transform:scale(1.05);
+    }
+
+    100%{
+
+        opacity:.8;
+
         transform:scale(1);
     }
 }
 
-@keyframes brandFade{
+@keyframes botanicalLogo{
 
-    from{
+    0%{
+
         opacity:0;
-        letter-spacing:12px;
+
+        filter:blur(8px);
+
+        transform:
+            scale(.92)
+            translateY(8px);
     }
 
-    to{
+    55%{
+
         opacity:1;
-        letter-spacing:7px;
+
+        filter:blur(1px);
+
+        transform:
+            scale(1.02)
+            translateY(0);
+    }
+
+    100%{
+
+        opacity:1;
+
+        filter:blur(0);
+
+        transform:
+            scale(1)
+            translateY(0);
     }
 }
 
-@keyframes loaderLine{
 
-    to{
-        width:150px;
-    }
+/* =========================================================
+   HERO CONTENT REVEAL
+   ========================================================= */
+
+.hero-content-reveal{
+
+    opacity:0;
+
+    transform:translateY(18px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+body.loaded .hero-content-reveal{
+
+    opacity:1;
+
+    transform:translateY(0);
 }
 
 
@@ -443,7 +483,7 @@ header{
 
 
 /* =========================================================
-   NAV BRAND
+   HEADER — LOGO ONLY
    ========================================================= */
 
 .nav-brand{
@@ -452,33 +492,24 @@ header{
 
     align-items:center;
 
-    gap:10px;
-
     flex-shrink:0;
 }
 
 .nav-brand img{
 
-    width:42px;
+    width:54px;
 
-    height:42px;
+    height:54px;
 
     object-fit:contain;
+
+    transition:
+        transform .3s ease;
 }
 
-.nav-brand-name{
+.nav-brand:hover img{
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:28px;
-
-    font-weight:600;
-
-    letter-spacing:3px;
-
-    color:var(--green);
+    transform:scale(1.05);
 }
 
 
@@ -709,62 +740,57 @@ header{
     z-index:2;
 }
 
+
+/* =========================================================
+   HERO LOGO ONLY
+   ========================================================= */
+
 .hero-logo{
 
-    width:180px;
+    width:245px;
 
-    height:180px;
+    height:245px;
 
     object-fit:contain;
 
     margin:
-        0 auto 20px;
+        0 auto 25px;
 
     animation:
-        heroLogoFade 1.4s ease both;
+        heroLogoFloat 5s
+        ease-in-out
+        infinite;
 }
 
-@keyframes heroLogoFade{
+@keyframes heroLogoFloat{
 
-    from{
-
-        opacity:0;
+    0%,
+    100%{
 
         transform:
-            translateY(18px)
-            scale(.95);
+            translateY(0);
     }
 
-    to{
-
-        opacity:1;
+    50%{
 
         transform:
-            translateY(0)
-            scale(1);
+            translateY(-5px);
     }
 }
 
-.hero-brand{
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+/*
+   REMOVED:
+   .hero-brand
 
-    font-size:
-        clamp(60px,9vw,105px);
+   There is intentionally NO
+   "HASIRU ESTATE" text here.
+*/
 
-    line-height:.9;
 
-    letter-spacing:
-        clamp(4px,1vw,11px);
-
-    color:var(--green);
-
-    font-weight:600;
-
-    margin-bottom:18px;
-}
+/* =========================================================
+   HERO TAGLINE
+   ========================================================= */
 
 .hero-tagline{
 
@@ -773,7 +799,7 @@ header{
         serif;
 
     font-size:
-        clamp(24px,3vw,36px);
+        clamp(25px,3vw,37px);
 
     color:var(--green2);
 
@@ -1268,7 +1294,7 @@ body.dark .focus-number{
 
 
 /* =========================================================
-   ENQUIRY / FIND YOUR PLOT
+   ENQUIRY
    ========================================================= */
 
 .enquiry-section{
@@ -1790,7 +1816,7 @@ footer{
 
 
 /* =========================================================
-   BACK TOP
+   BACK TO TOP
    ========================================================= */
 
 .back-top{
@@ -1899,12 +1925,9 @@ body.kn{
 }
 
 body.kn .title,
-body.kn .hero-brand,
 body.kn .hero-tagline,
 body.kn .card h3,
-body.kn .footer-brand,
 body.kn .footer-heading,
-body.kn .nav-brand-name,
 body.kn .process-number{
 
     font-family:
@@ -1914,7 +1937,7 @@ body.kn .process-number{
 
 
 /* =========================================================
-   RESPONSIVE TABLET
+   RESPONSIVE — TABLET
    ========================================================= */
 
 @media(max-width:1100px){
@@ -1954,12 +1977,11 @@ body.kn .process-number{
             1px solid
             var(--border);
     }
-
 }
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE — MOBILE
    ========================================================= */
 
 @media(max-width:760px){
@@ -1988,16 +2010,11 @@ body.kn .process-number{
             calc(100% - 20px);
     }
 
-    .nav-brand-name{
-
-        font-size:24px;
-    }
-
     .nav-brand img{
 
-        width:36px;
+        width:45px;
 
-        height:36px;
+        height:45px;
     }
 
     .navlinks{
@@ -2100,18 +2117,17 @@ body.kn .process-number{
 
     .hero-logo{
 
-        width:145px;
+        width:185px;
 
-        height:145px;
+        height:185px;
+
+        margin-bottom:22px;
     }
 
-    .hero-brand{
+    .hero-tagline{
 
         font-size:
-            clamp(48px,16vw,75px);
-
-        letter-spacing:
-            clamp(3px,1.5vw,7px);
+            clamp(23px,7vw,31px);
     }
 
     .hero-description{
@@ -2215,7 +2231,6 @@ body.kn .process-number{
 
         bottom:15px;
     }
-
 }
 
 
@@ -2251,16 +2266,9 @@ body.kn .process-number{
 
     .hero-logo{
 
-        width:120px;
+        width:155px;
 
-        height:120px;
-    }
-
-    .hero-brand{
-
-        font-size:46px;
-
-        letter-spacing:3px;
+        height:155px;
     }
 
     .hero-tagline{
@@ -2296,10 +2304,6 @@ body.kn .process-number{
 }
 
 
-/* =========================================================
-   INPUT FONT FIX
-   ========================================================= */
-
 input,
 select,
 textarea{
@@ -2326,7 +2330,7 @@ textarea{
 
 
 <!-- ======================================================
-     ACCESSIBILITY
+     SKIP LINK
 ====================================================== -->
 
 <a
@@ -2348,32 +2352,21 @@ textarea{
 
 
 <!-- ======================================================
-     LOADER
+     HASIRU UNIQUE LOADER
 ====================================================== -->
 
 <div
-    class="loader"
-    id="loader"
-    aria-hidden="true"
+    class="site-loader"
+    id="siteLoader"
 >
 
-    <div class="loader-inner">
+    <div class="loader-glow"></div>
 
-        <!-- Keep logo.png in the same folder -->
-
-        <img
-            src="logo.png"
-            class="loader-logo"
-            alt="Hasiru Estate Logo"
-        >
-
-        <div class="loader-brand">
-            HASIRU ESTATE
-        </div>
-
-        <div class="loader-line"></div>
-
-    </div>
+    <img
+        src="logo.png"
+        class="loader-logo"
+        alt="Hasiru Estate logo"
+    >
 
 </div>
 
@@ -2387,21 +2380,18 @@ textarea{
 <nav class="nav">
 
 
-    <!-- BRAND -->
+    <!-- ONLY LOGO — NO HASIRU TEXT -->
 
     <a
         href="#home"
         class="nav-brand"
+        aria-label="Hasiru Estate Home"
     >
 
         <img
             src="logo.png"
             alt="Hasiru Estate"
         >
-
-        <span class="nav-brand-name">
-            HASIRU
-        </span>
 
     </a>
 
@@ -2456,9 +2446,6 @@ textarea{
 
     <div class="navtools">
 
-
-        <!-- LANGUAGE -->
-
         <button
             class="nav-btn"
             id="languageBtn"
@@ -2468,8 +2455,6 @@ textarea{
             EN
         </button>
 
-
-        <!-- DARK MODE -->
 
         <button
             class="nav-btn"
@@ -2481,8 +2466,6 @@ textarea{
         </button>
 
 
-        <!-- CONNECT -->
-
         <a
             href="#enquiry"
             class="nav-cta"
@@ -2490,8 +2473,6 @@ textarea{
             Enquire
         </a>
 
-
-        <!-- MOBILE -->
 
         <button
             class="nav-btn menu-btn"
@@ -2530,69 +2511,73 @@ textarea{
     <div class="hero-inner">
 
 
-        <img
-            src="logo.png"
-            class="hero-logo"
-            alt="HASIRU ESTATE"
-        >
+        <!-- ONLY LOGO -->
 
+        <div class="hero-content-reveal">
 
-        <div class="hero-brand">
-            HASIRU ESTATE
-        </div>
-
-
-        <div class="hero-tagline">
-
-            Green Spaces.
-            Thoughtful Living.
-
-        </div>
-
-
-        <p class="hero-description">
-
-            Hasiru Estate focuses exclusively on gated land
-            and plotted development opportunities, helping
-            individuals and families discover thoughtfully
-            planned spaces for living and investment.
-
-        </p>
-
-
-        <div class="hero-actions">
-
-            <a
-                href="#enquiry"
-                class="btn btn-primary"
+            <img
+                src="logo.png"
+                class="hero-logo"
+                alt="Hasiru Estate"
             >
-                Explore Opportunities
-            </a>
 
 
-            <a
-                href="#about"
-                class="btn btn-secondary"
-            >
-                Discover Hasiru Estate
-            </a>
+            <!-- NO HASIRU ESTATE TEXT HERE -->
 
 
-            <a
-                href="https://wa.me/919019746649?text=Hello%20Hasiru%20Estate%2C%20I%20am%20interested%20in%20your%20land%20and%20plot%20opportunities."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-            >
-                WhatsApp Us
-            </a>
+            <div class="hero-tagline">
 
-        </div>
+                Green Spaces.
+                Thoughtful Living.
+
+            </div>
 
 
-        <div class="hero-note">
+            <p class="hero-description">
 
-            GATED LAND · PLANNED SPACES · THOUGHTFUL LIVING
+                Hasiru Estate focuses exclusively on gated land
+                and plotted development opportunities, helping
+                individuals and families discover thoughtfully
+                planned spaces for living and investment.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="#enquiry"
+                    class="btn btn-primary"
+                >
+                    Explore Opportunities
+                </a>
+
+
+                <a
+                    href="#about"
+                    class="btn btn-secondary"
+                >
+                    Discover Hasiru Estate
+                </a>
+
+
+                <a
+                    href="https://wa.me/919019746649?text=Hello%20Hasiru%20Estate%2C%20I%20am%20interested%20in%20your%20land%20and%20plot%20opportunities."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                >
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+
+            <div class="hero-note">
+
+                GATED LAND · PLANNED SPACES · THOUGHTFUL LIVING
+
+            </div>
 
         </div>
 
@@ -2645,38 +2630,23 @@ textarea{
         <div class="about-list">
 
             <div>
-
                 <span></span>
-
                 Gated land and plotted developments
-
             </div>
 
-
             <div>
-
                 <span></span>
-
                 Planned layouts and community-oriented spaces
-
             </div>
 
-
             <div>
-
                 <span></span>
-
                 Opportunities for individuals and families
-
             </div>
 
-
             <div>
-
                 <span></span>
-
                 Personal assistance throughout the discovery process
-
             </div>
 
         </div>
@@ -2684,20 +2654,15 @@ textarea{
     </div>
 
 
-
     <div class="about-panel">
 
         <div class="eyebrow">
-
             Our Approach
-
         </div>
 
 
         <h3>
-
             Simple. Clear. Professional.
-
         </h3>
 
 
@@ -2732,7 +2697,7 @@ textarea{
 
 
 <!-- ======================================================
-     WHY CHOOSE US
+     WHY US
 ====================================================== -->
 
 <section
@@ -2746,9 +2711,7 @@ textarea{
 <div class="center">
 
     <div class="eyebrow">
-
         Why Choose Hasiru Estate
-
     </div>
 
 
@@ -2798,7 +2761,6 @@ textarea{
     </div>
 
 
-
     <div class="card feature-card">
 
         <div class="card-icon">
@@ -2818,7 +2780,6 @@ textarea{
         </p>
 
     </div>
-
 
 
     <div class="card feature-card">
@@ -2842,7 +2803,6 @@ textarea{
     </div>
 
 
-
     <div class="card feature-card">
 
         <div class="card-icon">
@@ -2864,7 +2824,6 @@ textarea{
     </div>
 
 
-
     <div class="card feature-card">
 
         <div class="card-icon">
@@ -2884,7 +2843,6 @@ textarea{
         </p>
 
     </div>
-
 
 
     <div class="card feature-card">
@@ -2917,7 +2875,7 @@ textarea{
 
 
 <!-- ======================================================
-     OUR FOCUS
+     FOCUS
 ====================================================== -->
 
 <section
@@ -2980,7 +2938,6 @@ textarea{
     </div>
 
 
-
     <div class="card focus-card">
 
         <div class="focus-number">
@@ -3003,7 +2960,6 @@ textarea{
         </p>
 
     </div>
-
 
 
     <div class="card focus-card">
@@ -3095,7 +3051,6 @@ textarea{
     </div>
 
 
-
     <div class="process-step">
 
         <div class="process-number">
@@ -3116,7 +3071,6 @@ textarea{
     </div>
 
 
-
     <div class="process-step">
 
         <div class="process-number">
@@ -3135,7 +3089,6 @@ textarea{
         </p>
 
     </div>
-
 
 
     <div class="process-step">
@@ -3208,42 +3161,25 @@ textarea{
 
         <div class="enquiry-points">
 
-
             <div class="enquiry-point">
-
                 <span></span>
-
                 Preferred location
-
             </div>
 
-
             <div class="enquiry-point">
-
                 <span></span>
-
                 Plot or land requirement
-
             </div>
 
-
             <div class="enquiry-point">
-
                 <span></span>
-
                 Residential or other requirement
-
             </div>
-
 
             <div class="enquiry-point">
-
                 <span></span>
-
                 Personal assistance
-
             </div>
-
 
         </div>
 
@@ -3253,11 +3189,7 @@ textarea{
 
     <div class="form-box">
 
-
-        <form
-            id="enquiryForm"
-        >
-
+        <form id="enquiryForm">
 
             <div class="form-grid">
 
@@ -3278,7 +3210,6 @@ textarea{
                 </div>
 
 
-
                 <div class="field">
 
                     <label>
@@ -3293,7 +3224,6 @@ textarea{
                     >
 
                 </div>
-
 
 
                 <div class="field">
@@ -3332,7 +3262,6 @@ textarea{
                 </div>
 
 
-
                 <div class="field">
 
                     <label>
@@ -3347,7 +3276,6 @@ textarea{
                     >
 
                 </div>
-
 
 
                 <div class="field full">
@@ -3371,9 +3299,7 @@ textarea{
                 type="submit"
                 class="form-submit"
             >
-
                 Send Enquiry on WhatsApp
-
             </button>
 
 
@@ -3383,7 +3309,6 @@ textarea{
                 the details you entered.
 
             </div>
-
 
         </form>
 
@@ -3648,7 +3573,6 @@ textarea{
         </div>
 
 
-
         <div class="contact-item">
 
             <small>
@@ -3662,7 +3586,6 @@ textarea{
         </div>
 
 
-
         <div class="contact-item">
 
             <small>
@@ -3674,7 +3597,6 @@ textarea{
             </span>
 
         </div>
-
 
 
         <div class="contact-item">
@@ -3836,18 +3758,7 @@ textarea{
     Property availability, approvals, dimensions, development
     features, pricing and other details may change and should
     be independently verified before making any decision or
-    transaction. Hasiru Estate does not provide financial,
-    legal, tax or investment advice and does not guarantee
-    returns or future appreciation.
-
-</p>
-
-
-
-<p class="disclaimer">
-
-    All transactions are subject to the terms and documentation
-    agreed between the concerned parties.
+    transaction.
 
 </p>
 
@@ -3859,7 +3770,7 @@ textarea{
 
 
 <!-- ======================================================
-     WHATSAPP FLOAT
+     WHATSAPP
 ====================================================== -->
 
 <a
@@ -3918,13 +3829,12 @@ textarea{
 
 <script>
 
-
 /* =========================================================
    ELEMENTS
    ========================================================= */
 
 const loader =
-    document.getElementById("loader");
+    document.getElementById("siteLoader");
 
 const navlinks =
     document.getElementById("navlinks");
@@ -3948,27 +3858,45 @@ const toast =
     document.getElementById("toast");
 
 
-
 /* =========================================================
-   LOADER
+   HASIRU OPENING TRANSITION
    ========================================================= */
 
 window.addEventListener(
     "load",
     () => {
 
+        /*
+          Different from PRANAURA:
+          the logo remains visible first,
+          then the loader softly disappears.
+        */
+
         setTimeout(
             () => {
 
-                loader.classList.add("hide");
+                document.body.classList.add(
+                    "loaded"
+                );
 
             },
-            1100
+            500
+        );
+
+
+        setTimeout(
+            () => {
+
+                loader.classList.add(
+                    "hide"
+                );
+
+            },
+            1500
         );
 
     }
 );
-
 
 
 /* =========================================================
@@ -3980,7 +3908,9 @@ menuBtn.addEventListener(
     () => {
 
         const opened =
-            navlinks.classList.toggle("open");
+            navlinks.classList.toggle(
+                "open"
+            );
 
         menuBtn.setAttribute(
             "aria-expanded",
@@ -3996,9 +3926,6 @@ menuBtn.addEventListener(
 );
 
 
-
-/* CLOSE MOBILE MENU */
-
 document
     .querySelectorAll(".navlinks a")
     .forEach(
@@ -4008,7 +3935,9 @@ document
                 "click",
                 () => {
 
-                    navlinks.classList.remove("open");
+                    navlinks.classList.remove(
+                        "open"
+                    );
 
                     menuBtn.setAttribute(
                         "aria-expanded",
@@ -4025,9 +3954,8 @@ document
     );
 
 
-
 /* =========================================================
-   ACTIVE NAV
+   ACTIVE NAVIGATION
    ========================================================= */
 
 const sections =
@@ -4057,7 +3985,9 @@ window.addEventListener(
                 ){
 
                     current =
-                        section.getAttribute("id");
+                        section.getAttribute(
+                            "id"
+                        );
 
                 }
 
@@ -4072,7 +4002,9 @@ window.addEventListener(
                 );
 
                 if(
-                    item.getAttribute("href")
+                    item.getAttribute(
+                        "href"
+                    )
                     ===
                     "#" + current
                 ){
@@ -4090,7 +4022,6 @@ window.addEventListener(
 );
 
 
-
 /* =========================================================
    SCROLL PROGRESS
    ========================================================= */
@@ -4103,9 +4034,11 @@ window.addEventListener(
             window.scrollY;
 
         const height =
-            document.documentElement.scrollHeight
+            document.documentElement
+                .scrollHeight
             -
-            document.documentElement.clientHeight;
+            document.documentElement
+                .clientHeight;
 
         const progress =
             height > 0
@@ -4117,7 +4050,6 @@ window.addEventListener(
 
     }
 );
-
 
 
 /* =========================================================
@@ -4138,7 +4070,6 @@ if(
     );
 
 }
-
 
 themeBtn.addEventListener(
     "click",
@@ -4164,91 +4095,60 @@ themeBtn.addEventListener(
 );
 
 
-
 /* =========================================================
-   LANGUAGE
+   KANNADA
    ========================================================= */
 
-let kannada =
-    false;
-
-
-/*
-    Only the interface labels are switched here.
-
-    Main property/business content remains
-    intentionally stable unless translated below.
-*/
+let kannada = false;
 
 const translations = {
 
-    en: {
+    en:[
+        "Home",
+        "About",
+        "Why Us",
+        "Focus",
+        "Process",
+        "Enquire",
+        "FAQ",
+        "Contact"
+    ],
 
-        navHome:"Home",
-        navAbout:"About",
-        navWhy:"Why Us",
-        navFocus:"Focus",
-        navProcess:"Process",
-        navEnquire:"Enquire",
-        navFAQ:"FAQ",
-        navContact:"Contact"
-
-    },
-
-    kn: {
-
-        navHome:"ಮುಖಪುಟ",
-        navAbout:"ನಮ್ಮ ಬಗ್ಗೆ",
-        navWhy:"ಏಕೆ ನಾವು",
-        navFocus:"ನಮ್ಮ ಗಮನ",
-        navProcess:"ಪ್ರಕ್ರಿಯೆ",
-        navEnquire:"ವಿಚಾರಣೆ",
-        navFAQ:"ಪ್ರಶ್ನೆಗಳು",
-        navContact:"ಸಂಪರ್ಕ"
-
-    }
+    kn:[
+        "ಮುಖಪುಟ",
+        "ನಮ್ಮ ಬಗ್ಗೆ",
+        "ಏಕೆ ನಾವು",
+        "ನಮ್ಮ ಗಮನ",
+        "ಪ್ರಕ್ರಿಯೆ",
+        "ವಿಚಾರಣೆ",
+        "ಪ್ರಶ್ನೆಗಳು",
+        "ಸಂಪರ್ಕ"
+    ]
 
 };
 
 
-
-function setLanguage(
-    language
-){
-
-    const t =
-        translations[language];
+function setLanguage(language){
 
     const links =
         document.querySelectorAll(
             ".navlinks a"
         );
 
-    if(language === "kn"){
+    links.forEach(
+        (link,index) => {
 
-        links[0].textContent =
-            t.navHome;
+            link.textContent =
+                translations[
+                    language
+                ][index];
 
-        links[1].textContent =
-            t.navAbout;
+        }
+    );
 
-        links[2].textContent =
-            t.navWhy;
-
-        links[3].textContent =
-            t.navFocus;
-
-        links[4].textContent =
-            t.navProcess;
-
-        links[5].textContent =
-            t.navEnquire;
-
-        links[6].textContent =
-            t.navFAQ;
-
-        links[7].textContent =
-            t.navContact;
+    if(
+        language === "kn"
+    ){
 
         document.body.classList.add(
             "kn"
@@ -4259,30 +4159,6 @@ function setLanguage(
 
     }
     else{
-
-        links[0].textContent =
-            t.navHome;
-
-        links[1].textContent =
-            t.navAbout;
-
-        links[2].textContent =
-            t.navWhy;
-
-        links[3].textContent =
-            t.navFocus;
-
-        links[4].textContent =
-            t.navProcess;
-
-        links[5].textContent =
-            t.navEnquire;
-
-        links[6].textContent =
-            t.navFAQ;
-
-        links[7].textContent =
-            t.navContact;
 
         document.body.classList.remove(
             "kn"
@@ -4313,13 +4189,14 @@ languageBtn.addEventListener(
 );
 
 
-
 /* =========================================================
    FAQ
    ========================================================= */
 
 document
-    .querySelectorAll(".faq-question")
+    .querySelectorAll(
+        ".faq-question"
+    )
     .forEach(
         button => {
 
@@ -4361,14 +4238,11 @@ document
     );
 
 
-
 /* =========================================================
    TOAST
    ========================================================= */
 
-function showToast(
-    message
-){
+function showToast(message){
 
     toast.textContent =
         message;
@@ -4391,9 +4265,8 @@ function showToast(
 }
 
 
-
 /* =========================================================
-   ENQUIRY FORM
+   ENQUIRY → WHATSAPP
    ========================================================= */
 
 document
@@ -4498,7 +4371,6 @@ Thank you.`;
     );
 
 
-
 /* =========================================================
    BACK TO TOP
    ========================================================= */
@@ -4544,9 +4416,8 @@ backTop.addEventListener(
 );
 
 
-
 /* =========================================================
-   ESCAPE KEY
+   ESCAPE MENU
    ========================================================= */
 
 document.addEventListener(
@@ -4573,8 +4444,6 @@ document.addEventListener(
 
     }
 );
-
-
 
 </script>
 
