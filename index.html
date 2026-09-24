@@ -5,53 +5,34 @@
 
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HASIRU ESTATE | Gated Lands & Plotted Developments</title>
 
 <meta
-    name="description"
-    content="Hasiru Estate focuses on gated land and plotted development opportunities."
->
-
-<meta
-    name="keywords"
-    content="Hasiru Estate, gated plots, plotted development, Mysore land, Mysuru plots, Karnataka real estate"
->
-
-<meta
-    name="author"
-    content="Hasiru Estate"
->
-
-<meta
-    name="theme-color"
-    content="#285c43"
+name="description"
+content="Hasiru Estate focuses on gated land and plotted development opportunities."
 >
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
 >
 
 <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet"
 >
 
 
 <style>
 
 /* =========================================================
-   HASIRU ESTATE
-   PREMIUM BOTANICAL REAL ESTATE WEBSITE
-   ========================================================= */
+   ROOT
+========================================================= */
 
 :root{
 
@@ -71,14 +52,12 @@
 
     --border:#cbd4c8;
 
-    --white:#ffffff;
-
     --gold:#a18a54;
 
     --whatsapp:#25D366;
 
     --shadow:
-        0 15px 45px rgba(28,65,43,.12);
+    0 15px 45px rgba(28,65,43,.12);
 
     --radius:18px;
 
@@ -88,7 +67,7 @@
 
 /* =========================================================
    DARK MODE
-   ========================================================= */
+========================================================= */
 
 body.dark{
 
@@ -97,7 +76,6 @@ body.dark{
     --green3:#d4e6d7;
 
     --leaf:#8faf82;
-    --leaf2:#a6bd98;
 
     --cream:#101a14;
     --cream2:#17231c;
@@ -108,18 +86,16 @@ body.dark{
 
     --border:#3b5042;
 
-    --white:#17231c;
-
     --gold:#c8b477;
 
     --shadow:
-        0 15px 45px rgba(0,0,0,.35);
+    0 15px 45px rgba(0,0,0,.35);
 }
 
 
 /* =========================================================
    RESET
-   ========================================================= */
+========================================================= */
 
 *{
     margin:0;
@@ -128,17 +104,13 @@ body.dark{
 }
 
 html{
-
     scroll-behavior:smooth;
-
     scroll-padding-top:85px;
 }
 
 body{
 
-    font-family:
-        "Poppins",
-        sans-serif;
+    font-family:"Poppins",sans-serif;
 
     background:var(--cream);
 
@@ -147,14 +119,29 @@ body{
     line-height:1.6;
 
     overflow-x:hidden;
+}
 
-    min-width:320px;
+body.kn{
+
+    font-family:
+    "Noto Sans Kannada",
+    "Poppins",
+    sans-serif;
+}
+
+body.kn .title,
+body.kn .hero-tagline,
+body.kn h3,
+body.kn .footer-heading,
+body.kn .footer-brand{
+
+    font-family:
+    "Noto Sans Kannada",
+    sans-serif;
 }
 
 a{
-
     color:inherit;
-
     text-decoration:none;
 }
 
@@ -162,82 +149,47 @@ button,
 input,
 select,
 textarea{
-
     font:inherit;
 }
 
 button{
-
     cursor:pointer;
 }
 
 img{
-
     max-width:100%;
-
     display:block;
 }
 
 ::selection{
-
     background:var(--green);
-
     color:#fff;
 }
 
 
 /* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
+   SCROLL PROGRESS
+========================================================= */
 
-.skip-link{
+.scroll-progress{
 
     position:fixed;
 
-    left:20px;
+    top:0;
+    left:0;
 
-    top:-100px;
+    width:0;
+    height:3px;
 
-    z-index:100000;
+    background:var(--leaf);
 
-    padding:12px 18px;
-
-    background:var(--green);
-
-    color:#fff;
-
-    border-radius:8px;
-}
-
-.skip-link:focus{
-
-    top:20px;
-}
-
-:focus-visible{
-
-    outline:
-        3px solid
-        var(--gold);
-
-    outline-offset:4px;
+    z-index:100001;
 }
 
 
 /* =========================================================
-   NEW HASIRU OPENING TRANSITION
-   ========================================================= */
-
-/*
-   IMPORTANT:
-   This is intentionally NOT the PRANAURA loader.
-
-   Hasiru uses:
-   - soft botanical glow
-   - logo scale
-   - gentle blur removal
-   - no brand-name reveal
-*/
+   HASIRU OPENING TRANSITION
+========================================================= */
 
 .site-loader{
 
@@ -258,8 +210,8 @@ img{
     overflow:hidden;
 
     transition:
-        opacity .8s ease,
-        visibility .8s ease;
+    opacity .8s ease,
+    visibility .8s ease;
 }
 
 .site-loader.hide{
@@ -276,25 +228,24 @@ img{
     position:absolute;
 
     width:260px;
-
     height:260px;
 
     border-radius:50%;
 
     background:
-        radial-gradient(
-            circle,
-            rgba(114,155,105,.16) 0%,
-            rgba(114,155,105,.08) 35%,
-            rgba(114,155,105,0) 72%
-        );
+    radial-gradient(
+        circle,
+        rgba(114,155,105,.18) 0%,
+        rgba(114,155,105,.08) 35%,
+        rgba(114,155,105,0) 72%
+    );
 
     transform:scale(.55);
 
     animation:
-        botanicalGlow 1.8s
-        cubic-bezier(.22,.61,.36,1)
-        forwards;
+    botanicalGlow 1.8s
+    cubic-bezier(.22,.61,.36,1)
+    forwards;
 }
 
 .loader-logo{
@@ -304,7 +255,6 @@ img{
     z-index:2;
 
     width:125px;
-
     height:125px;
 
     object-fit:contain;
@@ -314,35 +264,29 @@ img{
     filter:blur(8px);
 
     transform:
-        scale(.92)
-        translateY(8px);
+    scale(.92)
+    translateY(8px);
 
     animation:
-        botanicalLogo 1.5s
-        cubic-bezier(.22,.61,.36,1)
-        .15s forwards;
+    botanicalLogo 1.5s
+    cubic-bezier(.22,.61,.36,1)
+    .15s forwards;
 }
 
 @keyframes botanicalGlow{
 
     0%{
-
         opacity:0;
-
         transform:scale(.55);
     }
 
     45%{
-
         opacity:1;
-
         transform:scale(1.05);
     }
 
     100%{
-
         opacity:.8;
-
         transform:scale(1);
     }
 }
@@ -350,43 +294,23 @@ img{
 @keyframes botanicalLogo{
 
     0%{
-
         opacity:0;
-
         filter:blur(8px);
-
-        transform:
-            scale(.92)
-            translateY(8px);
+        transform:scale(.92) translateY(8px);
     }
 
     55%{
-
         opacity:1;
-
         filter:blur(1px);
-
-        transform:
-            scale(1.02)
-            translateY(0);
+        transform:scale(1.02) translateY(0);
     }
 
     100%{
-
         opacity:1;
-
         filter:blur(0);
-
-        transform:
-            scale(1)
-            translateY(0);
+        transform:scale(1) translateY(0);
     }
 }
-
-
-/* =========================================================
-   HERO CONTENT REVEAL
-   ========================================================= */
 
 .hero-content-reveal{
 
@@ -395,8 +319,8 @@ img{
     transform:translateY(18px);
 
     transition:
-        opacity 1s ease,
-        transform 1s ease;
+    opacity 1s ease,
+    transform 1s ease;
 }
 
 body.loaded .hero-content-reveal{
@@ -408,37 +332,14 @@ body.loaded .hero-content-reveal{
 
 
 /* =========================================================
-   SCROLL PROGRESS
-   ========================================================= */
-
-.scroll-progress{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:0;
-
-    height:3px;
-
-    background:var(--leaf);
-
-    z-index:100001;
-}
-
-
-/* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
 header{
 
     position:fixed;
 
     top:0;
-
     left:0;
 
     width:100%;
@@ -446,19 +347,19 @@ header{
     z-index:9999;
 
     background:
-        color-mix(
-            in srgb,
-            var(--cream) 92%,
-            transparent
-        );
+    color-mix(
+        in srgb,
+        var(--cream) 92%,
+        transparent
+    );
 
     backdrop-filter:blur(18px);
 
     -webkit-backdrop-filter:blur(18px);
 
     border-bottom:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 }
 
 .nav{
@@ -482,9 +383,7 @@ header{
 }
 
 
-/* =========================================================
-   HEADER — LOGO ONLY
-   ========================================================= */
+/* LOGO ONLY */
 
 .nav-brand{
 
@@ -498,24 +397,21 @@ header{
 .nav-brand img{
 
     width:54px;
-
     height:54px;
 
     object-fit:contain;
 
-    transition:
-        transform .3s ease;
+    transition:.3s ease;
 }
 
 .nav-brand:hover img{
-
     transform:scale(1.05);
 }
 
 
 /* =========================================================
    NAVIGATION
-   ========================================================= */
+========================================================= */
 
 .navlinks{
 
@@ -548,11 +444,9 @@ header{
     position:absolute;
 
     left:0;
-
     bottom:-7px;
 
     width:0;
-
     height:1px;
 
     background:var(--leaf);
@@ -560,7 +454,8 @@ header{
     transition:.25s ease;
 }
 
-.navlinks a:hover{
+.navlinks a:hover,
+.navlinks a.active{
 
     color:var(--green);
 }
@@ -571,15 +466,10 @@ header{
     width:100%;
 }
 
-.navlinks a.active{
-
-    color:var(--green);
-}
-
 
 /* =========================================================
-   NAV TOOLS
-   ========================================================= */
+   NAV BUTTONS
+========================================================= */
 
 .navtools{
 
@@ -595,12 +485,11 @@ header{
 .nav-btn{
 
     width:40px;
-
     height:40px;
 
     border:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     background:transparent;
 
@@ -649,22 +538,21 @@ header{
 }
 
 .menu-btn{
-
     display:none;
 }
 
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .hero{
 
     min-height:100svh;
 
     padding:
-        145px 24px
-        90px;
+    145px 24px
+    90px;
 
     display:flex;
 
@@ -677,11 +565,11 @@ header{
     position:relative;
 
     background:
-        linear-gradient(
-            135deg,
-            var(--cream2),
-            var(--cream)
-        );
+    linear-gradient(
+        135deg,
+        var(--cream2),
+        var(--cream)
+    );
 
     overflow:hidden;
 }
@@ -693,16 +581,14 @@ header{
     position:absolute;
 
     width:420px;
-
     height:420px;
 
     border-radius:50%;
 
     background:
-        rgba(114,155,105,.09);
+    rgba(114,155,105,.09);
 
     left:-170px;
-
     bottom:-180px;
 }
 
@@ -713,25 +599,20 @@ header{
     position:absolute;
 
     width:300px;
-
     height:300px;
 
     border-radius:50%;
 
     background:
-        rgba(40,92,67,.06);
+    rgba(40,92,67,.06);
 
     right:-120px;
-
     top:120px;
 }
 
 .hero-inner{
 
-    width:min(
-        100%,
-        900px
-    );
+    width:min(100%,900px);
 
     margin:auto;
 
@@ -740,66 +621,41 @@ header{
     z-index:2;
 }
 
-
-/* =========================================================
-   HERO LOGO ONLY
-   ========================================================= */
-
 .hero-logo{
 
     width:245px;
-
     height:245px;
 
     object-fit:contain;
 
     margin:
-        0 auto 25px;
+    0 auto 25px;
 
     animation:
-        heroLogoFloat 5s
-        ease-in-out
-        infinite;
+    heroLogoFloat 5s
+    ease-in-out
+    infinite;
 }
 
 @keyframes heroLogoFloat{
 
-    0%,
-    100%{
-
-        transform:
-            translateY(0);
+    0%,100%{
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-            translateY(-5px);
+        transform:translateY(-5px);
     }
 }
-
-
-/*
-   REMOVED:
-   .hero-brand
-
-   There is intentionally NO
-   "HASIRU ESTATE" text here.
-*/
-
-
-/* =========================================================
-   HERO TAGLINE
-   ========================================================= */
 
 .hero-tagline{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     font-size:
-        clamp(25px,3vw,37px);
+    clamp(25px,3vw,37px);
 
     color:var(--green2);
 
@@ -843,15 +699,15 @@ header{
     min-height:48px;
 
     padding:
-        0 23px;
+    0 23px;
 
     border-radius:30px;
 
     font-size:12px;
 
     border:
-        1px solid
-        var(--green);
+    1px solid
+    var(--green);
 
     transition:.3s ease;
 }
@@ -898,7 +754,7 @@ header{
 
 /* =========================================================
    GENERAL
-   ========================================================= */
+========================================================= */
 
 .container{
 
@@ -910,19 +766,16 @@ header{
     margin:auto;
 }
 
-section{
-
-    position:relative;
-}
-
 .section{
-
     padding:105px 0;
 }
 
 .section-alt{
-
     background:var(--cream2);
+}
+
+.center{
+    text-align:center;
 }
 
 .eyebrow{
@@ -943,11 +796,11 @@ section{
 .title{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     font-size:
-        clamp(42px,5vw,68px);
+    clamp(42px,5vw,68px);
 
     line-height:1;
 
@@ -969,20 +822,14 @@ section{
     line-height:1.9;
 }
 
-.center{
-
-    text-align:center;
-}
-
 .center .subtitle{
-
     margin:auto;
 }
 
 
 /* =========================================================
-   CARDS
-   ========================================================= */
+   GRID / CARDS
+========================================================= */
 
 .grid{
 
@@ -991,22 +838,10 @@ section{
     gap:20px;
 }
 
-.g2{
-
-    grid-template-columns:
-        repeat(2,minmax(0,1fr));
-}
-
 .g3{
 
     grid-template-columns:
-        repeat(3,minmax(0,1fr));
-}
-
-.g4{
-
-    grid-template-columns:
-        repeat(4,minmax(0,1fr));
+    repeat(3,minmax(0,1fr));
 }
 
 .card{
@@ -1014,17 +849,17 @@ section{
     background:var(--cream2);
 
     border:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     border-radius:var(--radius);
 
     padding:30px;
 
     transition:
-        transform .3s ease,
-        border-color .3s ease,
-        box-shadow .3s ease;
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
 }
 
 .card:hover{
@@ -1039,12 +874,11 @@ section{
 .card-icon{
 
     width:48px;
-
     height:48px;
 
     border:
-        1px solid
-        var(--leaf);
+    1px solid
+    var(--leaf);
 
     display:grid;
 
@@ -1057,8 +891,8 @@ section{
     color:var(--green);
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     font-size:20px;
 }
@@ -1066,8 +900,8 @@ section{
 .card h3{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     font-size:27px;
 
@@ -1088,14 +922,14 @@ section{
 
 /* =========================================================
    ABOUT
-   ========================================================= */
+========================================================= */
 
 .about-grid{
 
     display:grid;
 
     grid-template-columns:
-        1.1fr .9fr;
+    1.1fr .9fr;
 
     gap:60px;
 
@@ -1107,8 +941,8 @@ section{
     padding:35px;
 
     border:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     background:var(--cream2);
 
@@ -1120,8 +954,8 @@ section{
 .about-panel h3{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     font-size:32px;
 
@@ -1164,7 +998,6 @@ section{
 .about-list span{
 
     width:7px;
-
     height:7px;
 
     background:var(--leaf);
@@ -1178,55 +1011,15 @@ section{
 
 
 /* =========================================================
-   WHY
-   ========================================================= */
-
-.feature-card{
-
-    min-height:230px;
-}
-
-
-/* =========================================================
-   FOCUS
-   ========================================================= */
-
-.focus-card{
-
-    min-height:250px;
-}
-
-.focus-number{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:60px;
-
-    color:var(--cream3);
-
-    line-height:1;
-
-    margin-bottom:10px;
-}
-
-body.dark .focus-number{
-
-    color:#293a30;
-}
-
-
-/* =========================================================
    PROCESS
-   ========================================================= */
+========================================================= */
 
 .process-grid{
 
     display:grid;
 
     grid-template-columns:
-        repeat(4,minmax(0,1fr));
+    repeat(4,minmax(0,1fr));
 
     gap:0;
 
@@ -1238,30 +1031,30 @@ body.dark .focus-number{
     padding:30px;
 
     border-top:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     border-bottom:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     border-left:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 }
 
 .process-step:last-child{
 
     border-right:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 }
 
 .process-number{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     color:var(--leaf);
 
@@ -1273,8 +1066,8 @@ body.dark .focus-number{
 .process-step h3{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     font-size:25px;
 
@@ -1295,16 +1088,16 @@ body.dark .focus-number{
 
 /* =========================================================
    ENQUIRY
-   ========================================================= */
+========================================================= */
 
 .enquiry-section{
 
     background:
-        linear-gradient(
-            135deg,
-            var(--cream3),
-            var(--cream2)
-        );
+    linear-gradient(
+        135deg,
+        var(--cream3),
+        var(--cream2)
+    );
 }
 
 .enquiry-layout{
@@ -1312,16 +1105,11 @@ body.dark .focus-number{
     display:grid;
 
     grid-template-columns:
-        .75fr 1.25fr;
+    .75fr 1.25fr;
 
     gap:50px;
 
     align-items:start;
-}
-
-.enquiry-info{
-
-    padding-top:15px;
 }
 
 .enquiry-points{
@@ -1347,7 +1135,6 @@ body.dark .focus-number{
 .enquiry-point span{
 
     width:8px;
-
     height:8px;
 
     margin-top:7px;
@@ -1364,8 +1151,8 @@ body.dark .focus-number{
     background:var(--cream2);
 
     border:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     padding:35px;
 
@@ -1379,7 +1166,7 @@ body.dark .focus-number{
     display:grid;
 
     grid-template-columns:
-        repeat(2,minmax(0,1fr));
+    repeat(2,minmax(0,1fr));
 
     gap:16px;
 }
@@ -1394,7 +1181,6 @@ body.dark .focus-number{
 }
 
 .field.full{
-
     grid-column:1 / -1;
 }
 
@@ -1403,8 +1189,6 @@ body.dark .focus-number{
     font-size:11px;
 
     color:var(--muted);
-
-    letter-spacing:.3px;
 }
 
 .field input,
@@ -1416,8 +1200,8 @@ body.dark .focus-number{
     min-height:46px;
 
     border:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     background:var(--cream);
 
@@ -1426,7 +1210,7 @@ body.dark .focus-number{
     border-radius:10px;
 
     padding:
-        10px 13px;
+    10px 13px;
 
     outline:none;
 }
@@ -1436,17 +1220,6 @@ body.dark .focus-number{
     min-height:110px;
 
     resize:vertical;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-
-    border-color:var(--leaf);
-
-    box-shadow:
-        0 0 0 3px
-        rgba(114,155,105,.12);
 }
 
 .form-submit{
@@ -1491,7 +1264,7 @@ body.dark .focus-number{
 
 /* =========================================================
    FAQ
-   ========================================================= */
+========================================================= */
 
 .faq{
 
@@ -1503,8 +1276,8 @@ body.dark .focus-number{
 .faq-item{
 
     border-bottom:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 }
 
 .faq-question{
@@ -1546,7 +1319,7 @@ body.dark .focus-number{
     display:none;
 
     padding:
-        0 0 22px;
+    0 0 22px;
 
     color:var(--muted);
 
@@ -1556,26 +1329,24 @@ body.dark .focus-number{
 }
 
 .faq-item.open .faq-answer{
-
     display:block;
 }
 
 .faq-item.open .faq-icon{
-
     transform:rotate(45deg);
 }
 
 
 /* =========================================================
    CONTACT
-   ========================================================= */
+========================================================= */
 
 .contact-grid{
 
     display:grid;
 
     grid-template-columns:
-        .8fr 1.2fr;
+    .8fr 1.2fr;
 
     gap:50px;
 }
@@ -1592,8 +1363,8 @@ body.dark .focus-number{
     padding:22px;
 
     border:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     background:var(--cream2);
 
@@ -1625,11 +1396,6 @@ body.dark .focus-number{
     word-break:break-word;
 }
 
-.contact-item a:hover{
-
-    color:var(--green);
-}
-
 .contact-actions{
 
     margin-top:20px;
@@ -1644,16 +1410,16 @@ body.dark .focus-number{
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 footer{
 
     padding:
-        50px 0 30px;
+    50px 0 30px;
 
     border-top:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     background:var(--cream3);
 }
@@ -1663,7 +1429,7 @@ footer{
     display:grid;
 
     grid-template-columns:
-        1.4fr 1fr 1fr;
+    1.4fr 1fr 1fr;
 
     gap:40px;
 
@@ -1673,8 +1439,8 @@ footer{
 .footer-brand{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     color:var(--green);
 
@@ -1699,8 +1465,8 @@ footer{
 .footer-heading{
 
     font-family:
-        "Cormorant Garamond",
-        serif;
+    "Cormorant Garamond",
+    serif;
 
     color:var(--green);
 
@@ -1723,16 +1489,11 @@ footer{
     color:var(--muted);
 }
 
-.footer-links a:hover{
-
-    color:var(--green);
-}
-
 .footer-bottom{
 
     border-top:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     padding-top:22px;
 
@@ -1765,7 +1526,7 @@ footer{
 
 /* =========================================================
    WHATSAPP
-   ========================================================= */
+========================================================= */
 
 .whatsapp{
 
@@ -1776,7 +1537,6 @@ footer{
     bottom:22px;
 
     width:56px;
-
     height:56px;
 
     border-radius:50%;
@@ -1792,8 +1552,8 @@ footer{
     z-index:9000;
 
     box-shadow:
-        0 10px 30px
-        rgba(37,211,102,.28);
+    0 10px 30px
+    rgba(37,211,102,.28);
 
     transition:.25s ease;
 }
@@ -1801,14 +1561,13 @@ footer{
 .whatsapp:hover{
 
     transform:
-        translateY(-4px)
-        scale(1.03);
+    translateY(-4px)
+    scale(1.03);
 }
 
 .whatsapp svg{
 
     width:29px;
-
     height:29px;
 
     fill:white;
@@ -1817,7 +1576,7 @@ footer{
 
 /* =========================================================
    BACK TO TOP
-   ========================================================= */
+========================================================= */
 
 .back-top{
 
@@ -1828,14 +1587,13 @@ footer{
     bottom:22px;
 
     width:45px;
-
     height:45px;
 
     border-radius:50%;
 
     border:
-        1px solid
-        var(--border);
+    1px solid
+    var(--border);
 
     background:var(--cream2);
 
@@ -1864,18 +1622,17 @@ footer{
 
 /* =========================================================
    TOAST
-   ========================================================= */
+========================================================= */
 
 .toast{
 
     position:fixed;
 
     left:50%;
-
     bottom:30px;
 
     transform:
-        translate(-50%,20px);
+    translate(-50%,20px);
 
     opacity:0;
 
@@ -1888,7 +1645,7 @@ footer{
     color:#fff;
 
     padding:
-        13px 20px;
+    13px 20px;
 
     border-radius:30px;
 
@@ -1908,47 +1665,21 @@ footer{
     visibility:visible;
 
     transform:
-        translate(-50%,0);
+    translate(-50%,0);
 }
 
 
 /* =========================================================
-   KANNADA
-   ========================================================= */
-
-body.kn{
-
-    font-family:
-        "Noto Sans Kannada",
-        "Poppins",
-        sans-serif;
-}
-
-body.kn .title,
-body.kn .hero-tagline,
-body.kn .card h3,
-body.kn .footer-heading,
-body.kn .process-number{
-
-    font-family:
-        "Noto Sans Kannada",
-        sans-serif;
-}
-
-
-/* =========================================================
-   RESPONSIVE — TABLET
-   ========================================================= */
+   RESPONSIVE
+========================================================= */
 
 @media(max-width:1100px){
 
     .navlinks{
-
         gap:13px;
     }
 
     .navlinks a{
-
         font-size:10px;
     }
 
@@ -1959,46 +1690,32 @@ body.kn .process-number{
         grid-template-columns:1fr;
     }
 
-    .g4{
-
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
     .process-grid{
 
         grid-template-columns:
-            repeat(2,1fr);
+        repeat(2,1fr);
     }
 
     .process-step{
 
         border-right:
-            1px solid
-            var(--border);
+        1px solid
+        var(--border);
     }
 }
 
 
-/* =========================================================
-   RESPONSIVE — MOBILE
-   ========================================================= */
-
 @media(max-width:760px){
 
     html{
-
         scroll-padding-top:70px;
     }
 
     .container{
-
-        width:
-            calc(100% - 30px);
+        width:calc(100% - 30px);
     }
 
     .section{
-
         padding:78px 0;
     }
 
@@ -2007,13 +1724,12 @@ body.kn .process-number{
         min-height:68px;
 
         width:
-            calc(100% - 20px);
+        calc(100% - 20px);
     }
 
     .nav-brand img{
 
         width:45px;
-
         height:45px;
     }
 
@@ -2024,11 +1740,10 @@ body.kn .process-number{
         top:68px;
 
         left:10px;
-
         right:10px;
 
         max-height:
-            calc(100svh - 82px);
+        calc(100svh - 82px);
 
         overflow-y:auto;
 
@@ -2045,8 +1760,8 @@ body.kn .process-number{
         background:var(--cream2);
 
         border:
-            1px solid
-            var(--border);
+        1px solid
+        var(--border);
 
         border-radius:14px;
 
@@ -2057,7 +1772,7 @@ body.kn .process-number{
         visibility:hidden;
 
         transform:
-            translateY(-8px);
+        translateY(-8px);
 
         transition:.25s ease;
     }
@@ -2069,7 +1784,7 @@ body.kn .process-number{
         visibility:visible;
 
         transform:
-            translateY(0);
+        translateY(0);
     }
 
     .navlinks a{
@@ -2079,29 +1794,22 @@ body.kn .process-number{
         font-size:13px;
 
         border-bottom:
-            1px solid
-            var(--border);
-    }
-
-    .navlinks a:last-child{
-
-        border-bottom:0;
+        1px solid
+        var(--border);
     }
 
     .navlinks a::after{
-
         display:none;
     }
 
     .menu-btn{
-
         display:grid;
     }
 
     .nav-cta{
 
         padding:
-            9px 14px;
+        9px 14px;
 
         font-size:10px;
     }
@@ -2111,14 +1819,13 @@ body.kn .process-number{
         min-height:100svh;
 
         padding:
-            120px 18px
-            80px;
+        120px 18px
+        80px;
     }
 
     .hero-logo{
 
         width:185px;
-
         height:185px;
 
         margin-bottom:22px;
@@ -2127,11 +1834,10 @@ body.kn .process-number{
     .hero-tagline{
 
         font-size:
-            clamp(23px,7vw,31px);
+        clamp(23px,7vw,31px);
     }
 
     .hero-description{
-
         font-size:13px;
     }
 
@@ -2144,18 +1850,14 @@ body.kn .process-number{
         max-width:350px;
 
         margin-left:auto;
-
         margin-right:auto;
     }
 
     .btn{
-
         width:100%;
     }
 
-    .g2,
     .g3,
-    .g4,
     .form-grid{
 
         grid-template-columns:1fr;
@@ -2169,8 +1871,8 @@ body.kn .process-number{
     .process-step{
 
         border-right:
-            1px solid
-            var(--border);
+        1px solid
+        var(--border);
 
         border-bottom:0;
     }
@@ -2178,128 +1880,84 @@ body.kn .process-number{
     .process-step:last-child{
 
         border-bottom:
-            1px solid
-            var(--border);
+        1px solid
+        var(--border);
     }
 
     .card{
-
         padding:24px;
     }
 
     .title{
 
         font-size:
-            clamp(38px,12vw,54px);
+        clamp(38px,12vw,54px);
     }
 
     .subtitle{
-
         font-size:13px;
     }
 
     .form-box{
-
         padding:22px;
     }
 
     .field.full{
-
         grid-column:auto;
     }
 
     .footer-grid{
-
         grid-template-columns:1fr;
     }
 
     .footer-bottom{
-
         flex-direction:column;
     }
 
     .whatsapp{
 
         right:15px;
-
         bottom:15px;
     }
 
     .back-top{
 
         left:15px;
-
         bottom:15px;
     }
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
 @media(max-width:430px){
 
     .navtools{
-
         gap:5px;
     }
 
     .nav-btn{
 
         width:36px;
-
         height:36px;
     }
 
     .nav-cta{
-
         display:none;
     }
 
     .hero{
 
         padding-left:14px;
-
         padding-right:14px;
     }
 
     .hero-logo{
 
         width:155px;
-
         height:155px;
     }
 
     .hero-tagline{
-
         font-size:22px;
-    }
-
-    .card{
-
-        padding:21px;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-
-        scroll-behavior:auto !important;
-
-        animation-duration:.01ms !important;
-
-        animation-iteration-count:1 !important;
-
-        transition-duration:.01ms !important;
     }
 }
 
@@ -2307,7 +1965,6 @@ body.kn .process-number{
 input,
 select,
 textarea{
-
     font-size:16px;
 }
 
@@ -2316,7 +1973,6 @@ textarea{
     input,
     select,
     textarea{
-
         font-size:13px;
     }
 }
@@ -2330,43 +1986,31 @@ textarea{
 
 
 <!-- ======================================================
-     SKIP LINK
-====================================================== -->
-
-<a
-    href="#main-content"
-    class="skip-link"
->
-    Skip to content
-</a>
-
-
-<!-- ======================================================
-     SCROLL PROGRESS
+     SCROLL
 ====================================================== -->
 
 <div
-    class="scroll-progress"
-    id="scrollProgress"
+class="scroll-progress"
+id="scrollProgress"
 ></div>
 
 
 <!-- ======================================================
-     HASIRU UNIQUE LOADER
+     LOADER
 ====================================================== -->
 
 <div
-    class="site-loader"
-    id="siteLoader"
+class="site-loader"
+id="siteLoader"
 >
 
-    <div class="loader-glow"></div>
+<div class="loader-glow"></div>
 
-    <img
-        src="logo.png"
-        class="loader-logo"
-        alt="Hasiru Estate logo"
-    >
+<img
+src="logo.png"
+class="loader-logo"
+alt="Hasiru Estate logo"
+>
 
 </div>
 
@@ -2380,112 +2024,124 @@ textarea{
 <nav class="nav">
 
 
-    <!-- ONLY LOGO — NO HASIRU TEXT -->
+<a
+href="#home"
+class="nav-brand"
+aria-label="Hasiru Estate Home"
+>
 
-    <a
-        href="#home"
-        class="nav-brand"
-        aria-label="Hasiru Estate Home"
-    >
+<img
+src="logo.png"
+alt="Hasiru Estate"
+>
 
-        <img
-            src="logo.png"
-            alt="Hasiru Estate"
-        >
-
-    </a>
+</a>
 
 
-    <!-- NAVIGATION -->
+<div
+class="navlinks"
+id="navlinks"
+>
 
-    <div
-        class="navlinks"
-        id="navlinks"
-        aria-label="Primary navigation"
-    >
+<a
+href="#home"
+class="active"
+data-i18n="nav.home"
+>
+Home
+</a>
 
-        <a
-            href="#home"
-            class="active"
-        >
-            Home
-        </a>
+<a
+href="#about"
+data-i18n="nav.about"
+>
+About
+</a>
 
-        <a href="#about">
-            About
-        </a>
+<a
+href="#why"
+data-i18n="nav.why"
+>
+Why Us
+</a>
 
-        <a href="#why">
-            Why Us
-        </a>
+<a
+href="#focus"
+data-i18n="nav.focus"
+>
+Focus
+</a>
 
-        <a href="#focus">
-            Focus
-        </a>
+<a
+href="#process"
+data-i18n="nav.process"
+>
+Process
+</a>
 
-        <a href="#process">
-            Process
-        </a>
+<a
+href="#enquiry"
+data-i18n="nav.enquire"
+>
+Enquire
+</a>
 
-        <a href="#enquiry">
-            Enquire
-        </a>
+<a
+href="#faq"
+data-i18n="nav.faq"
+>
+FAQ
+</a>
 
-        <a href="#faq">
-            FAQ
-        </a>
+<a
+href="#contact"
+data-i18n="nav.contact"
+>
+Contact
+</a>
 
-        <a href="#contact">
-            Contact
-        </a>
-
-    </div>
-
-
-    <!-- TOOLS -->
-
-    <div class="navtools">
-
-        <button
-            class="nav-btn"
-            id="languageBtn"
-            type="button"
-            aria-label="Switch language"
-        >
-            EN
-        </button>
-
-
-        <button
-            class="nav-btn"
-            id="themeBtn"
-            type="button"
-            aria-label="Toggle dark mode"
-        >
-            ◐
-        </button>
+</div>
 
 
-        <a
-            href="#enquiry"
-            class="nav-cta"
-        >
-            Enquire
-        </a>
+<div class="navtools">
 
 
-        <button
-            class="nav-btn menu-btn"
-            id="menuBtn"
-            type="button"
-            aria-label="Open navigation"
-            aria-expanded="false"
-            aria-controls="navlinks"
-        >
-            ☰
-        </button>
+<button
+class="nav-btn"
+id="languageBtn"
+type="button"
+>
+EN
+</button>
 
-    </div>
+
+<button
+class="nav-btn"
+id="themeBtn"
+type="button"
+>
+◐
+</button>
+
+
+<a
+href="#enquiry"
+class="nav-cta"
+data-i18n="nav.enquire"
+>
+Enquire
+</a>
+
+
+<button
+class="nav-btn menu-btn"
+id="menuBtn"
+type="button"
+>
+☰
+</button>
+
+</div>
 
 </nav>
 
@@ -2496,7 +2152,7 @@ textarea{
      MAIN
 ====================================================== -->
 
-<main id="main-content">
+<main>
 
 
 <!-- ======================================================
@@ -2504,87 +2160,90 @@ textarea{
 ====================================================== -->
 
 <section
-    class="hero"
-    id="home"
+class="hero"
+id="home"
 >
 
-    <div class="hero-inner">
+<div class="hero-inner">
 
 
-        <!-- ONLY LOGO -->
-
-        <div class="hero-content-reveal">
-
-            <img
-                src="logo.png"
-                class="hero-logo"
-                alt="Hasiru Estate"
-            >
+<div class="hero-content-reveal">
 
 
-            <!-- NO HASIRU ESTATE TEXT HERE -->
+<img
+src="logo.png"
+class="hero-logo"
+alt="Hasiru Estate"
+>
 
 
-            <div class="hero-tagline">
-
-                Green Spaces.
-                Thoughtful Living.
-
-            </div>
-
-
-            <p class="hero-description">
-
-                Hasiru Estate focuses exclusively on gated land
-                and plotted development opportunities, helping
-                individuals and families discover thoughtfully
-                planned spaces for living and investment.
-
-            </p>
+<div
+class="hero-tagline"
+data-i18n="hero.tagline"
+>
+Green Spaces. Thoughtful Living.
+</div>
 
 
-            <div class="hero-actions">
-
-                <a
-                    href="#enquiry"
-                    class="btn btn-primary"
-                >
-                    Explore Opportunities
-                </a>
-
-
-                <a
-                    href="#about"
-                    class="btn btn-secondary"
-                >
-                    Discover Hasiru Estate
-                </a>
+<p
+class="hero-description"
+data-i18n="hero.description"
+>
+Hasiru Estate focuses exclusively on gated land and
+plotted development opportunities, helping individuals
+and families discover thoughtfully planned spaces for
+living and investment.
+</p>
 
 
-                <a
-                    href="https://wa.me/919019746649?text=Hello%20Hasiru%20Estate%2C%20I%20am%20interested%20in%20your%20land%20and%20plot%20opportunities."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-secondary"
-                >
-                    WhatsApp Us
-                </a>
-
-            </div>
+<div class="hero-actions">
 
 
-            <div class="hero-note">
+<a
+href="#enquiry"
+class="btn btn-primary"
+data-i18n="hero.button1"
+>
+Explore Opportunities
+</a>
 
-                GATED LAND · PLANNED SPACES · THOUGHTFUL LIVING
 
-            </div>
+<a
+href="#about"
+class="btn btn-secondary"
+data-i18n="hero.button2"
+>
+Discover Hasiru Estate
+</a>
 
-        </div>
 
-    </div>
+<a
+href="https://wa.me/919019746649"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-secondary"
+data-i18n="hero.button3"
+>
+WhatsApp Us
+</a>
+
+
+</div>
+
+
+<div
+class="hero-note"
+data-i18n="hero.note"
+>
+GATED LAND · PLANNED SPACES · THOUGHTFUL LIVING
+</div>
+
+
+</div>
+
+</div>
 
 </section>
-
 
 
 <!-- ======================================================
@@ -2592,8 +2251,8 @@ textarea{
 ====================================================== -->
 
 <section
-    class="section"
-    id="about"
+class="section"
+id="about"
 >
 
 <div class="container">
@@ -2601,91 +2260,131 @@ textarea{
 <div class="about-grid">
 
 
-    <div>
+<div>
 
-        <div class="eyebrow">
-
-            About Hasiru Estate
-
-        </div>
-
-
-        <h2 class="title">
-
-            Focused on land.
-            Designed around possibilities.
-
-        </h2>
+<div
+class="eyebrow"
+data-i18n="about.eyebrow"
+>
+About Hasiru Estate
+</div>
 
 
-        <p class="subtitle">
-
-            Hasiru Estate is a real-estate company focused
-            on gated land and plotted development
-            opportunities.
-
-        </p>
-
-
-        <div class="about-list">
-
-            <div>
-                <span></span>
-                Gated land and plotted developments
-            </div>
-
-            <div>
-                <span></span>
-                Planned layouts and community-oriented spaces
-            </div>
-
-            <div>
-                <span></span>
-                Opportunities for individuals and families
-            </div>
-
-            <div>
-                <span></span>
-                Personal assistance throughout the discovery process
-            </div>
-
-        </div>
-
-    </div>
+<h2
+class="title"
+data-i18n="about.title"
+>
+Focused on land. Designed around possibilities.
+</h2>
 
 
-    <div class="about-panel">
-
-        <div class="eyebrow">
-            Our Approach
-        </div>
-
-
-        <h3>
-            Simple. Clear. Professional.
-        </h3>
+<p
+class="subtitle"
+data-i18n="about.subtitle"
+>
+Hasiru Estate is a real-estate company focused on
+gated land and plotted development opportunities.
+</p>
 
 
-        <p>
-
-            We aim to make the process of exploring land
-            opportunities simple, transparent and professional.
-
-        </p>
+<div class="about-list">
 
 
-        <br>
+<div>
+
+<span></span>
+
+<div
+data-i18n="about.point1"
+>
+Gated land and plotted developments
+</div>
+
+</div>
 
 
-        <p>
+<div>
 
-            Interested buyers can share their requirements,
-            understand available opportunities and connect
-            with the relevant project or sales representatives.
+<span></span>
 
-        </p>
+<div
+data-i18n="about.point2"
+>
+Planned layouts and community-oriented spaces
+</div>
 
-    </div>
+</div>
+
+
+<div>
+
+<span></span>
+
+<div
+data-i18n="about.point3"
+>
+Opportunities for individuals and families
+</div>
+
+</div>
+
+
+<div>
+
+<span></span>
+
+<div
+data-i18n="about.point4"
+>
+Personal assistance throughout the discovery process
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="about-panel">
+
+
+<div
+class="eyebrow"
+data-i18n="about.approachEyebrow"
+>
+Our Approach
+</div>
+
+
+<h3
+data-i18n="about.approachTitle"
+>
+Simple. Clear. Professional.
+</h3>
+
+
+<p
+data-i18n="about.approachText1"
+>
+We aim to make the process of exploring land
+opportunities simple, transparent and professional.
+</p>
+
+
+<br>
+
+
+<p
+data-i18n="about.approachText2"
+>
+Interested buyers can share their requirements,
+understand available opportunities and connect
+with the relevant project or sales representatives.
+</p>
+
+</div>
 
 
 </div>
@@ -2693,7 +2392,6 @@ textarea{
 </div>
 
 </section>
-
 
 
 <!-- ======================================================
@@ -2701,8 +2399,8 @@ textarea{
 ====================================================== -->
 
 <section
-    class="section section-alt"
-    id="why"
+class="section section-alt"
+id="why"
 >
 
 <div class="container">
@@ -2710,160 +2408,175 @@ textarea{
 
 <div class="center">
 
-    <div class="eyebrow">
-        Why Choose Hasiru Estate
-    </div>
+<div
+class="eyebrow"
+data-i18n="why.eyebrow"
+>
+Why Choose Hasiru Estate
+</div>
 
 
-    <h2 class="title">
+<h2
+class="title"
+data-i18n="why.title"
+>
+A focused approach to plotted developments.
+</h2>
 
-        A focused approach to
-        plotted developments.
 
-    </h2>
-
-
-    <p class="subtitle">
-
-        Our focus is on presenting land opportunities
-        with clear information and personal assistance.
-
-    </p>
+<p
+class="subtitle"
+data-i18n="why.subtitle"
+>
+Our focus is on presenting land opportunities
+with clear information and personal assistance.
+</p>
 
 </div>
 
 
-
 <div
-    class="grid g3"
-    style="margin-top:50px;"
+class="grid g3"
+style="margin-top:50px;"
 >
 
 
-    <div class="card feature-card">
+<div class="card">
 
-        <div class="card-icon">
-            01
-        </div>
+<div class="card-icon">
+01
+</div>
 
-        <h3>
-            Gated Developments
-        </h3>
+<h3
+data-i18n="why.card1.title"
+>
+Gated Developments
+</h3>
 
-        <p>
+<p
+data-i18n="why.card1.text"
+>
+Focused on gated land and plotted developments
+designed around planned layouts and
+community-oriented spaces.
+</p>
 
-            Focused on gated land and plotted developments
-            designed around planned layouts and
-            community-oriented spaces.
-
-        </p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-        <div class="card-icon">
-            02
-        </div>
-
-        <h3>
-            Thoughtful Locations
-        </h3>
-
-        <p>
-
-            We focus on opportunities in locations selected
-            around accessibility, surroundings and
-            future potential.
-
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="card feature-card">
+<div class="card">
 
-        <div class="card-icon">
-            03
-        </div>
+<div class="card-icon">
+02
+</div>
 
-        <h3>
-            Personal Assistance
-        </h3>
+<h3
+data-i18n="why.card2.title"
+>
+Thoughtful Locations
+</h3>
 
-        <p>
+<p
+data-i18n="why.card2.text"
+>
+We focus on opportunities in locations selected
+around accessibility, surroundings and
+future potential.
+</p>
 
-            Interested buyers can receive assistance
-            understanding available opportunities and
-            connecting with the relevant team.
-
-        </p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-        <div class="card-icon">
-            04
-        </div>
-
-        <h3>
-            Clear Information
-        </h3>
-
-        <p>
-
-            We aim to present available information about
-            location, development features and plot
-            availability clearly.
-
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="card feature-card">
+<div class="card">
 
-        <div class="card-icon">
-            05
-        </div>
+<div class="card-icon">
+03
+</div>
 
-        <h3>
-            Buyer Focus
-        </h3>
+<h3
+data-i18n="why.card3.title"
+>
+Personal Assistance
+</h3>
 
-        <p>
+<p
+data-i18n="why.card3.text"
+>
+Interested buyers can receive assistance
+understanding available opportunities and
+connecting with the relevant team.
+</p>
 
-            Requirements can be shared before exploring
-            suitable land and plotted development
-            opportunities.
-
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="card feature-card">
+<div class="card">
 
-        <div class="card-icon">
-            06
-        </div>
+<div class="card-icon">
+04
+</div>
 
-        <h3>
-            Professional Process
-        </h3>
+<h3
+data-i18n="why.card4.title"
+>
+Clear Information
+</h3>
 
-        <p>
+<p
+data-i18n="why.card4.text"
+>
+We aim to present available information about
+location, development features and plot
+availability clearly.
+</p>
 
-            Our objective is to make land discovery
-            simple, transparent and professionally
-            coordinated.
+</div>
 
-        </p>
 
-    </div>
+<div class="card">
+
+<div class="card-icon">
+05
+</div>
+
+<h3
+data-i18n="why.card5.title"
+>
+Buyer Focus
+</h3>
+
+<p
+data-i18n="why.card5.text"
+>
+Requirements can be shared before exploring
+suitable land and plotted development
+opportunities.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+06
+</div>
+
+<h3
+data-i18n="why.card6.title"
+>
+Professional Process
+</h3>
+
+<p
+data-i18n="why.card6.text"
+>
+Our objective is to make land discovery
+simple, transparent and professionally
+coordinated.
+</p>
+
+</div>
 
 
 </div>
@@ -2871,7 +2584,6 @@ textarea{
 </div>
 
 </section>
-
 
 
 <!-- ======================================================
@@ -2879,8 +2591,8 @@ textarea{
 ====================================================== -->
 
 <section
-    class="section"
-    id="focus"
+class="section"
+id="focus"
 >
 
 <div class="container">
@@ -2888,102 +2600,124 @@ textarea{
 
 <div class="center">
 
-    <div class="eyebrow">
-        Our Focus
-    </div>
+<div
+class="eyebrow"
+data-i18n="focus.eyebrow"
+>
+Our Focus
+</div>
 
-    <h2 class="title">
-        Land opportunities
-        with a clear purpose.
-    </h2>
 
-    <p class="subtitle">
+<h2
+class="title"
+data-i18n="focus.title"
+>
+Land opportunities with a clear purpose.
+</h2>
 
-        Explore the types of opportunities Hasiru Estate
-        focuses on.
 
-    </p>
+<p
+class="subtitle"
+data-i18n="focus.subtitle"
+>
+Explore the types of opportunities Hasiru Estate
+focuses on.
+</p>
 
 </div>
 
 
-
 <div
-    class="grid g3"
-    style="margin-top:50px;"
+class="grid g3"
+style="margin-top:50px;"
 >
 
 
-    <div class="card focus-card">
+<div class="card">
 
-        <div class="focus-number">
-            01
-        </div>
+<div
+class="focus-number"
+style="font-family:'Cormorant Garamond';font-size:60px;color:var(--cream3);"
+>
+01
+</div>
 
-        <div class="card-icon">
-            G
-        </div>
+<div class="card-icon">
+G
+</div>
 
-        <h3>
-            Gated Plots
-        </h3>
+<h3
+data-i18n="focus.card1.title"
+>
+Gated Plots
+</h3>
 
-        <p>
+<p
+data-i18n="focus.card1.text"
+>
+Plotted developments within gated communities
+with planned layouts and designated spaces.
+</p>
 
-            Plotted developments within gated communities
-            with planned layouts and designated spaces.
-
-        </p>
-
-    </div>
-
-
-    <div class="card focus-card">
-
-        <div class="focus-number">
-            02
-        </div>
-
-        <div class="card-icon">
-            R
-        </div>
-
-        <h3>
-            Residential Land
-        </h3>
-
-        <p>
-
-            Land opportunities suitable for those looking
-            to plan a future home or residential property.
-
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="card focus-card">
+<div class="card">
 
-        <div class="focus-number">
-            03
-        </div>
+<div
+class="focus-number"
+style="font-family:'Cormorant Garamond';font-size:60px;color:var(--cream3);"
+>
+02
+</div>
 
-        <div class="card-icon">
-            L
-        </div>
+<div class="card-icon">
+R
+</div>
 
-        <h3>
-            Land Opportunities
-        </h3>
+<h3
+data-i18n="focus.card2.title"
+>
+Residential Land
+</h3>
 
-        <p>
+<p
+data-i18n="focus.card2.text"
+>
+Land opportunities suitable for those looking
+to plan a future home or residential property.
+</p>
 
-            Opportunities presented based on availability,
-            location and development details.
+</div>
 
-        </p>
 
-    </div>
+<div class="card">
+
+<div
+class="focus-number"
+style="font-family:'Cormorant Garamond';font-size:60px;color:var(--cream3);"
+>
+03
+</div>
+
+<div class="card-icon">
+L
+</div>
+
+<h3
+data-i18n="focus.card3.title"
+>
+Land Opportunities
+</h3>
+
+<p
+data-i18n="focus.card3.text"
+>
+Opportunities presented based on availability,
+location and development details.
+</p>
+
+</div>
 
 
 </div>
@@ -2991,7 +2725,6 @@ textarea{
 </div>
 
 </section>
-
 
 
 <!-- ======================================================
@@ -2999,8 +2732,8 @@ textarea{
 ====================================================== -->
 
 <section
-    class="section section-alt"
-    id="process"
+class="section section-alt"
+id="process"
 >
 
 <div class="container">
@@ -3008,108 +2741,123 @@ textarea{
 
 <div class="center">
 
-    <div class="eyebrow">
-        Our Process
-    </div>
-
-    <h2 class="title">
-        From requirement
-        to opportunity.
-    </h2>
-
-    <p class="subtitle">
-
-        A simple way to begin exploring available land
-        and plotted development opportunities.
-
-    </p>
-
+<div
+class="eyebrow"
+data-i18n="process.eyebrow"
+>
+Our Process
 </div>
 
+
+<h2
+class="title"
+data-i18n="process.title"
+>
+From requirement to opportunity.
+</h2>
+
+
+<p
+class="subtitle"
+data-i18n="process.subtitle"
+>
+A simple way to begin exploring available land
+and plotted development opportunities.
+</p>
+
+</div>
 
 
 <div class="process-grid">
 
 
-    <div class="process-step">
+<div class="process-step">
 
-        <div class="process-number">
-            01
-        </div>
+<div class="process-number">
+01
+</div>
 
-        <h3>
-            Share
-        </h3>
+<h3
+data-i18n="process.step1.title"
+>
+Share
+</h3>
 
-        <p>
+<p
+data-i18n="process.step1.text"
+>
+Tell us the type of land or plot you are
+looking for and your preferred location.
+</p>
 
-            Tell us the type of land or plot you are
-            looking for and your preferred location.
-
-        </p>
-
-    </div>
-
-
-    <div class="process-step">
-
-        <div class="process-number">
-            02
-        </div>
-
-        <h3>
-            Understand
-        </h3>
-
-        <p>
-
-            We help you understand available opportunities
-            and relevant project information.
-
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="process-step">
+<div class="process-step">
 
-        <div class="process-number">
-            03
-        </div>
+<div class="process-number">
+02
+</div>
 
-        <h3>
-            Connect
-        </h3>
+<h3
+data-i18n="process.step2.title"
+>
+Understand
+</h3>
 
-        <p>
+<p
+data-i18n="process.step2.text"
+>
+We help you understand available opportunities
+and relevant project information.
+</p>
 
-            Interested buyers can be connected with the
-            appropriate sales or project representatives.
-
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="process-step">
+<div class="process-step">
 
-        <div class="process-number">
-            04
-        </div>
+<div class="process-number">
+03
+</div>
 
-        <h3>
-            Verify
-        </h3>
+<h3
+data-i18n="process.step3.title"
+>
+Connect
+</h3>
 
-        <p>
+<p
+data-i18n="process.step3.text"
+>
+Interested buyers can be connected with the
+appropriate sales or project representatives.
+</p>
 
-            Independently verify approvals, dimensions,
-            availability, pricing and other relevant details
-            before making a decision.
+</div>
 
-        </p>
 
-    </div>
+<div class="process-step">
+
+<div class="process-number">
+04
+</div>
+
+<h3
+data-i18n="process.step4.title"
+>
+Verify
+</h3>
+
+<p
+data-i18n="process.step4.text"
+>
+Independently verify approvals, dimensions,
+availability, pricing and other relevant details
+before making a decision.
+</p>
+
+</div>
 
 
 </div>
@@ -3119,14 +2867,13 @@ textarea{
 </section>
 
 
-
 <!-- ======================================================
      ENQUIRY
 ====================================================== -->
 
 <section
-    class="section enquiry-section"
-    id="enquiry"
+class="section enquiry-section"
+id="enquiry"
 >
 
 <div class="container">
@@ -3135,192 +2882,266 @@ textarea{
 <div class="enquiry-layout">
 
 
-    <div class="enquiry-info">
+<div>
 
-        <div class="eyebrow">
-            Enquire About Land
-        </div>
+<div
+class="eyebrow"
+data-i18n="enquiry.eyebrow"
+>
+Enquire About Land
+</div>
 
 
-        <h2 class="title">
+<h2
+class="title"
+data-i18n="enquiry.title"
+>
+Tell us what you are looking for.
+</h2>
 
-            Tell us what
-            you are looking for.
 
-        </h2>
+<p
+class="subtitle"
+data-i18n="enquiry.subtitle"
+>
+Share your basic requirements and we can help
+you explore relevant gated land and plotted
+development opportunities.
+</p>
 
 
-        <p class="subtitle">
+<div class="enquiry-points">
 
-            Share your basic requirements and we can help
-            you explore relevant gated land and plotted
-            development opportunities.
 
-        </p>
+<div class="enquiry-point">
 
+<span></span>
 
-        <div class="enquiry-points">
+<div
+data-i18n="enquiry.point1"
+>
+Preferred location
+</div>
 
-            <div class="enquiry-point">
-                <span></span>
-                Preferred location
-            </div>
+</div>
 
-            <div class="enquiry-point">
-                <span></span>
-                Plot or land requirement
-            </div>
 
-            <div class="enquiry-point">
-                <span></span>
-                Residential or other requirement
-            </div>
+<div class="enquiry-point">
 
-            <div class="enquiry-point">
-                <span></span>
-                Personal assistance
-            </div>
+<span></span>
 
-        </div>
+<div
+data-i18n="enquiry.point2"
+>
+Plot or land requirement
+</div>
 
-    </div>
+</div>
 
 
+<div class="enquiry-point">
 
-    <div class="form-box">
+<span></span>
 
-        <form id="enquiryForm">
+<div
+data-i18n="enquiry.point3"
+>
+Residential or other requirement
+</div>
 
-            <div class="form-grid">
+</div>
 
 
-                <div class="field">
+<div class="enquiry-point">
 
-                    <label>
-                        Name
-                    </label>
+<span></span>
 
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your name"
-                        required
-                    >
+<div
+data-i18n="enquiry.point4"
+>
+Personal assistance
+</div>
 
-                </div>
+</div>
 
 
-                <div class="field">
+</div>
 
-                    <label>
-                        Phone / WhatsApp
-                    </label>
+</div>
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        placeholder="Enter your phone number"
-                        required
-                    >
 
-                </div>
+<div class="form-box">
 
+<form id="enquiryForm">
 
-                <div class="field">
 
-                    <label>
-                        I am looking for
-                    </label>
+<div class="form-grid">
 
-                    <select
-                        id="requirement"
-                        required
-                    >
 
-                        <option value="">
-                            Select
-                        </option>
+<div class="field">
 
-                        <option>
-                            Gated Plot
-                        </option>
-
-                        <option>
-                            Residential Land
-                        </option>
-
-                        <option>
-                            Investment Land
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Preferred Location
-                    </label>
-
-                    <input
-                        type="text"
-                        id="location"
-                        placeholder="Example: Mysore"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="field full">
-
-                    <label>
-                        Additional Requirements
-                    </label>
-
-                    <textarea
-                        id="message"
-                        placeholder="Tell us anything else about your requirement..."
-                    ></textarea>
-
-                </div>
-
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="form-submit"
-            >
-                Send Enquiry on WhatsApp
-            </button>
-
-
-            <div class="form-note">
-
-                Your enquiry will open WhatsApp with
-                the details you entered.
-
-            </div>
-
-        </form>
-
-    </div>
-
+<label
+data-i18n="form.name"
+>
+Name
+</label>
+
+<input
+type="text"
+id="name"
+data-placeholder-en="Enter your name"
+data-placeholder-kn="ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label
+data-i18n="form.phone"
+>
+Phone / WhatsApp
+</label>
+
+<input
+type="tel"
+id="phone"
+data-placeholder-en="Enter your phone number"
+data-placeholder-kn="ನಿಮ್ಮ ದೂರವಾಣಿ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ"
+placeholder="Enter your phone number"
+required
+>
+
+</div>
+
+
+<div class="field">
+
+<label
+data-i18n="form.looking"
+>
+I am looking for
+</label>
+
+<select
+id="requirement"
+required
+>
+
+<option
+value=""
+data-i18n="form.select"
+>
+Select
+</option>
+
+<option
+value="Gated Plot"
+data-en="Gated Plot"
+data-kn="ಗೇಟೆಡ್ ಪ್ಲಾಟ್"
+>
+Gated Plot
+</option>
+
+<option
+value="Residential Land"
+data-en="Residential Land"
+data-kn="ವಸತಿ ಜಮೀನು"
+>
+Residential Land
+</option>
+
+<option
+value="Investment Land"
+data-en="Investment Land"
+data-kn="ಹೂಡಿಕೆ ಜಮೀನು"
+>
+Investment Land
+</option>
+
+<option
+value="Other"
+data-en="Other"
+data-kn="ಇತರೆ"
+>
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label
+data-i18n="form.location"
+>
+Preferred Location
+</label>
+
+<input
+type="text"
+id="location"
+data-placeholder-en="Example: Mysore"
+data-placeholder-kn="ಉದಾಹರಣೆ: ಮೈಸೂರು"
+placeholder="Example: Mysore"
+required
+>
+
+</div>
+
+
+<div class="field full">
+
+<label
+data-i18n="form.message"
+>
+Additional Requirements
+</label>
+
+<textarea
+id="message"
+data-placeholder-en="Tell us anything else about your requirement..."
+data-placeholder-kn="ನಿಮ್ಮ ಅಗತ್ಯತೆಯ ಕುರಿತು ಇನ್ನೇನಾದರೂ ತಿಳಿಸಿ..."
+placeholder="Tell us anything else about your requirement..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="form-submit"
+data-i18n="form.submit"
+>
+Send Enquiry on WhatsApp
+</button>
+
+
+<div
+class="form-note"
+data-i18n="form.note"
+>
+Your enquiry will open WhatsApp with the details you entered.
+</div>
+
+
+</form>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- ======================================================
@@ -3328,8 +3149,8 @@ textarea{
 ====================================================== -->
 
 <section
-    class="section"
-    id="faq"
+class="section"
+id="faq"
 >
 
 <div class="container">
@@ -3337,13 +3158,20 @@ textarea{
 
 <div class="center">
 
-    <div class="eyebrow">
-        FAQ
-    </div>
+<div
+class="eyebrow"
+data-i18n="faq.eyebrow"
+>
+FAQ
+</div>
 
-    <h2 class="title">
-        Common Questions
-    </h2>
+
+<h2
+class="title"
+data-i18n="faq.title"
+>
+Common Questions
+</h2>
 
 </div>
 
@@ -3351,139 +3179,160 @@ textarea{
 <div class="faq">
 
 
-    <div class="faq-item">
+<div class="faq-item">
 
-        <button
-            class="faq-question"
-            type="button"
-        >
+<button
+class="faq-question"
+type="button"
+>
 
-            What does Hasiru Estate focus on?
+<span
+data-i18n="faq.q1"
+>
+What does Hasiru Estate focus on?
+</span>
 
-            <span class="faq-icon">
-                +
-            </span>
+<span class="faq-icon">
++
+</span>
 
-        </button>
-
-
-        <div class="faq-answer">
-
-            Hasiru Estate focuses on gated land and
-            plotted development opportunities.
-
-        </div>
-
-    </div>
+</button>
 
 
+<div
+class="faq-answer"
+data-i18n="faq.a1"
+>
+Hasiru Estate focuses on gated land and
+plotted development opportunities.
+</div>
 
-    <div class="faq-item">
-
-        <button
-            class="faq-question"
-            type="button"
-        >
-
-            Can I share my preferred location?
-
-            <span class="faq-icon">
-                +
-            </span>
-
-        </button>
+</div>
 
 
-        <div class="faq-answer">
+<div class="faq-item">
 
-            Yes. You can mention your preferred location
-            in the enquiry form so the relevant opportunities
-            can be discussed with you.
+<button
+class="faq-question"
+type="button"
+>
 
-        </div>
+<span
+data-i18n="faq.q2"
+>
+Can I share my preferred location?
+</span>
 
-    </div>
+<span class="faq-icon">
++
+</span>
 
-
-
-    <div class="faq-item">
-
-        <button
-            class="faq-question"
-            type="button"
-        >
-
-            Can I contact Hasiru Estate through WhatsApp?
-
-            <span class="faq-icon">
-                +
-            </span>
-
-        </button>
+</button>
 
 
-        <div class="faq-answer">
+<div
+class="faq-answer"
+data-i18n="faq.a2"
+>
+Yes. You can mention your preferred location
+in the enquiry form so the relevant opportunities
+can be discussed with you.
+</div>
 
-            Yes. The website includes a direct WhatsApp
-            contact option for enquiries.
-
-        </div>
-
-    </div>
-
-
-
-    <div class="faq-item">
-
-        <button
-            class="faq-question"
-            type="button"
-        >
-
-            Does Hasiru Estate provide legal or financial advice?
-
-            <span class="faq-icon">
-                +
-            </span>
-
-        </button>
+</div>
 
 
-        <div class="faq-answer">
+<div class="faq-item">
 
-            No. Property availability, approvals, dimensions,
-            pricing and other details should be independently
-            verified before making any decision or transaction.
+<button
+class="faq-question"
+type="button"
+>
 
-        </div>
+<span
+data-i18n="faq.q3"
+>
+Can I contact Hasiru Estate through WhatsApp?
+</span>
 
-    </div>
+<span class="faq-icon">
++
+</span>
 
-
-
-    <div class="faq-item">
-
-        <button
-            class="faq-question"
-            type="button"
-        >
-
-            Where is Hasiru Estate located?
-
-            <span class="faq-icon">
-                +
-            </span>
-
-        </button>
+</button>
 
 
-        <div class="faq-answer">
+<div
+class="faq-answer"
+data-i18n="faq.a3"
+>
+Yes. The website includes a direct WhatsApp
+contact option for enquiries.
+</div>
 
-            Hasiru Estate is based in Mysore, Karnataka, India.
+</div>
 
-        </div>
 
-    </div>
+<div class="faq-item">
+
+<button
+class="faq-question"
+type="button"
+>
+
+<span
+data-i18n="faq.q4"
+>
+Does Hasiru Estate provide legal or financial advice?
+</span>
+
+<span class="faq-icon">
++
+</span>
+
+</button>
+
+
+<div
+class="faq-answer"
+data-i18n="faq.a4"
+>
+No. Property availability, approvals, dimensions,
+pricing and other details should be independently
+verified before making any decision or transaction.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button
+class="faq-question"
+type="button"
+>
+
+<span
+data-i18n="faq.q5"
+>
+Where is Hasiru Estate located?
+</span>
+
+<span class="faq-icon">
++
+</span>
+
+</button>
+
+
+<div
+class="faq-answer"
+data-i18n="faq.a5"
+>
+Hasiru Estate is based in Mysore, Karnataka, India.
+</div>
+
+</div>
 
 
 </div>
@@ -3493,14 +3342,13 @@ textarea{
 </section>
 
 
-
 <!-- ======================================================
      CONTACT
 ====================================================== -->
 
 <section
-    class="section section-alt"
-    id="contact"
+class="section section-alt"
+id="contact"
 >
 
 <div class="container">
@@ -3509,115 +3357,131 @@ textarea{
 <div class="contact-grid">
 
 
-    <div>
+<div>
 
-        <div class="eyebrow">
-            Contact Hasiru Estate
-        </div>
-
-
-        <h2 class="title">
-
-            Let's talk about
-            your land requirement.
-
-        </h2>
+<div
+class="eyebrow"
+data-i18n="contact.eyebrow"
+>
+Contact Hasiru Estate
+</div>
 
 
-        <p class="subtitle">
-
-            Contact us for available gated land and
-            plotted development opportunities.
-
-        </p>
-
-
-        <div class="contact-actions">
-
-            <a
-                href="tel:+919019746649"
-                class="btn btn-primary"
-            >
-                Call Now
-            </a>
+<h2
+class="title"
+data-i18n="contact.title"
+>
+Let's talk about your land requirement.
+</h2>
 
 
-            <a
-                href="https://wa.me/919019746649"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-            >
-                WhatsApp
-            </a>
-
-        </div>
-
-    </div>
+<p
+class="subtitle"
+data-i18n="contact.subtitle"
+>
+Contact us for available gated land and
+plotted development opportunities.
+</p>
 
 
-
-    <div class="contact-details">
-
-
-        <div class="contact-item">
-
-            <small>
-                Phone
-            </small>
-
-            <a href="tel:+919019746649">
-                +91 90197 46649
-            </a>
-
-        </div>
+<div class="contact-actions">
 
 
-        <div class="contact-item">
-
-            <small>
-                Email
-            </small>
-
-            <a href="mailto:hasiruestate@gmail.com">
-                hasiruestate@gmail.com
-            </a>
-
-        </div>
+<a
+href="tel:+919019746649"
+class="btn btn-primary"
+data-i18n="contact.call"
+>
+Call Now
+</a>
 
 
-        <div class="contact-item">
-
-            <small>
-                Location
-            </small>
-
-            <span>
-                Mysore, Karnataka, India
-            </span>
-
-        </div>
+<a
+href="https://wa.me/919019746649"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-secondary"
+data-i18n="contact.whatsapp"
+>
+WhatsApp
+</a>
 
 
-        <div class="contact-item">
+</div>
 
-            <small>
-                Instagram
-            </small>
-
-            <a
-                href="https://www.instagram.com/hasiruestate/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                @HasiruEstate
-            </a>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="contact-details">
 
+
+<div class="contact-item">
+
+<small
+data-i18n="contact.phoneLabel"
+>
+Phone
+</small>
+
+<a href="tel:+919019746649">
++91 90197 46649
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<small
+data-i18n="contact.emailLabel"
+>
+Email
+</small>
+
+<a href="mailto:hasiruestate@gmail.com">
+hasiruestate@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<small
+data-i18n="contact.locationLabel"
+>
+Location
+</small>
+
+<span
+data-i18n="contact.location"
+>
+Mysore, Karnataka, India
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<small
+data-i18n="contact.instagramLabel"
+>
+Instagram
+</small>
+
+<a
+href="https://www.instagram.com/hasiruestate/"
+target="_blank"
+rel="noopener noreferrer"
+>
+@HasiruEstate
+</a>
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -3627,7 +3491,6 @@ textarea{
 
 
 </main>
-
 
 
 <!-- ======================================================
@@ -3642,124 +3505,149 @@ textarea{
 <div class="footer-grid">
 
 
-    <div>
+<div>
 
-        <div class="footer-brand">
-            HASIRU ESTATE
-        </div>
-
-
-        <p class="footer-text">
-
-            Green Spaces. Thoughtful Living.
-
-            <br><br>
-
-            Focused on gated land and plotted
-            development opportunities.
-
-        </p>
-
-    </div>
+<div class="footer-brand">
+HASIRU ESTATE
+</div>
 
 
+<p
+class="footer-text"
+data-i18n="footer.description"
+>
+Green Spaces. Thoughtful Living.
 
-    <div>
+<br><br>
 
-        <div class="footer-heading">
-            Explore
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#why">
-                Why Us
-            </a>
-
-            <a href="#focus">
-                Our Focus
-            </a>
-
-            <a href="#process">
-                Process
-            </a>
-
-        </div>
-
-    </div>
-
-
-
-    <div>
-
-        <div class="footer-heading">
-            Connect
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#enquiry">
-                Enquire About Land
-            </a>
-
-            <a href="tel:+919019746649">
-                +91 90197 46649
-            </a>
-
-            <a href="mailto:hasiruestate@gmail.com">
-                hasiruestate@gmail.com
-            </a>
-
-            <a
-                href="https://www.instagram.com/hasiruestate/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Instagram
-            </a>
-
-        </div>
-
-    </div>
-
+Focused on gated land and plotted
+development opportunities.
+</p>
 
 </div>
 
+
+<div>
+
+<div
+class="footer-heading"
+data-i18n="footer.explore"
+>
+Explore
+</div>
+
+
+<div class="footer-links">
+
+<a
+href="#home"
+data-i18n="nav.home"
+>
+Home
+</a>
+
+<a
+href="#about"
+data-i18n="nav.about"
+>
+About
+</a>
+
+<a
+href="#why"
+data-i18n="nav.why"
+>
+Why Us
+</a>
+
+<a
+href="#focus"
+data-i18n="nav.focus"
+>
+Our Focus
+</a>
+
+<a
+href="#process"
+data-i18n="nav.process"
+>
+Process
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div
+class="footer-heading"
+data-i18n="footer.connect"
+>
+Connect
+</div>
+
+
+<div class="footer-links">
+
+<a
+href="#enquiry"
+data-i18n="footer.enquire"
+>
+Enquire About Land
+</a>
+
+<a href="tel:+919019746649">
++91 90197 46649
+</a>
+
+<a href="mailto:hasiruestate@gmail.com">
+hasiruestate@gmail.com
+</a>
+
+<a
+href="https://www.instagram.com/hasiruestate/"
+target="_blank"
+>
+Instagram
+</a>
+
+</div>
+
+</div>
+
+
+</div>
 
 
 <div class="footer-bottom">
 
-    <span>
-        © 2026 HASIRU ESTATE. All rights reserved.
-    </span>
+<span
+data-i18n="footer.copyright"
+>
+© 2026 HASIRU ESTATE. All rights reserved.
+</span>
 
-    <span>
-        Mysore, Karnataka, India
-    </span>
+<span
+data-i18n="contact.location"
+>
+Mysore, Karnataka, India
+</span>
 
 </div>
 
 
-
-<p class="disclaimer">
-
-    Disclaimer: Hasiru Estate provides information regarding
-    available land and plotted development opportunities.
-    Property availability, approvals, dimensions, development
-    features, pricing and other details may change and should
-    be independently verified before making any decision or
-    transaction.
-
+<p
+class="disclaimer"
+data-i18n="footer.disclaimer"
+>
+Disclaimer: Hasiru Estate provides information regarding
+available land and plotted development opportunities.
+Property availability, approvals, dimensions, development
+features, pricing and other details may change and should
+be independently verified before making any decision or
+transaction.
 </p>
 
 
@@ -3768,302 +3656,1308 @@ textarea{
 </footer>
 
 
-
 <!-- ======================================================
      WHATSAPP
 ====================================================== -->
 
 <a
-    class="whatsapp"
-    href="https://wa.me/919019746649?text=Hello%20Hasiru%20Estate%2C%20I%20would%20like%20to%20know%20about%20your%20land%20and%20plot%20opportunities."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Chat on WhatsApp"
+class="whatsapp"
+href="https://wa.me/919019746649"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="WhatsApp"
 >
-
 
 <svg
-    viewBox="0 0 32 32"
-    aria-hidden="true"
+viewBox="0 0 32 32"
 >
 
-    <path
-        d="M19.11 17.02c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.32-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.91 2.92 4.63 4.09.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
-    />
+<path
+d="M19.11 17.02c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.32-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.91 2.92 4.63 4.09.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+/>
 
-    <path
-        d="M16.02 3.2c-7.08 0-12.83 5.75-12.83 12.83 0 2.26.59 4.47 1.72 6.41L3.08 28.8l6.52-1.71a12.77 12.77 0 0 0 6.42 1.73h.01c7.08 0 12.83-5.76 12.83-12.83S23.1 3.2 16.02 3.2zm0 23.44h-.01a10.58 10.58 0 0 1-5.4-1.48l-.39-.23-3.87 1.02 1.03-3.77-.25-.39a10.61 10.61 0 1 1 8.89 4.85z"
-    />
+<path
+d="M16.02 3.2c-7.08 0-12.83 5.75-12.83 12.83 0 2.26.59 4.47 1.72 6.41L3.08 28.8l6.52-1.71a12.77 12.77 0 0 0 6.42 1.73h.01c7.08 0 12.83-5.76 12.83-12.83S23.1 3.2 16.02 3.2zm0 23.44h-.01a10.58 10.58 0 0 1-5.4-1.48l-.39-.23-3.87 1.02 1.03-3.77-.25-.39a10.61 10.61 0 1 1 8.89 4.85z"
+/>
 
 </svg>
 
 </a>
 
 
-
-<!-- ======================================================
-     BACK TOP
-====================================================== -->
+<!-- BACK TOP -->
 
 <button
-    class="back-top"
-    id="backTop"
-    type="button"
-    aria-label="Back to top"
+class="back-top"
+id="backTop"
+type="button"
 >
-    ↑
+↑
 </button>
 
 
-
-<!-- ======================================================
-     TOAST
-====================================================== -->
-
 <div
-    class="toast"
-    id="toast"
+class="toast"
+id="toast"
 ></div>
-
 
 
 <script>
 
 /* =========================================================
    ELEMENTS
-   ========================================================= */
+========================================================= */
 
 const loader =
-    document.getElementById("siteLoader");
+document.getElementById("siteLoader");
 
 const navlinks =
-    document.getElementById("navlinks");
+document.getElementById("navlinks");
 
 const menuBtn =
-    document.getElementById("menuBtn");
+document.getElementById("menuBtn");
 
 const languageBtn =
-    document.getElementById("languageBtn");
+document.getElementById("languageBtn");
 
 const themeBtn =
-    document.getElementById("themeBtn");
+document.getElementById("themeBtn");
 
 const scrollProgress =
-    document.getElementById("scrollProgress");
+document.getElementById("scrollProgress");
 
 const backTop =
-    document.getElementById("backTop");
+document.getElementById("backTop");
 
 const toast =
-    document.getElementById("toast");
+document.getElementById("toast");
+
+let currentLanguage = "en";
 
 
 /* =========================================================
-   HASIRU OPENING TRANSITION
+   TRANSLATION DATABASE
    ========================================================= */
 
-window.addEventListener(
-    "load",
-    () => {
+const translations = {
 
-        /*
-          Different from PRANAURA:
-          the logo remains visible first,
-          then the loader softly disappears.
-        */
 
-        setTimeout(
-            () => {
+/* =========================
+   NAV
+========================= */
 
-                document.body.classList.add(
-                    "loaded"
-                );
+"nav.home":{
 
-            },
-            500
+en:"Home",
+
+kn:"ಮುಖಪುಟ"
+
+},
+
+"nav.about":{
+
+en:"About",
+
+kn:"ನಮ್ಮ ಬಗ್ಗೆ"
+
+},
+
+"nav.why":{
+
+en:"Why Us",
+
+kn:"ಏಕೆ ನಾವು"
+
+},
+
+"nav.focus":{
+
+en:"Focus",
+
+kn:"ನಮ್ಮ ಗಮನ"
+
+},
+
+"nav.process":{
+
+en:"Process",
+
+kn:"ಪ್ರಕ್ರಿಯೆ"
+
+},
+
+"nav.enquire":{
+
+en:"Enquire",
+
+kn:"ವಿಚಾರಿಸಿ"
+
+},
+
+"nav.faq":{
+
+en:"FAQ",
+
+kn:"ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು"
+
+},
+
+"nav.contact":{
+
+en:"Contact",
+
+kn:"ಸಂಪರ್ಕಿಸಿ"
+
+},
+
+
+/* =========================
+   HERO
+========================= */
+
+"hero.tagline":{
+
+en:"Green Spaces. Thoughtful Living.",
+
+kn:"ಹಸಿರು ಸ್ಥಳಗಳು. ಚಿಂತನಶೀಲ ಜೀವನ."
+
+},
+
+"hero.description":{
+
+en:"Hasiru Estate focuses exclusively on gated land and plotted development opportunities, helping individuals and families discover thoughtfully planned spaces for living and investment.",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳ ಮೇಲೆ ವಿಶೇಷವಾಗಿ ಗಮನಹರಿಸುತ್ತದೆ. ವ್ಯಕ್ತಿಗಳು ಮತ್ತು ಕುಟುಂಬಗಳು ವಾಸ ಮತ್ತು ಹೂಡಿಕೆಗೆ ಸೂಕ್ತವಾದ ಯೋಜಿತ ಸ್ಥಳಗಳನ್ನು ಕಂಡುಕೊಳ್ಳಲು ನಾವು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ."
+
+},
+
+"hero.button1":{
+
+en:"Explore Opportunities",
+
+kn:"ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ"
+
+},
+
+"hero.button2":{
+
+en:"Discover Hasiru Estate",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ"
+
+},
+
+"hero.button3":{
+
+en:"WhatsApp Us",
+
+kn:"ವಾಟ್ಸ್ಆ್ಯಪ್ ಮಾಡಿ"
+
+},
+
+"hero.note":{
+
+en:"GATED LAND · PLANNED SPACES · THOUGHTFUL LIVING",
+
+kn:"ಗೇಟೆಡ್ ಜಮೀನು · ಯೋಜಿತ ಸ್ಥಳಗಳು · ಚಿಂತನಶೀಲ ಜೀವನ"
+
+},
+
+
+/* =========================
+   ABOUT
+========================= */
+
+"about.eyebrow":{
+
+en:"About Hasiru Estate",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಬಗ್ಗೆ"
+
+},
+
+"about.title":{
+
+en:"Focused on land. Designed around possibilities.",
+
+kn:"ಜಮೀನಿನ ಮೇಲೆ ಗಮನ. ಸಾಧ್ಯತೆಗಳನ್ನು ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡ ವಿನ್ಯಾಸ."
+
+},
+
+"about.subtitle":{
+
+en:"Hasiru Estate is a real-estate company focused on gated land and plotted development opportunities.",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳ ಮೇಲೆ ಗಮನಹರಿಸಿರುವ ರಿಯಲ್ ಎಸ್ಟೇಟ್ ಸಂಸ್ಥೆಯಾಗಿದೆ."
+
+},
+
+"about.point1":{
+
+en:"Gated land and plotted developments",
+
+kn:"ಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿಗಳು"
+
+},
+
+"about.point2":{
+
+en:"Planned layouts and community-oriented spaces",
+
+kn:"ಯೋಜಿತ ಲೇಔಟ್‌ಗಳು ಮತ್ತು ಸಮುದಾಯ ಕೇಂದ್ರಿತ ಸ್ಥಳಗಳು"
+
+},
+
+"about.point3":{
+
+en:"Opportunities for individuals and families",
+
+kn:"ವ್ಯಕ್ತಿಗಳು ಮತ್ತು ಕುಟುಂಬಗಳಿಗೆ ಸೂಕ್ತವಾದ ಅವಕಾಶಗಳು"
+
+},
+
+"about.point4":{
+
+en:"Personal assistance throughout the discovery process",
+
+kn:"ಅವಕಾಶಗಳನ್ನು ಹುಡುಕುವ ಪ್ರಕ್ರಿಯೆಯಲ್ಲಿ ವೈಯಕ್ತಿಕ ಸಹಾಯ"
+
+},
+
+"about.approachEyebrow":{
+
+en:"Our Approach",
+
+kn:"ನಮ್ಮ ವಿಧಾನ"
+
+},
+
+"about.approachTitle":{
+
+en:"Simple. Clear. Professional.",
+
+kn:"ಸರಳ. ಸ್ಪಷ್ಟ. ವೃತ್ತಿಪರ."
+
+},
+
+"about.approachText1":{
+
+en:"We aim to make the process of exploring land opportunities simple, transparent and professional.",
+
+kn:"ಜಮೀನು ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸರಳ, ಪಾರದರ್ಶಕ ಮತ್ತು ವೃತ್ತಿಪರವಾಗಿಸುವುದು ನಮ್ಮ ಉದ್ದೇಶ."
+
+},
+
+"about.approachText2":{
+
+en:"Interested buyers can share their requirements, understand available opportunities and connect with the relevant project or sales representatives.",
+
+kn:"ಆಸಕ್ತ ಖರೀದಿದಾರರು ತಮ್ಮ ಅಗತ್ಯಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು, ಲಭ್ಯವಿರುವ ಅವಕಾಶಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಬಹುದು ಮತ್ತು ಸಂಬಂಧಿತ ಯೋಜನೆ ಅಥವಾ ಮಾರಾಟ ಪ್ರತಿನಿಧಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಬಹುದು."
+
+},
+
+
+/* =========================
+   WHY
+========================= */
+
+"why.eyebrow":{
+
+en:"Why Choose Hasiru Estate",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಅನ್ನು ಏಕೆ ಆಯ್ಕೆ ಮಾಡಬೇಕು"
+
+},
+
+"why.title":{
+
+en:"A focused approach to plotted developments.",
+
+kn:"ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿಗಳಿಗೆ ನಮ್ಮ ವಿಶೇಷ ಗಮನ."
+
+},
+
+"why.subtitle":{
+
+en:"Our focus is on presenting land opportunities with clear information and personal assistance.",
+
+kn:"ಸ್ಪಷ್ಟ ಮಾಹಿತಿ ಮತ್ತು ವೈಯಕ್ತಿಕ ಸಹಾಯದೊಂದಿಗೆ ಜಮೀನು ಅವಕಾಶಗಳನ್ನು ಪರಿಚಯಿಸುವುದು ನಮ್ಮ ಗಮನ."
+
+},
+
+"why.card1.title":{
+
+en:"Gated Developments",
+
+kn:"ಗೇಟೆಡ್ ಅಭಿವೃದ್ಧಿಗಳು"
+
+},
+
+"why.card1.text":{
+
+en:"Focused on gated land and plotted developments designed around planned layouts and community-oriented spaces.",
+
+kn:"ಯೋಜಿತ ಲೇಔಟ್‌ಗಳು ಮತ್ತು ಸಮುದಾಯ ಕೇಂದ್ರಿತ ಸ್ಥಳಗಳನ್ನು ಒಳಗೊಂಡ ಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿಗಳ ಮೇಲೆ ಗಮನ."
+
+},
+
+"why.card2.title":{
+
+en:"Thoughtful Locations",
+
+kn:"ಚಿಂತನಶೀಲ ಸ್ಥಳಗಳು"
+
+},
+
+"why.card2.text":{
+
+en:"We focus on opportunities in locations selected around accessibility, surroundings and future potential.",
+
+kn:"ಸಂಪರ್ಕ, ಸುತ್ತಮುತ್ತಲಿನ ಪರಿಸರ ಮತ್ತು ಭವಿಷ್ಯದ ಸಾಧ್ಯತೆಗಳನ್ನು ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡ ಸ್ಥಳಗಳಲ್ಲಿನ ಅವಕಾಶಗಳ ಮೇಲೆ ನಾವು ಗಮನಹರಿಸುತ್ತೇವೆ."
+
+},
+
+"why.card3.title":{
+
+en:"Personal Assistance",
+
+kn:"ವೈಯಕ್ತಿಕ ಸಹಾಯ"
+
+},
+
+"why.card3.text":{
+
+en:"Interested buyers can receive assistance understanding available opportunities and connecting with the relevant team.",
+
+kn:"ಆಸಕ್ತ ಖರೀದಿದಾರರು ಲಭ್ಯವಿರುವ ಅವಕಾಶಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಮತ್ತು ಸಂಬಂಧಿತ ತಂಡದೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಲು ಸಹಾಯ ಪಡೆಯಬಹುದು."
+
+},
+
+"why.card4.title":{
+
+en:"Clear Information",
+
+kn:"ಸ್ಪಷ್ಟ ಮಾಹಿತಿ"
+
+},
+
+"why.card4.text":{
+
+en:"We aim to present available information about location, development features and plot availability clearly.",
+
+kn:"ಸ್ಥಳ, ಅಭಿವೃದ್ಧಿಯ ವೈಶಿಷ್ಟ್ಯಗಳು ಮತ್ತು ಪ್ಲಾಟ್ ಲಭ್ಯತೆಯ ಮಾಹಿತಿಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ನೀಡುವುದು ನಮ್ಮ ಉದ್ದೇಶ."
+
+},
+
+"why.card5.title":{
+
+en:"Buyer Focus",
+
+kn:"ಖರೀದಿದಾರರ ಗಮನ"
+
+},
+
+"why.card5.text":{
+
+en:"Requirements can be shared before exploring suitable land and plotted development opportunities.",
+
+kn:"ಸೂಕ್ತ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸುವ ಮೊದಲು ನಿಮ್ಮ ಅಗತ್ಯಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದು."
+
+},
+
+"why.card6.title":{
+
+en:"Professional Process",
+
+kn:"ವೃತ್ತಿಪರ ಪ್ರಕ್ರಿಯೆ"
+
+},
+
+"why.card6.text":{
+
+en:"Our objective is to make land discovery simple, transparent and professionally coordinated.",
+
+kn:"ಜಮೀನು ಹುಡುಕುವ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಸರಳ, ಪಾರದರ್ಶಕ ಮತ್ತು ವೃತ್ತಿಪರವಾಗಿ ಸಂಯೋಜಿಸುವುದು ನಮ್ಮ ಉದ್ದೇಶ."
+
+},
+
+
+/* =========================
+   FOCUS
+========================= */
+
+"focus.eyebrow":{
+
+en:"Our Focus",
+
+kn:"ನಮ್ಮ ಗಮನ"
+
+},
+
+"focus.title":{
+
+en:"Land opportunities with a clear purpose.",
+
+kn:"ಸ್ಪಷ್ಟ ಉದ್ದೇಶದೊಂದಿಗೆ ಜಮೀನು ಅವಕಾಶಗಳು."
+
+},
+
+"focus.subtitle":{
+
+en:"Explore the types of opportunities Hasiru Estate focuses on.",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಗಮನಹರಿಸುವ ವಿವಿಧ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ."
+
+},
+
+"focus.card1.title":{
+
+en:"Gated Plots",
+
+kn:"ಗೇಟೆಡ್ ಪ್ಲಾಟ್‌ಗಳು"
+
+},
+
+"focus.card1.text":{
+
+en:"Plotted developments within gated communities with planned layouts and designated spaces.",
+
+kn:"ಯೋಜಿತ ಲೇಔಟ್‌ಗಳು ಮತ್ತು ನಿಗದಿತ ಸ್ಥಳಗಳನ್ನು ಹೊಂದಿರುವ ಗೇಟೆಡ್ ಸಮುದಾಯಗಳಲ್ಲಿನ ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿಗಳು."
+
+},
+
+"focus.card2.title":{
+
+en:"Residential Land",
+
+kn:"ವಸತಿ ಜಮೀನು"
+
+},
+
+"focus.card2.text":{
+
+en:"Land opportunities suitable for those looking to plan a future home or residential property.",
+
+kn:"ಭವಿಷ್ಯದ ಮನೆ ಅಥವಾ ವಸತಿ ಆಸ್ತಿಯನ್ನು ನಿರ್ಮಿಸಲು ಬಯಸುವವರಿಗೆ ಸೂಕ್ತವಾದ ಜಮೀನು ಅವಕಾಶಗಳು."
+
+},
+
+"focus.card3.title":{
+
+en:"Land Opportunities",
+
+kn:"ಜಮೀನು ಅವಕಾಶಗಳು"
+
+},
+
+"focus.card3.text":{
+
+en:"Opportunities presented based on availability, location and development details.",
+
+kn:"ಲಭ್ಯತೆ, ಸ್ಥಳ ಮತ್ತು ಅಭಿವೃದ್ಧಿಯ ವಿವರಗಳ ಆಧಾರದ ಮೇಲೆ ಪರಿಚಯಿಸಲಾದ ಅವಕಾಶಗಳು."
+
+},
+
+
+/* =========================
+   PROCESS
+========================= */
+
+"process.eyebrow":{
+
+en:"Our Process",
+
+kn:"ನಮ್ಮ ಪ್ರಕ್ರಿಯೆ"
+
+},
+
+"process.title":{
+
+en:"From requirement to opportunity.",
+
+kn:"ಅಗತ್ಯದಿಂದ ಅವಕಾಶದವರೆಗೆ."
+
+},
+
+"process.subtitle":{
+
+en:"A simple way to begin exploring available land and plotted development opportunities.",
+
+kn:"ಲಭ್ಯವಿರುವ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ಸರಳವಾದ ವಿಧಾನ."
+
+},
+
+"process.step1.title":{
+
+en:"Share",
+
+kn:"ಹಂಚಿಕೊಳ್ಳಿ"
+
+},
+
+"process.step1.text":{
+
+en:"Tell us the type of land or plot you are looking for and your preferred location.",
+
+kn:"ನೀವು ಹುಡುಕುತ್ತಿರುವ ಜಮೀನು ಅಥವಾ ಪ್ಲಾಟ್‌ನ ವಿಧ ಮತ್ತು ನಿಮ್ಮ ಆದ್ಯತೆಯ ಸ್ಥಳವನ್ನು ನಮಗೆ ತಿಳಿಸಿ."
+
+},
+
+"process.step2.title":{
+
+en:"Understand",
+
+kn:"ತಿಳಿದುಕೊಳ್ಳಿ"
+
+},
+
+"process.step2.text":{
+
+en:"We help you understand available opportunities and relevant project information.",
+
+kn:"ಲಭ್ಯವಿರುವ ಅವಕಾಶಗಳು ಮತ್ತು ಸಂಬಂಧಿತ ಯೋಜನೆಯ ಮಾಹಿತಿಯನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ನಾವು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ."
+
+},
+
+"process.step3.title":{
+
+en:"Connect",
+
+kn:"ಸಂಪರ್ಕಿಸಿ"
+
+},
+
+"process.step3.text":{
+
+en:"Interested buyers can be connected with the appropriate sales or project representatives.",
+
+kn:"ಆಸಕ್ತ ಖರೀದಿದಾರರನ್ನು ಸೂಕ್ತ ಮಾರಾಟ ಅಥವಾ ಯೋಜನಾ ಪ್ರತಿನಿಧಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಬಹುದು."
+
+},
+
+"process.step4.title":{
+
+en:"Verify",
+
+kn:"ಪರಿಶೀಲಿಸಿ"
+
+},
+
+"process.step4.text":{
+
+en:"Independently verify approvals, dimensions, availability, pricing and other relevant details before making a decision.",
+
+kn:"ನಿರ್ಧಾರ ತೆಗೆದುಕೊಳ್ಳುವ ಮೊದಲು ಅನುಮೋದನೆಗಳು, ಅಳತೆಗಳು, ಲಭ್ಯತೆ, ಬೆಲೆ ಮತ್ತು ಇತರ ಸಂಬಂಧಿತ ವಿವರಗಳನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸಿ."
+
+},
+
+
+/* =========================
+   ENQUIRY
+========================= */
+
+"enquiry.eyebrow":{
+
+en:"Enquire About Land",
+
+kn:"ಜಮೀನಿನ ಬಗ್ಗೆ ವಿಚಾರಿಸಿ"
+
+},
+
+"enquiry.title":{
+
+en:"Tell us what you are looking for.",
+
+kn:"ನೀವು ಏನನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಿ ಎಂದು ನಮಗೆ ತಿಳಿಸಿ."
+
+},
+
+"enquiry.subtitle":{
+
+en:"Share your basic requirements and we can help you explore relevant gated land and plotted development opportunities.",
+
+kn:"ನಿಮ್ಮ ಮೂಲಭೂತ ಅಗತ್ಯಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ. ಸಂಬಂಧಿತ ಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಲು ನಾವು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ."
+
+},
+
+"enquiry.point1":{
+
+en:"Preferred location",
+
+kn:"ಆದ್ಯತೆಯ ಸ್ಥಳ"
+
+},
+
+"enquiry.point2":{
+
+en:"Plot or land requirement",
+
+kn:"ಪ್ಲಾಟ್ ಅಥವಾ ಜಮೀನಿನ ಅಗತ್ಯತೆ"
+
+},
+
+"enquiry.point3":{
+
+en:"Residential or other requirement",
+
+kn:"ವಸತಿ ಅಥವಾ ಇತರ ಅಗತ್ಯತೆ"
+
+},
+
+"enquiry.point4":{
+
+en:"Personal assistance",
+
+kn:"ವೈಯಕ್ತಿಕ ಸಹಾಯ"
+
+},
+
+
+/* =========================
+   FORM
+========================= */
+
+"form.name":{
+
+en:"Name",
+
+kn:"ಹೆಸರು"
+
+},
+
+"form.phone":{
+
+en:"Phone / WhatsApp",
+
+kn:"ದೂರವಾಣಿ / ವಾಟ್ಸ್ಆ್ಯಪ್"
+
+},
+
+"form.looking":{
+
+en:"I am looking for",
+
+kn:"ನಾನು ಹುಡುಕುತ್ತಿರುವುದು"
+
+},
+
+"form.select":{
+
+en:"Select",
+
+kn:"ಆಯ್ಕೆಮಾಡಿ"
+
+},
+
+"form.location":{
+
+en:"Preferred Location",
+
+kn:"ಆದ್ಯತೆಯ ಸ್ಥಳ"
+
+},
+
+"form.message":{
+
+en:"Additional Requirements",
+
+kn:"ಹೆಚ್ಚುವರಿ ಅಗತ್ಯತೆಗಳು"
+
+},
+
+"form.submit":{
+
+en:"Send Enquiry on WhatsApp",
+
+kn:"ವಾಟ್ಸ್ಆ್ಯಪ್ ಮೂಲಕ ವಿಚಾರಣೆ ಕಳುಹಿಸಿ"
+
+},
+
+"form.note":{
+
+en:"Your enquiry will open WhatsApp with the details you entered.",
+
+kn:"ನೀವು ನಮೂದಿಸಿದ ವಿವರಗಳೊಂದಿಗೆ ನಿಮ್ಮ ವಿಚಾರಣೆ ವಾಟ್ಸ್ಆ್ಯಪ್‌ನಲ್ಲಿ ತೆರೆಯುತ್ತದೆ."
+
+},
+
+
+/* =========================
+   FAQ
+========================= */
+
+"faq.eyebrow":{
+
+en:"FAQ",
+
+kn:"ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು"
+
+},
+
+"faq.title":{
+
+en:"Common Questions",
+
+kn:"ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು"
+
+},
+
+"faq.q1":{
+
+en:"What does Hasiru Estate focus on?",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಯಾವುದರ ಮೇಲೆ ಗಮನಹರಿಸುತ್ತದೆ?"
+
+},
+
+"faq.a1":{
+
+en:"Hasiru Estate focuses on gated land and plotted development opportunities.",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳ ಮೇಲೆ ಗಮನಹರಿಸುತ್ತದೆ."
+
+},
+
+"faq.q2":{
+
+en:"Can I share my preferred location?",
+
+kn:"ನನ್ನ ಆದ್ಯತೆಯ ಸ್ಥಳವನ್ನು ಹಂಚಿಕೊಳ್ಳಬಹುದೇ?"
+
+},
+
+"faq.a2":{
+
+en:"Yes. You can mention your preferred location in the enquiry form so the relevant opportunities can be discussed with you.",
+
+kn:"ಹೌದು. ವಿಚಾರಣೆ ಫಾರ್ಮ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಆದ್ಯತೆಯ ಸ್ಥಳವನ್ನು ನಮೂದಿಸಬಹುದು. ಸಂಬಂಧಿತ ಅವಕಾಶಗಳ ಕುರಿತು ನಿಮ್ಮೊಂದಿಗೆ ಚರ್ಚಿಸಬಹುದು."
+
+},
+
+"faq.q3":{
+
+en:"Can I contact Hasiru Estate through WhatsApp?",
+
+kn:"ವಾಟ್ಸ್ಆ್ಯಪ್ ಮೂಲಕ ಹಸಿರು ಎಸ್ಟೇಟ್ ಅನ್ನು ಸಂಪರ್ಕಿಸಬಹುದೇ?"
+
+},
+
+"faq.a3":{
+
+en:"Yes. The website includes a direct WhatsApp contact option for enquiries.",
+
+kn:"ಹೌದು. ವಿಚಾರಣೆಗಳಿಗಾಗಿ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿ ನೇರ ವಾಟ್ಸ್ಆ್ಯಪ್ ಸಂಪರ್ಕ ಆಯ್ಕೆ ಇದೆ."
+
+},
+
+"faq.q4":{
+
+en:"Does Hasiru Estate provide legal or financial advice?",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಕಾನೂನು ಅಥವಾ ಹಣಕಾಸು ಸಲಹೆ ನೀಡುತ್ತದೆಯೇ?"
+
+},
+
+"faq.a4":{
+
+en:"No. Property availability, approvals, dimensions, pricing and other details should be independently verified before making any decision or transaction.",
+
+kn:"ಇಲ್ಲ. ಯಾವುದೇ ನಿರ್ಧಾರ ಅಥವಾ ವ್ಯವಹಾರ ಮಾಡುವ ಮೊದಲು ಆಸ್ತಿಯ ಲಭ್ಯತೆ, ಅನುಮೋದನೆಗಳು, ಅಳತೆಗಳು, ಬೆಲೆ ಮತ್ತು ಇತರ ವಿವರಗಳನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
+
+},
+
+"faq.q5":{
+
+en:"Where is Hasiru Estate located?",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಎಲ್ಲಿದೆ?"
+
+},
+
+"faq.a5":{
+
+en:"Hasiru Estate is based in Mysore, Karnataka, India.",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತದಲ್ಲಿ ಇದೆ."
+
+},
+
+
+/* =========================
+   CONTACT
+========================= */
+
+"contact.eyebrow":{
+
+en:"Contact Hasiru Estate",
+
+kn:"ಹಸಿರು ಎಸ್ಟೇಟ್ ಅನ್ನು ಸಂಪರ್ಕಿಸಿ"
+
+},
+
+"contact.title":{
+
+en:"Let's talk about your land requirement.",
+
+kn:"ನಿಮ್ಮ ಜಮೀನಿನ ಅಗತ್ಯತೆಯ ಕುರಿತು ಮಾತನಾಡೋಣ."
+
+},
+
+"contact.subtitle":{
+
+en:"Contact us for available gated land and plotted development opportunities.",
+
+kn:"ಲಭ್ಯವಿರುವ ಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳಿಗಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ."
+
+},
+
+"contact.call":{
+
+en:"Call Now",
+
+kn:"ಈಗ ಕರೆ ಮಾಡಿ"
+
+},
+
+"contact.whatsapp":{
+
+en:"WhatsApp",
+
+kn:"ವಾಟ್ಸ್ಆ್ಯಪ್"
+
+},
+
+"contact.phoneLabel":{
+
+en:"Phone",
+
+kn:"ದೂರವಾಣಿ"
+
+},
+
+"contact.emailLabel":{
+
+en:"Email",
+
+kn:"ಇಮೇಲ್"
+
+},
+
+"contact.locationLabel":{
+
+en:"Location",
+
+kn:"ಸ್ಥಳ"
+
+},
+
+"contact.instagramLabel":{
+
+en:"Instagram",
+
+kn:"ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್"
+
+},
+
+"contact.location":{
+
+en:"Mysore, Karnataka, India",
+
+kn:"ಮೈಸೂರು, ಕರ್ನಾಟಕ, ಭಾರತ"
+
+},
+
+
+/* =========================
+   FOOTER
+========================= */
+
+"footer.description":{
+
+en:"Green Spaces. Thoughtful Living.\n\nFocused on gated land and plotted development opportunities.",
+
+kn:"ಹಸಿರು ಸ್ಥಳಗಳು. ಚಿಂತನಶೀಲ ಜೀವನ.\n\nಗೇಟೆಡ್ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳ ಮೇಲೆ ಗಮನ."
+
+},
+
+"footer.explore":{
+
+en:"Explore",
+
+kn:"ಅನ್ವೇಷಿಸಿ"
+
+},
+
+"footer.connect":{
+
+en:"Connect",
+
+kn:"ಸಂಪರ್ಕಿಸಿ"
+
+},
+
+"footer.enquire":{
+
+en:"Enquire About Land",
+
+kn:"ಜಮೀನಿನ ಬಗ್ಗೆ ವಿಚಾರಿಸಿ"
+
+},
+
+"footer.copyright":{
+
+en:"© 2026 HASIRU ESTATE. All rights reserved.",
+
+kn:"© 2026 ಹಸಿರು ಎಸ್ಟೇಟ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+
+},
+
+"footer.disclaimer":{
+
+en:"Disclaimer: Hasiru Estate provides information regarding available land and plotted development opportunities. Property availability, approvals, dimensions, development features, pricing and other details may change and should be independently verified before making any decision or transaction.",
+
+kn:"ಸೂಚನೆ: ಹಸಿರು ಎಸ್ಟೇಟ್ ಲಭ್ಯವಿರುವ ಜಮೀನು ಮತ್ತು ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳ ಕುರಿತು ಮಾಹಿತಿಯನ್ನು ಒದಗಿಸುತ್ತದೆ. ಆಸ್ತಿಯ ಲಭ್ಯತೆ, ಅನುಮೋದನೆಗಳು, ಅಳತೆಗಳು, ಅಭಿವೃದ್ಧಿಯ ವೈಶಿಷ್ಟ್ಯಗಳು, ಬೆಲೆ ಮತ್ತು ಇತರ ವಿವರಗಳು ಬದಲಾಗಬಹುದು. ಯಾವುದೇ ನಿರ್ಧಾರ ಅಥವಾ ವ್ಯವಹಾರ ಮಾಡುವ ಮೊದಲು ಅವುಗಳನ್ನು ಸ್ವತಂತ್ರವಾಗಿ ಪರಿಶೀಲಿಸಬೇಕು."
+}
+
+};
+
+
+/* =========================================================
+   TRANSLATION FUNCTION
+========================================================= */
+
+function changeLanguage(language){
+
+    currentLanguage = language;
+
+
+    /* PAGE TEXT */
+
+    document
+    .querySelectorAll("[data-i18n]")
+    .forEach(element => {
+
+        const key =
+        element.getAttribute("data-i18n");
+
+        if(
+            translations[key] &&
+            translations[key][language]
+        ){
+
+            element.textContent =
+            translations[key][language];
+
+        }
+
+    });
+
+
+    /* PLACEHOLDERS */
+
+    document
+    .querySelectorAll(
+        "[data-placeholder-en]"
+    )
+    .forEach(input => {
+
+        const value =
+        language === "kn"
+        ? input.getAttribute("data-placeholder-kn")
+        : input.getAttribute("data-placeholder-en");
+
+        input.placeholder = value;
+
+    });
+
+
+    /* SELECT OPTIONS */
+
+    document
+    .querySelectorAll(
+        "select option[data-en]"
+    )
+    .forEach(option => {
+
+        option.textContent =
+        language === "kn"
+        ? option.getAttribute("data-kn")
+        : option.getAttribute("data-en");
+
+    });
+
+
+    /* BODY LANGUAGE */
+
+    if(language === "kn"){
+
+        document.body.classList.add("kn");
+
+        document.documentElement
+        .setAttribute(
+            "lang",
+            "kn"
         );
 
-
-        setTimeout(
-            () => {
-
-                loader.classList.add(
-                    "hide"
-                );
-
-            },
-            1500
-        );
+        languageBtn.textContent =
+        "EN";
 
     }
+    else{
+
+        document.body.classList.remove("kn");
+
+        document.documentElement
+        .setAttribute(
+            "lang",
+            "en"
+        );
+
+        languageBtn.textContent =
+        "ಕನ್ನಡ";
+
+    }
+
+
+    /* SAVE LANGUAGE */
+
+    localStorage.setItem(
+        "hasiru-language",
+        language
+    );
+
+}
+
+
+/* =========================================================
+   LANGUAGE BUTTON
+========================================================= */
+
+languageBtn.addEventListener(
+"click",
+() => {
+
+    if(currentLanguage === "en"){
+
+        changeLanguage("kn");
+
+    }
+    else{
+
+        changeLanguage("en");
+
+    }
+
+});
+
+
+/* =========================================================
+   LOAD SAVED LANGUAGE
+========================================================= */
+
+const savedLanguage =
+localStorage.getItem(
+"hasiru-language"
 );
+
+if(savedLanguage === "kn"){
+
+    changeLanguage("kn");
+
+}
+else{
+
+    changeLanguage("en");
+
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+window.addEventListener(
+"load",
+() => {
+
+    setTimeout(
+    () => {
+
+        document.body.classList.add(
+            "loaded"
+        );
+
+    },
+    500
+    );
+
+
+    setTimeout(
+    () => {
+
+        loader.classList.add(
+            "hide"
+        );
+
+    },
+    1500
+    );
+
+});
 
 
 /* =========================================================
    MOBILE MENU
-   ========================================================= */
+========================================================= */
 
 menuBtn.addEventListener(
-    "click",
-    () => {
+"click",
+() => {
 
-        const opened =
-            navlinks.classList.toggle(
-                "open"
-            );
+    const opened =
+    navlinks.classList.toggle(
+        "open"
+    );
 
-        menuBtn.setAttribute(
-            "aria-expanded",
-            opened
-        );
+    menuBtn.setAttribute(
+        "aria-expanded",
+        opened
+    );
 
-        menuBtn.textContent =
-            opened
-                ? "×"
-                : "☰";
+    menuBtn.textContent =
+    opened
+    ? "×"
+    : "☰";
 
-    }
-);
+});
 
 
 document
-    .querySelectorAll(".navlinks a")
-    .forEach(
-        link => {
+.querySelectorAll(".navlinks a")
+.forEach(link => {
 
-            link.addEventListener(
-                "click",
-                () => {
+    link.addEventListener(
+    "click",
+    () => {
 
-                    navlinks.classList.remove(
-                        "open"
-                    );
+        navlinks.classList.remove(
+            "open"
+        );
 
-                    menuBtn.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
-                    menuBtn.textContent =
-                        "☰";
+        menuBtn.textContent =
+        "☰";
 
-                }
-            );
+    });
 
-        }
-    );
+});
 
 
 /* =========================================================
    ACTIVE NAVIGATION
-   ========================================================= */
+========================================================= */
 
 const sections =
-    document.querySelectorAll(
-        "main section"
-    );
+document.querySelectorAll(
+"main section"
+);
 
 const navItems =
-    document.querySelectorAll(
-        ".navlinks a"
-    );
+document.querySelectorAll(
+".navlinks a"
+);
 
 window.addEventListener(
-    "scroll",
-    () => {
+"scroll",
+() => {
 
-        let current = "";
+    let current = "";
 
-        sections.forEach(
-            section => {
+    sections.forEach(
+    section => {
 
-                const top =
-                    section.offsetTop - 120;
+        const top =
+        section.offsetTop - 120;
 
-                if(
-                    window.scrollY >= top
-                ){
+        if(
+            window.scrollY >= top
+        ){
 
-                    current =
-                        section.getAttribute(
-                            "id"
-                        );
+            current =
+            section.getAttribute(
+                "id"
+            );
 
-                }
+        }
 
-            }
+    });
+
+
+    navItems.forEach(
+    item => {
+
+        item.classList.remove(
+            "active"
         );
 
-        navItems.forEach(
-            item => {
+        if(
+            item.getAttribute("href")
+            ===
+            "#" + current
+        ){
 
-                item.classList.remove(
-                    "active"
-                );
+            item.classList.add(
+                "active"
+            );
 
-                if(
-                    item.getAttribute(
-                        "href"
-                    )
-                    ===
-                    "#" + current
-                ){
+        }
 
-                    item.classList.add(
-                        "active"
-                    );
+    });
 
-                }
-
-            }
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
    SCROLL PROGRESS
-   ========================================================= */
+========================================================= */
 
 window.addEventListener(
-    "scroll",
-    () => {
+"scroll",
+() => {
 
-        const scrollTop =
-            window.scrollY;
+    const scrollTop =
+    window.scrollY;
 
-        const height =
-            document.documentElement
-                .scrollHeight
-            -
-            document.documentElement
-                .clientHeight;
+    const height =
+    document.documentElement.scrollHeight
+    -
+    document.documentElement.clientHeight;
 
-        const progress =
-            height > 0
-                ? (scrollTop / height) * 100
-                : 0;
+    const progress =
+    height > 0
+    ? (scrollTop / height) * 100
+    : 0;
 
-        scrollProgress.style.width =
-            progress + "%";
+    scrollProgress.style.width =
+    progress + "%";
 
-    }
-);
+});
 
 
 /* =========================================================
    DARK MODE
-   ========================================================= */
+========================================================= */
 
 const savedTheme =
-    localStorage.getItem(
-        "hasiru-theme"
-    );
+localStorage.getItem(
+"hasiru-theme"
+);
 
-if(
-    savedTheme === "dark"
-){
+if(savedTheme === "dark"){
 
     document.body.classList.add(
         "dark"
@@ -4072,264 +4966,187 @@ if(
 }
 
 themeBtn.addEventListener(
-    "click",
-    () => {
+"click",
+() => {
 
-        document.body.classList.toggle(
-            "dark"
-        );
-
-        const dark =
-            document.body.classList.contains(
-                "dark"
-            );
-
-        localStorage.setItem(
-            "hasiru-theme",
-            dark
-                ? "dark"
-                : "light"
-        );
-
-    }
-);
-
-
-/* =========================================================
-   KANNADA
-   ========================================================= */
-
-let kannada = false;
-
-const translations = {
-
-    en:[
-        "Home",
-        "About",
-        "Why Us",
-        "Focus",
-        "Process",
-        "Enquire",
-        "FAQ",
-        "Contact"
-    ],
-
-    kn:[
-        "ಮುಖಪುಟ",
-        "ನಮ್ಮ ಬಗ್ಗೆ",
-        "ಏಕೆ ನಾವು",
-        "ನಮ್ಮ ಗಮನ",
-        "ಪ್ರಕ್ರಿಯೆ",
-        "ವಿಚಾರಣೆ",
-        "ಪ್ರಶ್ನೆಗಳು",
-        "ಸಂಪರ್ಕ"
-    ]
-
-};
-
-
-function setLanguage(language){
-
-    const links =
-        document.querySelectorAll(
-            ".navlinks a"
-        );
-
-    links.forEach(
-        (link,index) => {
-
-            link.textContent =
-                translations[
-                    language
-                ][index];
-
-        }
+    document.body.classList.toggle(
+        "dark"
     );
 
-    if(
-        language === "kn"
-    ){
+    const dark =
+    document.body.classList.contains(
+        "dark"
+    );
 
-        document.body.classList.add(
-            "kn"
-        );
+    localStorage.setItem(
+        "hasiru-theme",
+        dark
+        ? "dark"
+        : "light"
+    );
 
-        languageBtn.textContent =
-            "ಕನ್ನಡ";
-
-    }
-    else{
-
-        document.body.classList.remove(
-            "kn"
-        );
-
-        languageBtn.textContent =
-            "EN";
-
-    }
-
-}
-
-
-languageBtn.addEventListener(
-    "click",
-    () => {
-
-        kannada =
-            !kannada;
-
-        setLanguage(
-            kannada
-                ? "kn"
-                : "en"
-        );
-
-    }
-);
+});
 
 
 /* =========================================================
    FAQ
-   ========================================================= */
+========================================================= */
 
 document
-    .querySelectorAll(
-        ".faq-question"
-    )
-    .forEach(
-        button => {
+.querySelectorAll(".faq-question")
+.forEach(button => {
 
-            button.addEventListener(
-                "click",
-                () => {
+    button.addEventListener(
+    "click",
+    () => {
 
-                    const item =
-                        button.parentElement;
+        const item =
+        button.parentElement;
 
-                    document
-                        .querySelectorAll(
-                            ".faq-item"
-                        )
-                        .forEach(
-                            other => {
+        document
+        .querySelectorAll(".faq-item")
+        .forEach(other => {
 
-                                if(
-                                    other !== item
-                                ){
+            if(other !== item){
 
-                                    other.classList.remove(
-                                        "open"
-                                    );
+                other.classList.remove(
+                    "open"
+                );
 
-                                }
+            }
 
-                            }
-                        );
+        });
 
-                    item.classList.toggle(
-                        "open"
-                    );
+        item.classList.toggle(
+            "open"
+        );
 
-                }
-            );
+    });
 
-        }
-    );
+});
 
 
 /* =========================================================
    TOAST
-   ========================================================= */
+========================================================= */
 
 function showToast(message){
 
     toast.textContent =
-        message;
+    message;
 
     toast.classList.add(
         "show"
     );
 
     setTimeout(
-        () => {
+    () => {
 
-            toast.classList.remove(
-                "show"
-            );
+        toast.classList.remove(
+            "show"
+        );
 
-        },
-        3000
+    },
+    3000
     );
 
 }
 
 
 /* =========================================================
-   ENQUIRY → WHATSAPP
-   ========================================================= */
+   WHATSAPP ENQUIRY
+========================================================= */
 
 document
-    .getElementById("enquiryForm")
-    .addEventListener(
-        "submit",
-        function(event){
+.getElementById("enquiryForm")
+.addEventListener(
+"submit",
+function(event){
 
-            event.preventDefault();
-
-
-            const name =
-                document
-                    .getElementById("name")
-                    .value
-                    .trim();
+    event.preventDefault();
 
 
-            const phone =
-                document
-                    .getElementById("phone")
-                    .value
-                    .trim();
+    const name =
+    document
+    .getElementById("name")
+    .value
+    .trim();
 
 
-            const requirement =
-                document
-                    .getElementById("requirement")
-                    .value
-                    .trim();
+    const phone =
+    document
+    .getElementById("phone")
+    .value
+    .trim();
 
 
-            const location =
-                document
-                    .getElementById("location")
-                    .value
-                    .trim();
+    const requirement =
+    document
+    .getElementById("requirement")
+    .value
+    .trim();
 
 
-            const message =
-                document
-                    .getElementById("message")
-                    .value
-                    .trim();
+    const location =
+    document
+    .getElementById("location")
+    .value
+    .trim();
 
 
-            if(
-                !name ||
-                !phone ||
-                !requirement ||
-                !location
-            ){
-
-                showToast(
-                    "Please fill in the required fields."
-                );
-
-                return;
-
-            }
+    const message =
+    document
+    .getElementById("message")
+    .value
+    .trim();
 
 
-            const whatsappMessage =
+    if(
+        !name ||
+        !phone ||
+        !requirement ||
+        !location
+    ){
+
+        showToast(
+            currentLanguage === "kn"
+            ? "ದಯವಿಟ್ಟು ಅಗತ್ಯವಿರುವ ಮಾಹಿತಿಯನ್ನು ಭರ್ತಿ ಮಾಡಿ."
+            : "Please fill in the required fields."
+        );
+
+        return;
+
+    }
+
+
+    let whatsappMessage;
+
+
+    if(currentLanguage === "kn"){
+
+        whatsappMessage =
+
+`ನಮಸ್ಕಾರ ಹಸಿರು ಎಸ್ಟೇಟ್,
+
+ನಿಮ್ಮ ಜಮೀನು / ಪ್ಲಾಟ್ ಅಭಿವೃದ್ಧಿ ಅವಕಾಶಗಳ ಕುರಿತು ತಿಳಿದುಕೊಳ್ಳಲು ನಾನು ಆಸಕ್ತಿ ಹೊಂದಿದ್ದೇನೆ.
+
+ಹೆಸರು: ${name}
+
+ದೂರವಾಣಿ / ವಾಟ್ಸ್ಆ್ಯಪ್: ${phone}
+
+ನನಗೆ ಬೇಕಾಗಿರುವುದು: ${requirement}
+
+ಆದ್ಯತೆಯ ಸ್ಥಳ: ${location}
+
+ಹೆಚ್ಚುವರಿ ಅಗತ್ಯತೆ:
+${message || "ನಮೂದಿಸಿಲ್ಲ"}
+
+ಧನ್ಯವಾದಗಳು.`;
+
+    }
+    else{
+
+        whatsappMessage =
 
 `Hello Hasiru Estate,
 
@@ -4348,102 +5165,102 @@ ${message || "Not specified"}
 
 Thank you.`;
 
-
-            const url =
-                "https://wa.me/919019746649?text="
-                +
-                encodeURIComponent(
-                    whatsappMessage
-                );
+    }
 
 
-            window.open(
-                url,
-                "_blank"
-            );
-
-
-            showToast(
-                "Opening WhatsApp..."
-            );
-
-        }
+    const url =
+    "https://wa.me/919019746649?text="
+    +
+    encodeURIComponent(
+        whatsappMessage
     );
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+
+    showToast(
+        currentLanguage === "kn"
+        ? "ವಾಟ್ಸ್ಆ್ಯಪ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ..."
+        : "Opening WhatsApp..."
+    );
+
+});
 
 
 /* =========================================================
    BACK TO TOP
-   ========================================================= */
+========================================================= */
 
 window.addEventListener(
-    "scroll",
-    () => {
+"scroll",
+() => {
 
-        if(
-            window.scrollY > 500
-        ){
+    if(
+        window.scrollY > 500
+    ){
 
-            backTop.classList.add(
-                "show"
-            );
-
-        }
-        else{
-
-            backTop.classList.remove(
-                "show"
-            );
-
-        }
+        backTop.classList.add(
+            "show"
+        );
 
     }
-);
+    else{
+
+        backTop.classList.remove(
+            "show"
+        );
+
+    }
+
+});
 
 
 backTop.addEventListener(
-    "click",
-    () => {
+"click",
+() => {
 
-        window.scrollTo({
+    window.scrollTo({
 
-            top:0,
+        top:0,
 
-            behavior:"smooth"
+        behavior:"smooth"
 
-        });
+    });
 
-    }
-);
+});
 
 
 /* =========================================================
-   ESCAPE MENU
-   ========================================================= */
+   ESCAPE MOBILE MENU
+========================================================= */
 
 document.addEventListener(
-    "keydown",
-    event => {
+"keydown",
+event => {
 
-        if(
-            event.key === "Escape"
-        ){
+    if(
+        event.key === "Escape"
+    ){
 
-            navlinks.classList.remove(
-                "open"
-            );
+        navlinks.classList.remove(
+            "open"
+        );
 
-            menuBtn.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
-            menuBtn.textContent =
-                "☰";
-
-        }
+        menuBtn.textContent =
+        "☰";
 
     }
-);
+
+});
 
 </script>
 
